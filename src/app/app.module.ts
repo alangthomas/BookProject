@@ -11,6 +11,7 @@ import { AddCategoryComponent } from './components/add-category/add-category.com
 import { AddSubcategoryComponent } from './components/add-subcategory/add-subcategory.component';
 import { AddBooksComponent } from './components/add-books/add-books.component';
 import { HomeComponent } from './components/home/home.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HomeComponent } from './components/home/home.component';
     AddCategoryComponent,
     AddSubcategoryComponent,
     AddBooksComponent,
-    HomeComponent
+    HomeComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="padding-left: 20px;">
+    <a class="navbar-brand" href="/">
+    <img src="https://img.icons8.com/external-itim2101-lineal-color-itim2101/2x/external-book-back-to-school-itim2101-lineal-color-itim2101.png" width="45" height="45" alt="" style="border-radius: 250px;"> Book App</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/add">Add Books</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <li *ngIf="loggedin == false" class="nav-item">
+                <button class="btn btn-outline-primary" routerLink="/register">Register</button>
+            </li>
+            <li *ngIf="loggedin == false" class="nav-item" style="margin-left: 7px;">
+                <button class="btn btn-outline-success" routerLink="/login">Login</button>
+            </li>
+        
+        
+            <li *ngIf="loggedin == true" class="nav-item">
+                <a class="navbar-brand" routerLink="">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTboP3I7YVTIvLusl6s0sph0CDmXVW6wY4u8atSX4D2OKCfh7auYYZi0zuJpPmd8VmmA38&usqp=CAU" width="26" height="26" alt="" style="border-radius: 250px;"> 
+                  </a>
+                <!-- <a class="nav-link" routerLink="">Profile</a> -->
+            </li>
+            <li *ngIf="loggedin == true" class="nav-item" style="margin-left: 7px;">
+                <button (click)="onLogout()" class="btn btn-outline-danger" routerLink="">Logout</button>
+            </li>
+        </ul>
+        <!-- <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form> -->
+
+    </div>
+</nav>
