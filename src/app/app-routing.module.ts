@@ -9,7 +9,7 @@ import { HomeComponent } from './components/home/home.component';
 const routes: Routes = [
   {path:'', redirectTo:'home', pathMatch:'full'},
   {path:'add-books', component:AddBooksComponent},
-  {path:'admin-dashboard', component: AdminDashboardComponent}
+  {path:'admin-dashboard', component: AdminDashboardComponent},
   {path:'home', component:HomeComponent},
   {path:'add-category', component: AddCategoryComponent},
   {path:'add-subcategory', component:AddSubcategoryComponent},
