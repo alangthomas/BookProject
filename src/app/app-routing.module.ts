@@ -6,7 +6,6 @@ import { AddSubcategoryComponent } from './components/add-subcategory/add-subcat
 import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
 import { HomeComponent } from './components/home/home.component';
 
-
 const routes: Routes = [
   {path:'', redirectTo:'home', pathMatch:'full'},
   {path:'add-books', component:AddBooksComponent},
@@ -14,7 +13,6 @@ const routes: Routes = [
   {path:'home', component:HomeComponent},
   {path:'add-category', component: AddCategoryComponent},
   {path:'add-subcategory', component:AddSubcategoryComponent},
-  {path:'admin', component: AdminDashboardComponent}
 ];
 
 @NgModule({
