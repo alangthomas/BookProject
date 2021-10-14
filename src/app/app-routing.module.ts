@@ -5,7 +5,7 @@ import { AddCategoryComponent } from './components/add-category/add-category.com
 import { AddSubcategoryComponent } from './components/add-subcategory/add-subcategory.component';
 import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
 import { HomeComponent } from './components/home/home.component';
-import { AdminDashboardComponent  } from './components/admin-dashboard/admin-dashboard.component';
+
 
 const routes: Routes = [
   {path:'', redirectTo:'home', pathMatch:'full'},
