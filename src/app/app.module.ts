@@ -18,6 +18,7 @@ import { ProductsComponent } from './components/products/products.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { ShowCategoriesComponent } from './components/show-categories/show-categories.component';
+import { CategoriesComponent } from './components/categories/categories.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { ShowCategoriesComponent } from './components/show-categories/show-categ
     ProductsComponent,
     RegisterComponent,
     LoginComponent,
-    ShowCategoriesComponent
+    ShowCategoriesComponent,
+    CategoriesComponent
   ],
   imports: [
     BrowserModule,

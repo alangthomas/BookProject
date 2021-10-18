@@ -23,7 +23,7 @@ export class NavbarComponent implements OnInit {
   }
 
   onSubmit(data:any){
-
+    console.log(data)
   }
 
 }

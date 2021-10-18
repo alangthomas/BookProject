@@ -8,6 +8,7 @@ import { CartComponent } from './components/cart/cart.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
+import { CategoriesComponent } from './components/categories/categories.component';
 
 const routes: Routes = [
   {path:'', redirectTo:'home', pathMatch:'full'},
@@ -18,7 +19,8 @@ const routes: Routes = [
   {path: 'cart:/userId', component:CartComponent},
   {path:'register', component:RegisterComponent},
   {path:'login', component:LoginComponent},
-  {path:'admin-dashboard',component:AdminDashboardComponent}
+  {path:'admin-dashboard',component:AdminDashboardComponent},
+  {path: 'categories', component:CategoriesComponent}
 ];
 
 @NgModule({

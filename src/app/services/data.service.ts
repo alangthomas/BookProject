@@ -19,4 +19,8 @@ export class DataService {
     return this.http.post<any>('http://localhost:54295/api/book',book);
   }
 
+  getCategories(): Observable <any>{
+    return this.http.get<any>('http://localhost:54295/api/category')
+  }
+
 }

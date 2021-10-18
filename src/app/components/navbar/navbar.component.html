@@ -21,7 +21,7 @@
                 </li>
             
         </ul>
-        <ul class="navbar-nav " style="margin-left: 20%;">
+        <ul class="navbar-nav " style="margin-left: 15% ; margin-right:10%; ">
             <form class="form-inline" #searchForm='ngForm' (submit) = onSubmit(searchForm.value)>
                 <!-- <select class="custom-select" id="inputGroupSelect01">
                     <option selected>Choose...</option>
@@ -29,11 +29,10 @@
                     <option value="2">Two</option>
                     <option value="3">Three</option>
                   </select> -->
-                  <select class="custom-select mr-sm-3" name="select" id="inlineFormCustomSelect" ngModel>
-                    <option selected >Choose</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                  <select class="custom-select mr-sm-3" name="select" id="inlineFormCustomSelect" ngModel="1">
+                    <option selected value="1">Books</option>
+                    <option value="2">Categories</option>
+                    <option value="3">ISBN</option>
                   </select>
                 <input class="form-control mr-sm-2" style="width: 400px;" type="search" placeholder="Search" name="searchtext" aria-label="Search" ngModel>
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -48,7 +47,7 @@
                 <button class="btn btn-outline-success" routerLink="/login">Login</button>
             </li>
         
-            <li *ngIf="loggedin != false and loggedin !='admin@gmail.com'" class="nav-item" style="margin-top: 20px; margin-right: 10px;">
+            <li *ngIf="loggedin != false and loggedin !='admin@gmail.com'" class="nav-item" style="margin-top: 20px; margin-right: 7px;">
                 <a class="navbar-brand" routerLink="">
                     <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/microsoft/309/shopping-cart_1f6d2.png" width="30" height="30" alt="" style="border-radius: 250px;"> 
                      Cart
