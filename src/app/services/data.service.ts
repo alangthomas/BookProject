@@ -11,7 +11,7 @@ export class DataService {
   }
 
   constructor(private http:HttpClient) { }
-  getCartById(userId : number): Observable<any>{
+  getCartById(userId : any): Observable<any>{
     return this.http.get<any>(`${this.ENDPOINTS.CART_URL + userId}` )
   }
 

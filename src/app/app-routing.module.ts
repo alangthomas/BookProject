@@ -12,7 +12,7 @@ const routes: Routes = [
   {path:'home', component:HomeComponent},
   {path:'add-category', component: AddCategoryComponent},
   {path:'add-subcategory', component:AddSubcategoryComponent},
-  {path: 'cart:/userId', component:CartComponent},
+  {path: 'cart/:userId', component:CartComponent},
 ];
 
 @NgModule({

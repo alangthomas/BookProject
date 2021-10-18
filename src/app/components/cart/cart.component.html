@@ -13,14 +13,14 @@
   </div>
   
 </div>  -->
-<div class="main">
+<!-- <div class="main">
   <h1>Shopping cart</h1>
   <h2 class="sub-heading">Free shipping from $100!</h2>
   <section class="shopping-cart">
    
-    <ol class="ui-list shopping-cart--list" id="shopping-cart--list" *ngFor = "let book of books">
+    <ol class="ui-list shopping-cart--list" id="shopping-cart--list" *ngFor = "let book of books"> -->
       <!-- {{subtotal}}+={{book.price}} -->
-      <li class="_grid shopping-cart--list-item">
+      <!-- <li class="_grid shopping-cart--list-item">
         <div class="_column product-image">
           <img class="product-image--img" src="{{book.Image}}" alt="Item image" width="100%" height="100%"/>
         </div>
@@ -29,7 +29,7 @@
           <p class="product-desc">{{book.Description}}</p>
           <div class="price product-single-price">${{book.Price}}</div>
         </div>
-        <div class="_column product-modifiers" data-product-price="adfadf">
+        <div class="_column product-modifiers" data-product-price="adfadf"> -->
           <!--this is for increasing quantity
             <div class="_grid">
             <button class="_btn _column product-subtract">&minus;</button>
@@ -38,12 +38,13 @@
           </div> -->
 
          <!-- <button  class="_btn entypo-trash product-remove" (click)="onRemoveButton(category)">Buy Now</button>   -->
+         <!-- <button  class="_btn entypo-trash product-remove" >Buy Now</button>  
           <div class="price product-total-price"width="100%" height="50%">Rs. {{book.Price}}</div>
         </div>
       </li>
-    </ol>
+    </ol> -->
 
-    <footer class="_grid cart-totals">
+    <!-- <footer class="_grid cart-totals">
         <div class="_column subtotal" id="subtotalCtr">
           <div class="cart-totals-key">Subtotal</div>
           <div class="cart-totals-value">0</div>
@@ -51,12 +52,12 @@
         <div class="_column shipping" id="shippingCtr">
           <div class="cart-totals-key">Shipping</div>
           <div class="cart-totals-value">$0.00</div>
-        </div>
+        </div> -->
         <!-- <div class="_column taxes" id="taxesCtr">
           <div class="cart-totals-key">Taxes (6%)</div>
           <div class="cart-totals-value">$0.00</div>
         </div> -->
-        <div class="_column total" id="totalCtr">
+        <!-- <div class="_column total" id="totalCtr">
           <div class="cart-totals-key">Total</div>
           <div class="cart-totals-value">$0.00</div>
         </div>
@@ -66,5 +67,62 @@
       </footer>
 
   </section> 
-   </div>
+   </div> -->
 <!-- </div> -->
+<app-navbar></app-navbar>
+<div class="container" style="background-color: white;" >
+
+	<!-- <h1>Shopping Cart</h1> -->
+<div class="cart" style="padding-top: 3%; border-width: 2px; border: tomato;"><h1>Shopping Cart</h1></div>
+	<div class="cart">
+		<div class="products">
+
+			<div class="product" *ngFor="let book of books">
+
+        <!-- <div></div> -->
+				<img src="{{book.Image}}" >
+
+				<div class="product-info">
+
+					<h3 class="product-name">{{book.Title}}</h3>
+
+					<h4 class="product-price">₹ {{book.Price}}</h4>
+
+					<!-- <h4 class="product-offer">50%</h4> -->
+
+					<!-- <p class="product-quantity">Qnt: <input value="1" name=""> -->
+            <button type="button" class="btn btn-danger " style="	position: absolute;bottom: 20px;right: 20px;">Remove</button>
+         <!-- <button  class="btn btn-primary btn-block" (click)="onButtonClick(category)">Buy Now</button>   -->
+
+					<!-- <p class="product-remove">
+						<i class="fa fa-trash" aria-hidden="true"></i>
+
+						<!-- <span class="remove" (click)>Remove</span>
+            <button type="button" class="btn btn-danger" style="	position: absolute;bottom: 20px;right: 20px;">Remove</button>
+					</p> -->
+				</div>
+			</div>
+		</div>
+
+     
+		<div class="cart-total">
+			<p>
+				<span>Total Price</span>
+				<span>₹ 3,000</span>
+			</p>
+			<p>
+				<span>Number of Items</span>
+				<span>2</span>
+			</p>
+<!-- 
+			<p>
+				<span>You Save</span>
+				<span>₹ 1,000</span>
+			</p> -->
+			<a href="#">Proceed to Checkout</a>
+		</div>
+
+	</div>
+
+</div>
+
