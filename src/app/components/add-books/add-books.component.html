@@ -1,4 +1,4 @@
-<!-- <app-navbar></app-navbar>
+<app-navbar></app-navbar>
 
 <div class="wrapper col-lg-6 col-md-8 col-sm-10 " >
     
@@ -9,16 +9,16 @@
     </div>
     <form #registerForm="ngForm" (submit)="onSubmit()" >
         <div class="form-group">
-            <label for="id">Id</label>
+            <label for="catid">Category Id</label>
             <input 
                 type="number"
-                name = "id"
-                id = "id"
+                name = "catid"
+                id = "catid"
                 required
                 class="form-control"
-                #id = "ngModel"
-                [(ngModel)] = "bookModel.id"
-                [class.is-invalid]="id.invalid && id.touched"
+                #catid = "ngModel"
+                [(ngModel)] = "bookModel.catId"
+                [class.is-invalid]="catid.invalid && catid.touched"
                 >
         </div>
         <div class="form-group">
@@ -35,20 +35,35 @@
                 >
         </div>
         <div class="form-group">
-            <label for="author">Author</label>
+            <label for="isbn">ISBN</label>
             <input 
-                type="text"
-                name = "author"
-                id = "author"
+                type="number"
+                name = "isbn"
+                id = "isbn"
                 required
                 class="form-control"
-                #author = "ngModel"
-                [(ngModel)] = "bookModel.author"
-                [class.is-invalid]="author.invalid && author.touched"
+                #isbn = "ngModel"
+                [(ngModel)] = "bookModel.ISBN"
+                [class.is-invalid]="isbn.invalid && isbn.touched"
                 >
         </div>
         <div class="form-group">
-            <label for="title">Price</label>
+            <label for="year">Year</label>
+            <input 
+                type="number"
+                name = "year"
+                id = "year"
+                required
+                class="form-control"
+                #year = "ngModel"
+                [(ngModel)] = "bookModel.year"
+                [class.is-invalid]="year.invalid && year.touched"
+                >
+        </div>
+
+
+        <div class="form-group">
+            <label for="price">Price</label>
             <input 
                 type="number"
                 name = "price"
@@ -68,11 +83,61 @@
                 id = "description"
                 required
                 class="form-control"
-                #title = "ngModel"
+                #description = "ngModel"
                 [(ngModel)] = "bookModel.description"
-                [class.is-invalid]="title.invalid && title.touched"
+                [class.is-invalid]="description.invalid && description.touched"
                 ></textarea>
+        </div> 
+        <div class="form-group">
+            <label for="position">Position</label>
+            <input 
+                type="number"
+                name = "position"
+                id = "position"
+                required
+                class="form-control"
+                #position = "ngModel"
+                [(ngModel)] = "bookModel.position"
+                [class.is-invalid]="description.invalid && description.touched"
+                >
         </div>
+
+        <!-- <div>
+            Status: <br>
+            <input type="radio" id="true" name="status" value="true">
+            <label for="true">Active</label><br>
+
+        </div> -->
+
+
+        <div class="form-group">
+            <label for="image">Image</label>
+            <input 
+                type="text"
+                name = "image"
+                id = "image"
+                required
+                class="form-control"
+                #image = "ngModel"
+                [(ngModel)] = "bookModel.image"
+                [class.is-invalid]="image.invalid && image.touched"
+                >
+        </div>
+
+        <div class="form-group">
+            <label for="author">Author</label>
+            <input 
+                type="text"
+                name = "author"
+                id = "author"
+                required
+                class="form-control"
+                #author = "ngModel"
+                [(ngModel)] = "bookModel.author"
+                [class.is-invalid]="author.invalid && author.touched"
+                >
+        </div>
+        
         <input 
                 type="submit"
                 value="Add Book"
@@ -83,4 +148,3 @@
     </form>
 </div>
 
- -->

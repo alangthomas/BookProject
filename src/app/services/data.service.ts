@@ -15,4 +15,8 @@ export class DataService {
     return this.http.get<any>(`${this.ENDPOINTS.CART_URL + userId}` )
   }
 
+  addBook(book : any):Observable <any>{
+    return this.http.post<any>('http://localhost:54295/api/book',book);
+  }
+
 }
