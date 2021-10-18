@@ -1,1 +1,86 @@
-<p>add-books works!</p>
+<!-- <app-navbar></app-navbar>
+
+<div class="wrapper col-lg-6 col-md-8 col-sm-10 " >
+    
+    <h1>Add New Book</h1>
+    <hr>
+    <div *ngIf="message" class="alert" [class]="alertClass" role="alert">
+        {{ message }}
+    </div>
+    <form #registerForm="ngForm" (submit)="onSubmit()" >
+        <div class="form-group">
+            <label for="id">Id</label>
+            <input 
+                type="number"
+                name = "id"
+                id = "id"
+                required
+                class="form-control"
+                #id = "ngModel"
+                [(ngModel)] = "bookModel.id"
+                [class.is-invalid]="id.invalid && id.touched"
+                >
+        </div>
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input 
+                type="text"
+                name = "title"
+                id = "title"
+                required
+                class="form-control"
+                #title = "ngModel"
+                [(ngModel)] = "bookModel.title"
+                [class.is-invalid]="title.invalid && title.touched"
+                >
+        </div>
+        <div class="form-group">
+            <label for="author">Author</label>
+            <input 
+                type="text"
+                name = "author"
+                id = "author"
+                required
+                class="form-control"
+                #author = "ngModel"
+                [(ngModel)] = "bookModel.author"
+                [class.is-invalid]="author.invalid && author.touched"
+                >
+        </div>
+        <div class="form-group">
+            <label for="title">Price</label>
+            <input 
+                type="number"
+                name = "price"
+                id = "price"
+                required
+                class="form-control"
+                #price = "ngModel"
+                [(ngModel)] = "bookModel.price"
+                [class.is-invalid]="title.invalid && title.touched"
+                >
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea 
+                type=""
+                name = "description"
+                id = "description"
+                required
+                class="form-control"
+                #title = "ngModel"
+                [(ngModel)] = "bookModel.description"
+                [class.is-invalid]="title.invalid && title.touched"
+                ></textarea>
+        </div>
+        <input 
+                type="submit"
+                value="Add Book"
+                class="btn btn-primary btn-block"
+                [disabled]="registerForm.invalid" />
+
+
+    </form>
+</div>
+
+ -->
