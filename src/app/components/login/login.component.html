@@ -1,0 +1,38 @@
+<app-navbar></app-navbar>
+
+<div class="container" style="margin-top: 100px;">
+    <div class="wrapper col-lg-6 col-md-8 col-sm-10">
+        <div *ngIf="message" class="alert" [class]="alertClass" role="alert">
+            {{ message }}
+        </div>
+        <h1>Login</h1>
+        <hr>
+        <form #registerForm="ngForm" (submit)="onSubmit()">
+
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" class="form-control" #email="ngModel"
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+                    [class.is-invalid]="email.invalid && email.touched" required [(ngModel)]="userModel.Email">
+                <div *ngIf="email.errors && (email.invalid || email.touched)">
+                    <small *ngIf="email.errors.pattern" class="text-danger">Invalid email</small>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" class="form-control"
+                    [(ngModel)]="userModel.Password">
+            </div>
+
+
+            <input type="submit" value="Login" class="btn btn-primary btn-block" [disabled]="registerForm.invalid" />
+            <div class="signup-link">Not a member? <a routerLink="/register">Register now</a></div>
+        </form>
+
+    </div>
+</div>
+    <!-- <div class="col-lg-3 col-md-2 col-sm-1">
+        <h4>userModel values:</h4>
+        <p>{{ userModel | json }}</p>
+    </div> -->

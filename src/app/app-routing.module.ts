@@ -5,6 +5,11 @@ import { AddCategoryComponent } from './components/add-category/add-category.com
 import { AddSubcategoryComponent } from './components/add-subcategory/add-subcategory.component';
 import { HomeComponent } from './components/home/home.component';
 import { CartComponent } from './components/cart/cart.component';
+import { RegisterComponent } from './components/register/register.component';
+import { LoginComponent } from './components/login/login.component';
+import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
+import { CategoriesComponent } from './components/categories/categories.component';
+import { WishlistComponent } from './components/wishlist/wishlist.component';
 
 const routes: Routes = [
   {path:'', redirectTo:'home', pathMatch:'full'},
@@ -13,6 +18,11 @@ const routes: Routes = [
   {path:'add-category', component: AddCategoryComponent},
   {path:'add-subcategory', component:AddSubcategoryComponent},
   {path: 'cart/:userId', component:CartComponent},
+  {path:'register', component:RegisterComponent},
+  {path:'login', component:LoginComponent},
+  {path:'admin-dashboard',component:AdminDashboardComponent},
+  {path: 'categories', component:CategoriesComponent},
+  {path: 'wishlist/:userId', component:WishlistComponent},
 ];
 
 @NgModule({
