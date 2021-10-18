@@ -12,6 +12,9 @@ import { AddSubcategoryComponent } from './components/add-subcategory/add-subcat
 import { AddBooksComponent } from './components/add-books/add-books.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { CartComponent } from './components/cart/cart.component';
+import { WishlistComponent } from './components/wishlist/wishlist.component';
+import { ProductsComponent } from './components/products/products.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     AddSubcategoryComponent,
     AddBooksComponent,
     HomeComponent,
-    NavbarComponent
+    NavbarComponent,
+    CartComponent,
+    WishlistComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,
