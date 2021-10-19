@@ -11,6 +11,7 @@ import { AdminDashboardComponent } from './components/admin-dashboard/admin-dash
 import { ViewBookComponent } from './components/view-book/view-book.component';
 import{  UpdateBookComponent } from './components/update-book/update-book.component';
 import { CategoriesComponent } from './components/categories/categories.component';
+import { BooksComponent } from './components/books/books.component';
 
 const routes: Routes = [
   {path:'', redirectTo:'home', pathMatch:'full'},
@@ -24,7 +25,8 @@ const routes: Routes = [
   {path:'admin-dashboard',component:AdminDashboardComponent},
   {path: 'view-book/:Id', component: ViewBookComponent},
   {path: 'view-book/:Id/updatebook', component: UpdateBookComponent},
-  {path: 'categories', component:CategoriesComponent}
+  {path: 'categories', component:CategoriesComponent},
+  {path : 'books/:categoryId', component:BooksComponent}
 ];
 
 @NgModule({

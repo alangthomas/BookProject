@@ -24,6 +24,8 @@ import { CategoriesComponent } from './components/categories/categories.componen
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { BooksComponent } from './components/books/books.component';
+
 
 @NgModule({
   declarations: [
@@ -42,7 +44,8 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     ShowCategoriesComponent,
     ViewBookComponent,
     UpdateBookComponent,
-    CategoriesComponent
+    CategoriesComponent,
+    BooksComponent,
   ],
   imports: [
     BrowserModule,
