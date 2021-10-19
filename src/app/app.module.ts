@@ -18,6 +18,8 @@ import { ProductsComponent } from './components/products/products.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { ShowCategoriesComponent } from './components/show-categories/show-categories.component';
+import { ViewBookComponent } from './components/view-book/view-book.component';
+import { UpdateBookComponent } from './components/update-book/update-book.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { ShowCategoriesComponent } from './components/show-categories/show-categ
     ProductsComponent,
     RegisterComponent,
     LoginComponent,
-    ShowCategoriesComponent
+    ShowCategoriesComponent,
+    ViewBookComponent,
+    UpdateBookComponent
   ],
   imports: [
     BrowserModule,

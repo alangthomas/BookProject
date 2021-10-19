@@ -8,7 +8,8 @@ import { CartComponent } from './components/cart/cart.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
-
+import { ViewBookComponent } from './components/view-book/view-book.component';
+import{  UpdateBookComponent } from './components/update-book/update-book.component';
 const routes: Routes = [
   {path:'', redirectTo:'home', pathMatch:'full'},
   {path:'add-books', component:AddBooksComponent},
@@ -18,7 +19,9 @@ const routes: Routes = [
   {path: 'cart:/userId', component:CartComponent},
   {path:'register', component:RegisterComponent},
   {path:'login', component:LoginComponent},
-  {path:'admin-dashboard',component:AdminDashboardComponent}
+  {path:'admin-dashboard',component:AdminDashboardComponent},
+  {path: 'view-book/:Id', component: ViewBookComponent},
+  {path: 'view-book/:Id/updatebook', component: UpdateBookComponent}
 ];
 
 @NgModule({

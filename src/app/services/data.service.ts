@@ -11,12 +11,25 @@ export class DataService {
   }
 
   constructor(private http:HttpClient) { }
+
   getCartById(userId : number): Observable<any>{
     return this.http.get<any>(`${this.ENDPOINTS.CART_URL + userId}` )
   }
 
   addBook(book : any):Observable <any>{
     return this.http.post<any>('http://localhost:54295/api/book',book);
+  }
+
+  getBookById(id : any):Observable <any>{
+    return this.http.get<any>('http://localhost:54295/api/book/'+id);
+  }
+
+  updateBook(id: any, book: any):Observable<any>{
+    return this.http.put<any>('http://localhost:54295/api/book/'+id,book);
+  }
+
+  deleteBook(id: any):Observable<any>{
+    return this.http.delete<any>('http://localhost:54295/api/book/'+id);
   }
 
 }
