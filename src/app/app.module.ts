@@ -18,6 +18,8 @@ import { ProductsComponent } from './components/products/products.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { ShowCategoriesComponent } from './components/show-categories/show-categories.component';
+import { ViewBookComponent } from './components/view-book/view-book.component';
+import { UpdateBookComponent } from './components/update-book/update-book.component';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { ProfileComponent } from './components/profile/profile.component';
@@ -38,6 +40,8 @@ import { AddressComponent } from './components/address/address.component';
     RegisterComponent,
     LoginComponent,
     ShowCategoriesComponent,
+    ViewBookComponent,
+    UpdateBookComponent,
     CategoriesComponent,
     SidebarComponent,
     ProfileComponent,

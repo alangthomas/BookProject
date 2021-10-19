@@ -8,6 +8,8 @@ import { CartComponent } from './components/cart/cart.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
+import { ViewBookComponent } from './components/view-book/view-book.component';
+import{  UpdateBookComponent } from './components/update-book/update-book.component';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { WishlistComponent } from './components/wishlist/wishlist.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
@@ -25,11 +27,13 @@ const routes: Routes = [
   {path:'register', component:RegisterComponent},
   {path:'login', component:LoginComponent},
   {path:'admin-dashboard',component:AdminDashboardComponent},
+  {path: 'view-book/:Id', component: ViewBookComponent},
+  {path: 'view-book/:Id/updatebook', component: UpdateBookComponent},
   {path: 'categories', component:CategoriesComponent},
   {path: 'wishlist/:userId', component:WishlistComponent},
   {path: 'sidebar/:userId', component:SidebarComponent},
   {path: 'profile/:userId', component:ProfileComponent},
-  {path: 'address/:userId', component:AddressComponent},
+  {path: 'address/getByUserId/:userId', component:AddressComponent},
   { path: '**', redirectTo: 'home', pathMatch: 'full' }, //always at the last line
 ];
 

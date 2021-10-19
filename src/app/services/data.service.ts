@@ -13,10 +13,13 @@ export class DataService {
     WISHLIST_REMOVE_ID : 'http://localhost:54295/api/wishlist/remove',
     ADD_TO_CART : 'http://localhost:54295/api/cart/add',
     ADD_TO_WISHLIST : 'http://localhost:54295/api/wishlist/add',
+    ADDRESS_URL : 'http://localhost:54295/api/address/getByUserId',
   }
 
   constructor(private http:HttpClient) { }
-  getCartById(userId : any): Observable<any>{
+
+  getCartById(userId : number): Observable<any>{
+
     return this.http.get<any>(`${this.ENDPOINTS.CART_URL + userId}` )
   }
 
@@ -24,10 +27,23 @@ export class DataService {
     return this.http.post<any>('http://localhost:54295/api/book',book);
   }
 
+
   RemoveFromCartById(userId:any, bookId:any): Observable<any>{
     return this.http.get<any>(`${this.ENDPOINTS.CART_REMOVE_ID+'/'+userId+'/'+bookId}`);
   }
 
+  getBookById(id : any):Observable <any>{
+    return this.http.get<any>('http://localhost:54295/api/book/'+id);
+  }
+
+  updateBook(id: any, book: any):Observable<any>{
+    return this.http.put<any>('http://localhost:54295/api/book/'+id,book);
+  }
+
+  deleteBook(id: any):Observable<any>{
+    return this.http.delete<any>('http://localhost:54295/api/book/'+id);
+  }
+  
   getCategories(): Observable <any>{
     return this.http.get<any>('http://localhost:54295/api/category')
   }
@@ -45,5 +61,8 @@ export class DataService {
 
   addToWishlist(userId:any, bookId:any):Observable<any>{
     return this.http.get<any>(`${this.ENDPOINTS.ADD_TO_WISHLIST +'/'+userId+'/'+bookId}`);
+  }
+  getAddressById(userId:any):Observable<any>{
+    return this.http.get<any>(`${this.ENDPOINTS.ADDRESS_URL +'/'+userId}`)
   }
 }
