@@ -18,6 +18,8 @@ import { ProductsComponent } from './components/products/products.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { ShowCategoriesComponent } from './components/show-categories/show-categories.component';
+import { ViewBookComponent } from './components/view-book/view-book.component';
+import { UpdateBookComponent } from './components/update-book/update-book.component';
 import { CategoriesComponent } from './components/categories/categories.component';
 
 @NgModule({
@@ -35,6 +37,8 @@ import { CategoriesComponent } from './components/categories/categories.componen
     RegisterComponent,
     LoginComponent,
     ShowCategoriesComponent,
+    ViewBookComponent,
+    UpdateBookComponent,
     CategoriesComponent
   ],
   imports: [

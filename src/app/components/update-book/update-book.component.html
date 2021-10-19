@@ -1,0 +1,150 @@
+<app-navbar></app-navbar>
+
+<div class="wrapper col-lg-6 col-md-8 col-sm-10">
+    <h1>Update Book</h1>
+    <hr>
+    <h5>Book Id: {{id}}</h5>
+    <div *ngIf="message" class="alert" [class]="alertClass" role="alert">
+        {{ message }}
+    </div>
+
+    <form #registerForm="ngForm" (submit)="onSubmit()" >
+        <div class="form-group">
+            <label for="catid">Category Id</label>
+            <input 
+                type="number"
+                name = "catid"
+                id = "catid"
+                required
+                class="form-control"
+                #catid = "ngModel"
+                [(ngModel)] = "bookModel.catId"
+                [class.is-invalid]="catid.invalid && catid.touched"
+                >
+        </div>
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input 
+                type="text"
+                name = "title"
+                id = "title"
+                required
+                class="form-control"
+                #title = "ngModel"
+                [(ngModel)] = "bookModel.title"
+                [class.is-invalid]="title.invalid && title.touched"
+                >
+        </div>
+        <div class="form-group">
+            <label for="isbn">ISBN</label>
+            <input 
+                type="number"
+                name = "isbn"
+                id = "isbn"
+                required
+                class="form-control"
+                #isbn = "ngModel"
+                [(ngModel)] = "bookModel.ISBN"
+                [class.is-invalid]="isbn.invalid && isbn.touched"
+                >
+        </div>
+        <div class="form-group">
+            <label for="year">Year</label>
+            <input 
+                type="number"
+                name = "year"
+                id = "year"
+                required
+                class="form-control"
+                #year = "ngModel"
+                [(ngModel)] = "bookModel.year"
+                [class.is-invalid]="year.invalid && year.touched"
+                >
+        </div>
+
+
+        <div class="form-group">
+            <label for="price">Price</label>
+            <input 
+                type="number"
+                name = "price"
+                id = "price"
+                required
+                class="form-control"
+                #price = "ngModel"
+                [(ngModel)] = "bookModel.price"
+                [class.is-invalid]="price.invalid && price.touched"
+                >
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea 
+                type=""
+                name = "description"
+                id = "description"
+                required
+                class="form-control"
+                #description = "ngModel"
+                [(ngModel)] = "bookModel.description"
+                [class.is-invalid]="description.invalid && description.touched"
+                ></textarea>
+        </div> 
+        <div class="form-group">
+            <label for="position">Position</label>
+            <input 
+                type="number"
+                name = "position"
+                id = "position"
+                required
+                class="form-control"
+                #position = "ngModel"
+                [(ngModel)] = "bookModel.position"
+                [class.is-invalid]="position.invalid && position.touched"
+                >
+        </div>
+
+        <!-- <div>
+            Status: <br>
+            <input type="radio" id="true" name="status" value="true">
+            <label for="true">Active</label><br>
+
+        </div> -->
+
+
+        <div class="form-group">
+            <label for="image">Image</label>
+            <input 
+                type="text"
+                name = "image"
+                id = "image"
+                required
+                class="form-control"
+                #image = "ngModel"
+                [(ngModel)] = "bookModel.image"
+                [class.is-invalid]="image.invalid && image.touched"
+                >
+        </div>
+
+        <div class="form-group">
+            <label for="author">Author</label>
+            <input 
+                type="text"
+                name = "author"
+                id = "author"
+                required
+                class="form-control"
+                #author = "ngModel"
+                [(ngModel)] = "bookModel.author"
+                [class.is-invalid]="author.invalid && author.touched"
+                >
+        </div>
+        
+        <input 
+                type="submit"
+                value="Update Book"
+                class="btn btn-primary btn-block"
+                [disabled]="registerForm.invalid" />
+
+
+    </form>
+</div>
