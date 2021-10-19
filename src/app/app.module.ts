@@ -21,9 +21,9 @@ import { ShowCategoriesComponent } from './components/show-categories/show-categ
 import { ViewBookComponent } from './components/view-book/view-book.component';
 import { UpdateBookComponent } from './components/update-book/update-book.component';
 import { CategoriesComponent } from './components/categories/categories.component';
-
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CarouselModule } from 'ngx-owl-carousel-o';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { AddressComponent } from './components/address/address.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +42,11 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     ShowCategoriesComponent,
     ViewBookComponent,
     UpdateBookComponent,
-    CategoriesComponent
+    CategoriesComponent,
+    SidebarComponent,
+    ProfileComponent,
+    AddressComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -50,8 +54,6 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     NgbModule,
     HttpClientModule,
     FormsModule,
-    BrowserAnimationsModule,
-    CarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
