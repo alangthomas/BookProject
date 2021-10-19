@@ -20,6 +20,9 @@ import { LoginComponent } from './components/login/login.component';
 import { ShowCategoriesComponent } from './components/show-categories/show-categories.component';
 import { CategoriesComponent } from './components/categories/categories.component';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,6 +46,8 @@ import { CategoriesComponent } from './components/categories/categories.componen
     NgbModule,
     HttpClientModule,
     FormsModule,
+    BrowserAnimationsModule,
+    CarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

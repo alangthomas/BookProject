@@ -2,7 +2,7 @@
 .jumbotron-fluid{
     height: 80px;
     /* margin: auto; */
-    /* padding: 10px; */
+    padding: 0px;
     
     background: linear-gradient(rgba(51, 50, 50, 0.5), rgba(48, 47, 47, 0.5)), url("src/assets/book.jpg");
     color: white;
@@ -13,7 +13,38 @@
     cursor: pointer;
 }
 
+.list-group{
+    max-height: 340px;
+    margin-bottom: 10px;
+    overflow:scroll;
+    -webkit-overflow-scrolling: touch;
+}
 
 body {
     background-color: rgb(238, 234, 234);
+}
+
+
+h2 {
+    color: #000;
+    font-size: 35px;
+    font-weight: 300;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    margin: 30px 0 80px;
+}
+h2::after {
+    content: "";
+    width: 100px;
+    position: absolute;
+    margin: 0 auto;
+    height: 4px;
+    background: rgba(0, 0, 0, 0.2);
+    left: 0;
+    right: 0;
+    bottom: -20px;
+}
+h2 b {
+    color: #ffc000;
 }

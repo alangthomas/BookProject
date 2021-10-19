@@ -23,4 +23,8 @@ export class DataService {
     return this.http.get<any>('http://localhost:54295/api/category')
   }
 
+  getBestseller(): Observable <any>{
+    return this.http.get<any>('http://localhost:54295/api/book/bestseller')
+  }
+
 }
