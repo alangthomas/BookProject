@@ -1,0 +1,24 @@
+.btn{
+    margin: 5px;
+    border: 2px solid white;
+} 
+
+.card-img{
+    width: 250px;
+}
+.jumbotron{
+    background-color: white;
+    
+    font-weight: 400;
+}
+
+.wishlist{
+    background-color: #FF8484;
+    color: white;
+    width: 120px;
+
+}
+
+.wishlist:hover{
+    background-color: #FF6666;
+}
