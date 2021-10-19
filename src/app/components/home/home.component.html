@@ -1,10 +1,70 @@
 <app-navbar></app-navbar>
 
-<div class="jumbotron jumbotron-fluid">
-    <div class="container header">
-        <h1 style="font-size: 60px;" >Welcome to The Book Store</h1>
-        <p style="font-size: 25px;"  class="lead">“A reader lives a thousand lives before he dies . . . The man who never reads lives only one.”</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid text-center">
+        <h1 style="font-size: 60px;">Welcome to The Book Store</h1>
+        <!--  <p style="font-size: 25px;"  class="lead">“A reader lives a thousand lives before he dies . . . The man who never reads lives only one.”</p> -->
+
     </div>
-</div>
 
 
+    <div class="container-fluid ">
+        <div class="row">
+            <div class="col-lg-1">
+
+            </div>
+
+            <aside class="col-lg-3" style="border-right: 1px solid lightgrey;" >
+                <h5 style="margin-left: 4px;">Browse by Category</h5>
+                <ul class="list-group" >
+                    <!-- <li class="list-group-item active"></li> -->
+                    <li (click)=onButtonClick(category.CategoryID) 
+                        class="list-group-item list-group-item-action" *ngFor='let category of categories'>{{category.CategoryName}}</li>
+                </ul>
+                <hr>
+            </aside>
+            <section class="col-lg-7" >
+            <ngb-carousel style="margin-top: 33px;" >
+                <ng-template ngbSlide>
+                    <img src="https://d2g9wbak88g7ch.cloudfront.net/bannerimages/46_inr.png" width="100%" alt="Delhi Metro">
+
+                </ng-template>
+                <ng-template ngbSlide>
+                    <img src="https://d2g9wbak88g7ch.cloudfront.net/bannerimages/38_inr.png" width="100%" alt="Bangalore Metro">
+
+                </ng-template>
+                <ng-template ngbSlide>
+                    <img src="https://d2g9wbak88g7ch.cloudfront.net/bannerimages/38_inr.png" width="100%" alt="Channai Metro">
+
+                </ng-template>
+                <ng-template ngbSlide>
+                    <img src="https://d2g9wbak88g7ch.cloudfront.net/bannerimages/38_inr.png" width="100%" alt="Jaipur Metro">
+
+                </ng-template>
+                <ng-template ngbSlide>
+                    <img src="https://d2g9wbak88g7ch.cloudfront.net/bannerimages/38_inr.png" width="100%" alt="Mumbai Metro">
+
+                </ng-template>
+            </ngb-carousel>
+        </section>
+        <div class="col-lg-1">
+
+        </div>
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>

@@ -31,5 +31,9 @@ export class DataService {
   deleteBook(id: any):Observable<any>{
     return this.http.delete<any>('http://localhost:54295/api/book/'+id);
   }
+  
+  getCategories(): Observable <any>{
+    return this.http.get<any>('http://localhost:54295/api/category')
+  }
 
 }
