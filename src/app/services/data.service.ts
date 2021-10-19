@@ -36,6 +36,7 @@ export class DataService {
     return this.http.get<any>('http://localhost:54295/api/category')
   }
 
+<<<<<<< HEAD
   getAllUsers(): Observable<any>{
     return this.http.get<any>('http://localhost:54295/api/user');
   }
@@ -47,4 +48,10 @@ export class DataService {
   disableUser(user: any): Observable<any>{
     return this.http.put<any>('http://localhost:54295/api/user/disable',user);
   }
+=======
+  getBestseller(): Observable <any>{
+    return this.http.get<any>('http://localhost:54295/api/book/bestseller')
+  }
+
+>>>>>>> b5445a57190bad6700096c055e07f193fb0b180f
 }

@@ -22,6 +22,9 @@ import { ViewBookComponent } from './components/view-book/view-book.component';
 import { UpdateBookComponent } from './components/update-book/update-book.component';
 import { CategoriesComponent } from './components/categories/categories.component';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,6 +50,8 @@ import { CategoriesComponent } from './components/categories/categories.componen
     NgbModule,
     HttpClientModule,
     FormsModule,
+    BrowserAnimationsModule,
+    CarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
