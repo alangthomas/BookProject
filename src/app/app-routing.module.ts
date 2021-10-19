@@ -10,8 +10,12 @@ import { LoginComponent } from './components/login/login.component';
 import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { WishlistComponent } from './components/wishlist/wishlist.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { AddressComponent } from './components/address/address.component';
 
 const routes: Routes = [
+  
   {path:'', redirectTo:'home', pathMatch:'full'},
   {path:'add-books', component:AddBooksComponent},
   {path:'home', component:HomeComponent},
@@ -23,6 +27,10 @@ const routes: Routes = [
   {path:'admin-dashboard',component:AdminDashboardComponent},
   {path: 'categories', component:CategoriesComponent},
   {path: 'wishlist/:userId', component:WishlistComponent},
+  {path: 'sidebar/:userId', component:SidebarComponent},
+  {path: 'profile/:userId', component:ProfileComponent},
+  {path: 'address/:userId', component:AddressComponent},
+  { path: '**', redirectTo: 'home', pathMatch: 'full' }, //always at the last line
 ];
 
 @NgModule({

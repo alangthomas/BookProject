@@ -19,6 +19,9 @@ import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { ShowCategoriesComponent } from './components/show-categories/show-categories.component';
 import { CategoriesComponent } from './components/categories/categories.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { AddressComponent } from './components/address/address.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +38,10 @@ import { CategoriesComponent } from './components/categories/categories.componen
     RegisterComponent,
     LoginComponent,
     ShowCategoriesComponent,
-    CategoriesComponent
+    CategoriesComponent,
+    SidebarComponent,
+    ProfileComponent,
+    AddressComponent,
   ],
   imports: [
     BrowserModule,
