@@ -11,7 +11,7 @@
                             src="https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/profile-pic-male_4811a1.svg">
                         <div class="DxGiT2">
                             <div class="_2QZ3Er">Hello,</div>
-                            <div class="_1ruvv2">userid = userId</div>
+                            <div class="_1ruvv2">{{user.Name}}</div>
                         </div>
                     </div>
                 </div>
@@ -73,7 +73,7 @@
 
 <div class="container" style="background-color: white; max-width: 75%; float: right; padding-top: 25px;">
     <div class="cart" style="padding-top: 3%; border-width: 2px; border: tomato;">
-        <h1>Hi "getname"</h1>
+        <h1>Hi {{user.Name}}</h1>
         <div class="_3E8aIl">
             <div class="_3c8nMP" style="padding-left: 5%;">
                 <div class="JLGkw1">
@@ -83,7 +83,7 @@
                         <div class="_1TlPi6 row">
                             <div class="_1YVqbV">
                                 <div class="_1Jqgld"><input type="text" class="_1w3ZZo _1YmvCG _2mFmU7 width:50%" name="firstName"
-                                        required="" disabled="" autocomplete="name" tabindex="1" value="Akshay"></div>
+                                        required="" disabled="" autocomplete="name" tabindex="1" value="{{user.Name}}"></div>
                             </div>
                         </div>
                         <div class="_1509Hs"> Your Gender </div>
@@ -120,7 +120,7 @@
                         <div class="_1TlPi6 row">
                             <div class="_1YVqbV">
                                 <div class="_1Jqgld"><input type="text" class="_1w3ZZo _1YmvCG _2mFmU7 width:50%" name="firstName"
-                                        required="" disabled="" autocomplete="name" tabindex="1" value="Akshay"></div>
+                                        required="" disabled="" autocomplete="name" tabindex="1" value="{{user.Email}}"></div>
                             </div>
                         </div>
                         
