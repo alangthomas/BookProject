@@ -25,6 +25,7 @@ export class AddBooksComponent implements OnInit {
     this.dataService.addBook(this.bookModel).subscribe(response => {
       this.message = "Book added successfully";
       console.log('SUCCESS');
+      this.router.navigate(['admin-dashboard'])
     })
   }
   
