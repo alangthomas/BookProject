@@ -8,13 +8,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 </head>
 
 <body>
     <div class="jumbotron jumbotron-fluid text-center">
-        <h1 style="font-size: 60px;">Welcome to The Book Store</h1>
-        <!--  <p style="font-size: 25px;"  class="lead">“A reader lives a thousand lives before he dies . . . The man who never reads lives only one.”</p> -->
-
+        <h1 style="font-size: 60px; ">Welcome to The Book Store</h1>
+        <!-- <p style="font-size: 25px;" class="lead">“A reader lives a thousand lives before he dies . . . The man who never
+            reads lives only one.”</p> -->
     </div>
 
 
@@ -24,46 +25,157 @@
 
             </div>
 
-            <aside class="col-lg-3" style="border-right: 1px solid lightgrey;" >
-                <h5 style="margin-left: 4px;">Browse by Category</h5>
-                <ul class="list-group" >
+            <aside class="col-lg-3">
+                <h5 style="margin-left: 4px; border-right: 1px solid lightgrey;">Browse by Category</h5>
+                <ul class="list-group">
                     <!-- <li class="list-group-item active"></li> -->
-                    <li (click)=onButtonClick(category.CategoryID) 
-                        class="list-group-item list-group-item-action" *ngFor='let category of categories'>{{category.CategoryName}}</li>
+                    <li (click)=onButtonClick(category.CategoryID) class="list-group-item list-group-item-action"
+                        *ngFor='let category of categories'>{{category.CategoryName}}</li>
                 </ul>
                 <hr>
+                <div class="container" style="margin-top: 20px; background-color: white;">
+                    <div class="row" style="padding-top: 25px;">
+                        <div class="col-sm">
+                            <img src="https://www.jiomart.com/images/cms/offers/1628868618_sbi_mob_lp.jpg" alt=""
+                                style="width: 100%; height: 80%;border: 2px solid grey;">
+                        </div>
+                    </div>
+                </div>
             </aside>
-            <section class="col-lg-7" >
-            <ngb-carousel style="margin-top: 33px;" >
-                <ng-template ngbSlide>
-                    <img src="https://d2g9wbak88g7ch.cloudfront.net/bannerimages/46_inr.png" width="100%" alt="Delhi Metro">
+            <section class="col-lg-7">
+                <ngb-carousel style="margin-top: 33px; border-left: 1px solid lightgrey;">
+                    <ng-template ngbSlide>
+                        <img src="https://d2g9wbak88g7ch.cloudfront.net/bannerimages/46_inr.png" width="100%"
+                            alt="Delhi Metro">
 
-                </ng-template>
-                <ng-template ngbSlide>
-                    <img src="https://d2g9wbak88g7ch.cloudfront.net/bannerimages/38_inr.png" width="100%" alt="Bangalore Metro">
+                    </ng-template>
+                    <ng-template ngbSlide>
+                        <img src="https://d2g9wbak88g7ch.cloudfront.net/bannerimages/38_inr.png" width="100%"
+                            alt="Bangalore Metro">
 
-                </ng-template>
-                <ng-template ngbSlide>
-                    <img src="https://d2g9wbak88g7ch.cloudfront.net/bannerimages/38_inr.png" width="100%" alt="Channai Metro">
+                    </ng-template>
+                    <ng-template ngbSlide>
+                        <img src="https://d2g9wbak88g7ch.cloudfront.net/bannerimages/38_inr.png" width="100%"
+                            alt="Channai Metro">
 
-                </ng-template>
-                <ng-template ngbSlide>
-                    <img src="https://d2g9wbak88g7ch.cloudfront.net/bannerimages/38_inr.png" width="100%" alt="Jaipur Metro">
+                    </ng-template>
+                    <ng-template ngbSlide>
+                        <img src="https://d2g9wbak88g7ch.cloudfront.net/bannerimages/38_inr.png" width="100%"
+                            alt="Jaipur Metro">
 
-                </ng-template>
-                <ng-template ngbSlide>
-                    <img src="https://d2g9wbak88g7ch.cloudfront.net/bannerimages/38_inr.png" width="100%" alt="Mumbai Metro">
+                    </ng-template>
+                    <ng-template ngbSlide>
+                        <img src="https://d2g9wbak88g7ch.cloudfront.net/bannerimages/38_inr.png" width="100%"
+                            alt="Mumbai Metro">
 
-                </ng-template>
-            </ngb-carousel>
-        </section>
-        <div class="col-lg-1">
+                    </ng-template>
+                </ngb-carousel>
 
-        </div>
+                <div class="container" style="background-color: lightblue; margin-top: 20px;">
+                    <div class="row" style="padding-top: 25px;">
+                        <div class="col-sm-4">
+                            <img src="https://image.freepik.com/free-vector/free-shipping-concept-illustration_114360-2308.jpg"
+                                alt="" style="width: 100%; height: 80%;">
+                        </div>
+                        <div class="col-sm-4">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcMEzYd3dJCWlfW7_q9p8NtOeWegXC3nMXNw&usqp=CAU"
+                                style="width: 100%; height: 80%;" alt="">
+                        </div>
+                        <div class="col-sm-4">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiunbL3e7RXMEF4PRXmFVN2FhtKevF3PotQA&usqp=CAU"
+                                style="width: 100%; height: 80%;" alt="">
+                        </div>
+                    </div>
+                </div>
 
+            </section>
+
+            <div class="container-flex">
+                <hr>
+                <div class="row">
+                    <div class="col-lg-1">
+                    </div>
+                    <div class="col-lg-10">
+                        <h2>Trending <b>Products</b></h2>
+                        <div class="container-flex" style="padding: 20px;">
+                            <div class="row">
+                                <div class="col-sm-3" style="margin-bottom : 30px ;"
+                                    *ngFor='let bestseller of bestsellers'>
+                                    <!-- <div class="card" style="border-radius: 7px;">
+                                        <div class="card-body">
+                                            <img class="card-img-top" src="assets/book.jpg"
+                                                alt="Card image cap"><br><br>
+                                            <h5 class="card-title">{{bestseller.Title}}</h5><br>
+                                            <h6 class="card-title">{{bestseller.Author}}</h6>
+                                            <p class="card-text">{{bestseller.Description}}</p>
+                                            <h1>{{ bestseller.Price | currency: 'INR' }} </h1>
+                                            <button (click)=onCartClick(bestseller.Id)
+                                                class="btn btn-primary btn-block">Add to Cart</button>
+                                            <button (click)=onWishlistClick(bestseller.Id)
+                                                class="btn btn-primary btn-block">Add to wishlist</button>
+                                            <button (click)=onViewClick(bestseller.Id)
+                                                class="btn btn-primary btn-block">View</button>
+                                        </div>
+                                    </div> -->
+                                    <!-- Card -->
+                                    <div class="card">
+
+                                        <div class="view zoom overlay">
+                                            
+                                            <h4 class="mb-0"><span
+                                                    class="badge badge-primary badge-pill badge-news">Sale</span></h4>
+                                            <a href="#!">
+                                                <div class="mask">
+                                                    <img class="img-fluid w-100" 
+                                                        src="https://images-na.ssl-images-amazon.com/images/I/71tbalAHYCL.jpg">
+                                                    <div class="mask rgba-black-slight"></div>
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <div class="card-body text-center">
+
+                                            <h5>{{bestseller.Title}}</h5>
+                                            <p class="small text-muted text-uppercase mb-2">bestseller</p>
+                                            
+                                            <hr>
+                                            <h6 class="mb-3">
+                                                <span class="text-danger mr-1">{{bestseller.Price | currency: 'INR'}}</span>
+                                                <span class="text-grey"><s>$100</s></span>
+                                            </h6>
+
+                                            <button type="button" class="btn btn-primary btn-sm mr-1 mb-2" (click)=onCartClick(bestseller.Id)>
+                                                <i class="fas fa-shopping-cart pr-2"></i>Add to cart
+                                            </button>
+                                            <button type="button" class="btn btn-secondary btn-sm mr-1 mb-2" (click)=onViewClick(bestseller.Id) >
+                                                <i class="fas fa-info-circle pr-2"></i>Details
+                                            </button>
+                                            <button type="button"
+                                                class="btn btn-danger btn-sm px-3 mb-2 material-tooltip-main"
+                                                data-toggle="tooltip" data-placement="top" title="Add to wishlist" (click)=onWishlistClick(bestseller.Id) >
+                                                <i class="far fa-heart"></i>
+                                            </button>
+
+                                        </div>
+
+                                    </div>
+                                    <!-- Card -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-1">
+                    </div>
+                </div>
+
+
+                <div class="col-lg-1">
+
+                </div>
+
+            </div>
         </div>
     </div>
-
 
 </body>
 

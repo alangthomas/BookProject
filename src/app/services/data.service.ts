@@ -51,6 +51,7 @@ export class DataService {
     return this.http.get<any>(`${this.ENDPOINTS.WISHLIST_URL + userId}`)
   }
 
+
   RemoveFromWishlistById(userId:any, bookId:any): Observable<any>{
     return this.http.get<any>(`${this.ENDPOINTS.WISHLIST_REMOVE_ID +'/'+userId+'/'+bookId}`);
   }
@@ -65,4 +66,9 @@ export class DataService {
   getAddressById(userId:any):Observable<any>{
     return this.http.get<any>(`${this.ENDPOINTS.ADDRESS_URL +'/'+userId}`)
   }
+
+  getBestseller(): Observable <any>{
+    return this.http.get<any>('http://localhost:54295/api/book/bestseller')
+  }
+
 }

@@ -46,6 +46,7 @@ import { AddressComponent } from './components/address/address.component';
     SidebarComponent,
     ProfileComponent,
     AddressComponent,
+
   ],
   imports: [
     BrowserModule,
