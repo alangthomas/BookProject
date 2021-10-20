@@ -1,21 +1,23 @@
 <app-navbar></app-navbar>
+
+
 <div class="row">
     <nav class="admin__nav col-lg-3 ">
         <ul class="menu">
             <li class="menu__item">
-                <a class="menu__link" routerLink="admin-dashboard">View Users</a>
+                <a class="menu__link" routerLink="/admin-dashboard">View Users</a>
             </li>
             <li class="menu__item">
-                <a class="menu__link" routerLink="add-category">Add Category</a>
+                <a class="menu__link" routerLink="/add-category">Add Category</a>
             </li>
             <li class="menu__item">
-                <a class="menu__link" routerLink="add-books">Add Book</a>
+                <a class="menu__link" routerLink="/add-books">Add Book</a>
             </li>
             <li class="menu__item">
                 <a class="menu__link" routerLink="#">Add Coupon</a>
             </li>
             <li class="menu__item">
-                <a class="menu__link" routerLink="#">Foobars</a>
+                <a class="menu__link" routerLink="#">Orders</a>
             </li>
             <li class="menu__item">
                 <a class="menu__link" routerLink="#">Plumbuses</a>
@@ -23,7 +25,7 @@
         </ul>
     </nav>
     <div class="div container text-center col-lg-9">
-        <table ngIf="User" class="table   table-bordered table-hover" style="width: 60%;">
+        <table *ngIf="true" class="table   table-bordered table-hover" style="width: 60%;">
             <thead class="thead-dark text-center">
                 <tr>
                     <th>Id</th>
@@ -32,7 +34,7 @@
                     <th>Active</th>
                     <th></th>
                 </tr>
-            </thead>
+            </thead> 
             <tbody style="background-color: white; ">
                 <tr *ngFor="let user of users">
                     <td>{{user.UserId}}</td>
@@ -40,13 +42,20 @@
                     <td>{{user.Email}}</td>
                     <td>{{user.Active}}</td>
                     <td>
-                        <button  *ngIf="!user.Active" type="button" class="btn btn-success btn-sm" (click)='onActivate(user)' onClick="window.location.reload();">Activate</button>
-                        <button *ngIf="user.Active" type="button" class="btn btn-warning  btn-sm" (click)='onDisable(user)' onClick="window.location.reload();">Disable</button>
+                        <button *ngIf="!user.Active" type="button" class="btn btn-success btn-sm"
+                            (click)='onActivate(user)' onClick="window.location.reload();">Activate</button>
+                        <button *ngIf="user.Active" type="button" class="btn btn-warning  btn-sm"
+                            (click)='onDisable(user)' onClick="window.location.reload();">Disable</button>
+                        <button *ngIf="user.Active" type = "button" class="btn btn-primary btn-sm"
+                                (click)='onViewOrders(user.UserId)'>View Orders</button>
                     </td>
 
                 </tr>
             </tbody>
         </table>
+    </div>
+    <div class="div container text-center col-lg-9">
+
     </div>
 </div>
 <!-- <div class="jumbotron jumbotron-fluid">

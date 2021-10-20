@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {  DataService } from 'src/app/services/data.service';
-import { User }  from 'src/user';
+
 
 @Component({
   selector: 'app-admin-dashboard',
@@ -25,6 +25,10 @@ export class AdminDashboardComponent implements OnInit {
 
   onDisable(user:any){
     this.dataService.disableUser(user).subscribe()
+  }
+
+  onViewOrders(id:any){
+    console.log(id);
   }
 
 }
