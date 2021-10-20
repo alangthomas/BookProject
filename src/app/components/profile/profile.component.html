@@ -1,4 +1,5 @@
 <app-navbar></app-navbar>
+
 <div style="float: left; width: 24%; padding-top: 25px; background-color: white;">
     <!-- <app-sidebar></app-sidebar> -->
 
@@ -51,31 +52,79 @@
                         </div>
                         <div class="HDpecx"></div>
                     </div>
-                    
+                    <div>
+                        <div class="_1K5fB-">
+
+                            <a href="/wishlist/{{userId}}">
+                            <div class="_15sjxS row"><img class="_3GARO3"
+                                    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMyIgaGVpZ2h0PSIyMiIgdmlld0JveD0iMCAwIDIzIDIyIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC05LjY5NCAtOSkiPjxlbGxpcHNlIGN4PSIyMC41NTciIGN5PSIyMCIgcng9IjIwLjU1NyIgcnk9IjIwIi8+PHBhdGggZD0iTTcgNmgyOHYyOEg3eiIvPjxwYXRoIGZpbGw9IiMyODc0RjAiIGZpbGwtcnVsZT0ibm9uemVybyIgZD0iTTMxLjUgMjd2MS4xNjdhMi4zNCAyLjM0IDAgMCAxLTIuMzMzIDIuMzMzSDEyLjgzM2EyLjMzMyAyLjMzMyAwIDAgMS0yLjMzMy0yLjMzM1YxMS44MzNBMi4zMzMgMi4zMzMgMCAwIDEgMTIuODMzIDkuNWgxNi4zMzRhMi4zNCAyLjM0IDAgMCAxIDIuMzMzIDIuMzMzVjEzSDIxYTIuMzMzIDIuMzMzIDAgMCAwLTIuMzMzIDIuMzMzdjkuMzM0QTIuMzMzIDIuMzMzIDAgMCAwIDIxIDI3aDEwLjV6TTIxIDI0LjY2N2gxMS42Njd2LTkuMzM0SDIxdjkuMzM0em00LjY2Ny0yLjkxN2MtLjk3IDAtMS43NS0uNzgyLTEuNzUtMS43NXMuNzgtMS43NSAxLjc1LTEuNzVjLjk2OCAwIDEuNzUuNzgyIDEuNzUgMS43NXMtLjc4MiAxLjc1LTEuNzUgMS43NXoiLz48L2c+PC9zdmc+">
+                                <div class="_3vaeIJ">MY WISHLIST</div>
+                            </div>
+                        </a>
+                        </div>
+                        <div class="HDpecx"></div>
+                    </div>
                     <div class="HDpecx"></div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 <div class="container" style="background-color: white; max-width: 75%; float: right; padding-top: 25px;">
     <div class="cart" style="padding-top: 3%; border-width: 2px; border: tomato;">
-        <h1>Wishlist</h1>
-    </div>
-    <div class="cart">
-        
-        <div class="products">
-            <div class="product" *ngFor="let book of books">
-                <img src="{{book.Image}}">
-                <div class="product-info">
-                    <h3 class="product-name">{{book.Title}}</h3>
-                    <h4 class="product-price">{{ book.Price | currency: 'INR' }} </h4>
-                    <button type="button" class="btn btn-danger btn-lg"
-                        style="	position: absolute;bottom: 80px;right: 20px;" (click)="onMoveToCartButton(book.Id)">Move
-                        to Cart</button>
-                    <button type="button" class="btn btn-danger btn-lg "
-                        style="	position: absolute;bottom: 20px;right: 20px;"
-                        (click)="onRemoveButton(book.Id)">Remove</button>
+        <h1>Hi "getname"</h1>
+        <div class="_3E8aIl">
+            <div class="_3c8nMP" style="padding-left: 5%;">
+                <div class="JLGkw1">
+                    <div class="_1cyhik"><span class="_1mHr1S">Personal Information</span><span
+                            class="oKZoMV">Edit</span></div>
+                    <form>
+                        <div class="_1TlPi6 row">
+                            <div class="_1YVqbV">
+                                <div class="_1Jqgld"><input type="text" class="_1w3ZZo _1YmvCG _2mFmU7 width:50%" name="firstName"
+                                        required="" disabled="" autocomplete="name" tabindex="1" value="Akshay"></div>
+                            </div>
+                        </div>
+                        <div class="_1509Hs"> Your Gender </div>
+                        <div><label for="Male" class="_2Fn-Ln _2fnqkz _2hH1hC _2LcXZ- _3iI7Qn _3L7Pww"><input
+                                    disabled="" type="radio" class="_3DAmyP" name="gender" readonly="" id="Male"
+                                    checked="">
+                                <div class="_1XFPmK"></div>
+                                <div class="_2jIO64"><span disabled="" tabindex="3">Male</span></div>
+                            </label><label for="Female" class="_2Fn-Ln _2fnqkz _2LcXZ- _3iI7Qn"><input disabled=""
+                                    type="radio" class="_3DAmyP" name="gender" readonly="" id="Female">
+                                <div class="_1XFPmK"></div>
+                                <div class="_2jIO64"><span disabled="" tabindex="4">Female</span></div>
+                            </label></div>
+                    </form>
+                </div>
+
+                <div class="JLGkw1">
+                    <div class="_1cyhik"><span class="_1mHr1S">Mobile</span><span
+                            class="oKZoMV">Edit</span></div>
+                    <form>
+                        <div class="_1TlPi6 row">
+                            <div class="_1YVqbV">
+                                <div class="_1Jqgld"><input type="text" class="_1w3ZZo _1YmvCG _2mFmU7 width:50%" name="firstName"
+                                        required="" disabled="" autocomplete="name" tabindex="1" value="Akshay"></div>
+                            </div>
+                        </div>
+                        
+                    </form>
+                </div>
+                <div class="JLGkw1">
+                    <div class="_1cyhik"><span class="_1mHr1S">Email</span><span
+                            class="oKZoMV">Edit</span></div>
+                    <form>
+                        <div class="_1TlPi6 row">
+                            <div class="_1YVqbV">
+                                <div class="_1Jqgld"><input type="text" class="_1w3ZZo _1YmvCG _2mFmU7 width:50%" name="firstName"
+                                        required="" disabled="" autocomplete="name" tabindex="1" value="Akshay"></div>
+                            </div>
+                        </div>
+                        
+                    </form>
                 </div>
             </div>
         </div>

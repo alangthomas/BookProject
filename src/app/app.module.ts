@@ -24,6 +24,12 @@ import { CategoriesComponent } from './components/categories/categories.componen
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { BooksComponent } from './components/books/books.component';
+
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { AddressComponent } from './components/address/address.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +48,13 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     ShowCategoriesComponent,
     ViewBookComponent,
     UpdateBookComponent,
-    CategoriesComponent
+    CategoriesComponent,
+    BooksComponent,
+    SidebarComponent,
+    ProfileComponent,
+    AddressComponent,
+    FooterComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -50,8 +62,6 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     NgbModule,
     HttpClientModule,
     FormsModule,
-    BrowserAnimationsModule,
-    CarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

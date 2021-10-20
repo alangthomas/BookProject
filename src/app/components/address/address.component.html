@@ -1,0 +1,105 @@
+<!-- <body>
+    
+<div class="flex-box" *ngFor = "let address of addresses">
+    {{address.AddressStr}}
+</div>
+
+</body> -->
+<app-navbar></app-navbar>
+<div style="float: left; width: 25%; padding-top: 25px; background-color: white;">
+    <!-- <app-sidebar></app-sidebar> -->
+
+    <div class="continer" style="max-width: 100%; height: 100vh;">
+        <div class="_3SyQ96">
+            <div>
+                <div class="_3E8aIl">
+                    <div class="nUdcwy row"><img class="_3X2gOt" height="50px" width="50px"
+                            src="https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/profile-pic-male_4811a1.svg">
+                        <div class="DxGiT2">
+                            <div class="_2QZ3Er">Hello,</div>
+                            <div class="_1ruvv2">userid = userId</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="_3E8aIl _3AJE9A">
+                    <div>
+                        <div class="_1K5fB-">
+                            <div class="_15sjxS row"><img class="_3GARO3"
+                                    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDI0IDE4Ij48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC04LjY5NCAtMTEpIj48ZWxsaXBzZSBjeD0iMjAuNTU3IiBjeT0iMjAiIHJ4PSIyMC41NTciIHJ5PSIyMCIvPjxwYXRoIGZpbGw9IiMyODc0RjEiIGQ9Ik05IDExdjE3LjEwOGMwIC40OTMuNDEuODkyLjkxOC44OTJoNC45M3YtNS4yNTdoLTMuMDMzbDQuOTEyLTQuNzcgNC45NzIgNC44M2gtMy4wMzVWMjloMTIuNDE3Yy41MDcgMCAuOTE4LS40LjkxOC0uODkyVjExSDl6Ii8+PC9nPjwvc3ZnPg=="><a
+                                    class="_16v3bB" href="/account/orders">MY ORDERS<span class="_1p0cCT"></span></a>
+                            </div>
+                        </div>
+                        <div class="HDpecx"></div>
+                    </div>
+                    <div>
+                        <div class="_1K5fB-">
+                            <div class="_15sjxS row"><img class="_3GARO3"
+                                    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMiIgaGVpZ2h0PSIyMSIgdmlld0JveD0iMCAwIDIyIDIxIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC05LjY5NCAtMTApIj48cGF0aCBmaWxsPSIjMjg3NEYwIiBkPSJNMTQuMjc1IDIyLjcwNGMyLjI3Mi0uNDEyIDQuMzQ3LS42MTggNi4yMjUtLjYxOCAxLjg3OCAwIDMuOTUzLjIwNiA2LjIyNS42MThhNS4xNSA1LjE1IDAgMCAxIDQuMjMgNS4wNjhWMzFoLTIwLjkxdi0zLjIyOGE1LjE1IDUuMTUgMCAwIDEgNC4yMy01LjA2OHptMS4yNzQtNy43MjRjMC0yLjU4IDIuMTYzLTQuNjczIDQuODMyLTQuNjczIDIuNjY3IDAgNC44MyAyLjA5MiA0LjgzIDQuNjczIDAgMi41OC0yLjE2MyA0LjY3My00LjgzIDQuNjczLTIuNjcgMC00LjgzMy0yLjA5Mi00LjgzMy00LjY3M3oiLz48ZWxsaXBzZSBjeD0iMjAuNTU3IiBjeT0iMjAiIHJ4PSIyMC41NTciIHJ5PSIyMCIvPjwvZz48L3N2Zz4=">
+                                <div class="_3vaeIJ">ACCOUNT SETTINGS</div>
+                            </div>
+                            <div><a href="/profile/{{userId}}">
+                                    <div class="NS64GK _1MZ7_i">Profile Information</div>
+                                </a><a href="/address/getByUserId/{{userId}}">
+                                    <div class="NS64GK _1MZ7_i">Manage Addresses</div>
+
+                                </a>
+                            </div>
+                        </div>
+                        <div class="HDpecx"></div>
+                    </div>
+                    <div>
+                        <div class="_1K5fB-">
+
+                            <a href="/cart/{{userId}}">
+                                <div class="_15sjxS row"><img class="_3GARO3"
+                                        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMyIgaGVpZ2h0PSIyMiIgdmlld0JveD0iMCAwIDIzIDIyIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC05LjY5NCAtOSkiPjxlbGxpcHNlIGN4PSIyMC41NTciIGN5PSIyMCIgcng9IjIwLjU1NyIgcnk9IjIwIi8+PHBhdGggZD0iTTcgNmgyOHYyOEg3eiIvPjxwYXRoIGZpbGw9IiMyODc0RjAiIGZpbGwtcnVsZT0ibm9uemVybyIgZD0iTTMxLjUgMjd2MS4xNjdhMi4zNCAyLjM0IDAgMCAxLTIuMzMzIDIuMzMzSDEyLjgzM2EyLjMzMyAyLjMzMyAwIDAgMS0yLjMzMy0yLjMzM1YxMS44MzNBMi4zMzMgMi4zMzMgMCAwIDEgMTIuODMzIDkuNWgxNi4zMzRhMi4zNCAyLjM0IDAgMCAxIDIuMzMzIDIuMzMzVjEzSDIxYTIuMzMzIDIuMzMzIDAgMCAwLTIuMzMzIDIuMzMzdjkuMzM0QTIuMzMzIDIuMzMzIDAgMCAwIDIxIDI3aDEwLjV6TTIxIDI0LjY2N2gxMS42Njd2LTkuMzM0SDIxdjkuMzM0em00LjY2Ny0yLjkxN2MtLjk3IDAtMS43NS0uNzgyLTEuNzUtMS43NXMuNzgtMS43NSAxLjc1LTEuNzVjLjk2OCAwIDEuNzUuNzgyIDEuNzUgMS43NXMtLjc4MiAxLjc1LTEuNzUgMS43NXoiLz48L2c+PC9zdmc+">
+                                    <div class="_3vaeIJ">MY CART</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="HDpecx"></div>
+                        <div class="_1K5fB-">
+
+                            <a href="/wishlist/{{userId}}">
+                                <div class="_15sjxS row"><img class="_3GARO3"
+                                        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMyIgaGVpZ2h0PSIyMiIgdmlld0JveD0iMCAwIDIzIDIyIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC05LjY5NCAtOSkiPjxlbGxpcHNlIGN4PSIyMC41NTciIGN5PSIyMCIgcng9IjIwLjU1NyIgcnk9IjIwIi8+PHBhdGggZD0iTTcgNmgyOHYyOEg3eiIvPjxwYXRoIGZpbGw9IiMyODc0RjAiIGZpbGwtcnVsZT0ibm9uemVybyIgZD0iTTMxLjUgMjd2MS4xNjdhMi4zNCAyLjM0IDAgMCAxLTIuMzMzIDIuMzMzSDEyLjgzM2EyLjMzMyAyLjMzMyAwIDAgMS0yLjMzMy0yLjMzM1YxMS44MzNBMi4zMzMgMi4zMzMgMCAwIDEgMTIuODMzIDkuNWgxNi4zMzRhMi4zNCAyLjM0IDAgMCAxIDIuMzMzIDIuMzMzVjEzSDIxYTIuMzMzIDIuMzMzIDAgMCAwLTIuMzMzIDIuMzMzdjkuMzM0QTIuMzMzIDIuMzMzIDAgMCAwIDIxIDI3aDEwLjV6TTIxIDI0LjY2N2gxMS42Njd2LTkuMzM0SDIxdjkuMzM0em00LjY2Ny0yLjkxN2MtLjk3IDAtMS43NS0uNzgyLTEuNzUtMS43NXMuNzgtMS43NSAxLjc1LTEuNzVjLjk2OCAwIDEuNzUuNzgyIDEuNzUgMS43NXMtLjc4MiAxLjc1LTEuNzUgMS43NXoiLz48L2c+PC9zdmc+">
+                                    <div class="_3vaeIJ">MY WISHLIST</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="HDpecx"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container" style="background-color: rgb(214, 215, 219); max-width: 75%; float: right; padding-top: 25px; padding-left: 100px;padding-right: 100px;border-left: 50% ;">
+    <div class="contianer" style="" *ngFor="let address of addresses">
+        <div class="float:left"
+            style=" padding-left: 100px; padding-top: 15px;padding-bottom: 15px; position: relative; left: 0px; top: 0px;background-color: ; ">
+            <div class="panel problem-block "
+                style="padding:10%;padding-left: 30 ;rgb(99, 98, 196);margin-bottom:0px;border-radius: 10px;box-shadow:2px 2px 15px 0 rgba(46,61,73,.4); min-height: 200px; background-color: rgba(232, 242, 252, 0.904);">
+                <div style="padding:10%;padding-left: 30 ;rgb(99, 98, 196);margin-bottom:0px;border-radius: 10px;box-shadow:2px 2px 15px 0 rgba(46,61,73,.4); text-align: center;">
+                    {{address.AddressStr}}
+                </div>
+                <label for="">
+                    <div style="padding-top: 50px; padding-left: 30px; padding-right: 20px ; float: left;">
+                        <button class="btn btn-info btn-lg">Edit</button>
+                    </div>
+                    <div style="padding-top: 50px; padding-right: 30px;padding-left: 20px; float: right;">
+                        <button class="btn btn-danger btn-lg"
+                            style="position: relative; right: 0px; bottom: 0px; ">Delete</button>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="1" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Default checkbox
+                        </label>
+                    </div>
+                </label>
+            </div>
+        </div>
+    </div>
+</div>

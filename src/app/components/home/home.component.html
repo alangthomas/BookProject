@@ -99,7 +99,7 @@
                         <h2>Trending <b>Products</b></h2>
                         <div class="container-flex" style="padding: 20px;">
                             <div class="row">
-                                <div class="col-sm-3" style="margin-bottom : 30px ;"
+                                <div class="col-sm-2" style="margin-bottom : 30px ;"
                                     *ngFor='let bestseller of bestsellers'>
                                     <!-- <div class="card" style="border-radius: 7px;">
                                         <div class="card-body">
@@ -122,8 +122,8 @@
 
                                         <div class="view zoom overlay">
                                             
-                                            <h4 class="mb-0"><span
-                                                    class="badge badge-primary badge-pill badge-news">Sale</span></h4>
+                                            <!-- <h4 class="mb-0"><span
+                                                    class="badge badge-primary badge-pill badge-news">Sale</span></h4> -->
                                             <a href="#!">
                                                 <div class="mask">
                                                     <img class="img-fluid w-100" 
@@ -136,6 +136,7 @@
                                         <div class="card-body text-center">
 
                                             <h5>{{bestseller.Title}}</h5>
+                                            <p class="small text-uppercase mb-2">{{bestseller.Author}}</p>
                                             <p class="small text-muted text-uppercase mb-2">bestseller</p>
                                             
                                             <hr>
@@ -180,3 +181,4 @@
 </body>
 
 </html>
+<app-footer></app-footer>

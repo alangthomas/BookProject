@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';  
+import { Book } from 'src/app/book';
 import { DataService } from 'src/app/services/data.service';
-import { OwlOptions } from 'ngx-owl-carousel-o';
+
 
 
 @Component({
@@ -41,10 +42,11 @@ export class HomeComponent implements OnInit {
 }
 
 onButtonClick(catID:number){
-  this.router.navigate(['/showBooks',catID]);
+  this.router.navigate(['/books',catID]);
 }
 
 onCartClick(BookID:number){
+  this.dataService.addToCart(localStorage.getItem('userId'),BookID)
   this.router.navigate(['/cart',BookID])
 }
 
