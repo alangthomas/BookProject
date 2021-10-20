@@ -26,6 +26,12 @@ export class NavbarComponent implements OnInit {
 
   onSubmit(data:any){
     console.log(data)
+    if(data.select == '1' || data.select == '3'){
+      this.router.navigate(['/search-books',data.select,data.searchtext])
+    }
+    else{
+      this.router.navigate(['/search-categories', data.searchtext])
+    }
   }
 
 }

@@ -30,6 +30,8 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { AddressComponent } from './components/address/address.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { SearchBooksComponent } from './components/search-books/search-books.component';
+import { SearchCategoriesComponent } from './components/search-categories/search-categories.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +56,8 @@ import { FooterComponent } from './components/footer/footer.component';
     ProfileComponent,
     AddressComponent,
     FooterComponent,
+    SearchBooksComponent,
+    SearchCategoriesComponent,
 
   ],
   imports: [

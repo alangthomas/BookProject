@@ -38,18 +38,19 @@ onButtonClick(catId: any){
 }
 
 onCartClick(BookID:number){
-  this.router.navigate(['/cart',BookID])
+  this.dataservice.addToCart(localStorage.getItem('userId'),BookID)
+  this.router.navigate(['/cart',localStorage.getItem('userId')])
 }
 
 
 onWishlistClick(BookID:number){
-  this.router.navigate(['/wishlist',BookID])
+  this.dataservice.addToWishlist(localStorage.getItem('userId'),BookID)
+  this.router.navigate(['/wishlist',localStorage.getItem('userId')])
 }
 
 
 onViewClick(BookID:number){
-  this.router.navigate(['/view',BookID])
+  this.router.navigate(['/view-book',BookID])
 }
-
 
 }
