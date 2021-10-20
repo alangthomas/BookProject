@@ -7,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
-
+  public userId :any;
+  public user:any;
   ngOnInit(): void {
+    this.userId = 0;
   }
 
 }

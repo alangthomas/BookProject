@@ -29,9 +29,11 @@ import { BooksComponent } from './components/books/books.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { AddressComponent } from './components/address/address.component';
+import { OrderComponent } from './components/order/order.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SearchBooksComponent } from './components/search-books/search-books.component';
 import { SearchCategoriesComponent } from './components/search-categories/search-categories.component';
+
 
 @NgModule({
   declarations: [
@@ -55,10 +57,10 @@ import { SearchCategoriesComponent } from './components/search-categories/search
     SidebarComponent,
     ProfileComponent,
     AddressComponent,
+    OrderComponent,
     FooterComponent,
     SearchBooksComponent,
     SearchCategoriesComponent,
-
   ],
   imports: [
     BrowserModule,
