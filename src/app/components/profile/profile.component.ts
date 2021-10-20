@@ -11,7 +11,7 @@ export class ProfileComponent implements OnInit {
 
   public userId: any;
   public user : any;
-  public addresses :any;
+  public address :any;
   constructor(private dataService: DataService, private activatedRoute: ActivatedRoute, private router: Router) {
     this.userId = activatedRoute.snapshot.paramMap.get('userId');
   }
@@ -20,6 +20,10 @@ export class ProfileComponent implements OnInit {
     this.dataService.getUserById(this.userId).subscribe(response=>{
       this.user = response;
       console.log(response);
+      this.dataService.getFirstAddressById(this.userId).subscribe(response=>{
+        this.address = response;
+        console.log(response)
+      })
     })
   }
 

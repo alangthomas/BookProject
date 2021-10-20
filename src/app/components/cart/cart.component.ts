@@ -16,6 +16,7 @@ export class CartComponent implements OnInit {
   public userId: any;
   public totalAmount: number = 0;
   public totalItem: number = 0;
+  public quantity : number = 0;
   public helperString: string = "";
   constructor(private dataService: DataService, private activatedRoute: ActivatedRoute, private router: Router) {
     this.userId = activatedRoute.snapshot.paramMap.get('userId');
@@ -29,7 +30,10 @@ export class CartComponent implements OnInit {
       });
     })
   }
-  onRemoveButton(bookId: any) {
+  onChange(){
+    console.log(this.quantity);
+  }
+    onRemoveButton(bookId: any) {
     this.dataService.RemoveFromCartById(this.userId, bookId).subscribe(response => {
       console.log(response);
       this.totalAmount = 0;

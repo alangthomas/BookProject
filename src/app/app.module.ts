@@ -21,9 +21,15 @@ import { ShowCategoriesComponent } from './components/show-categories/show-categ
 import { ViewBookComponent } from './components/view-book/view-book.component';
 import { UpdateBookComponent } from './components/update-book/update-book.component';
 import { CategoriesComponent } from './components/categories/categories.component';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { BooksComponent } from './components/books/books.component';
+
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { AddressComponent } from './components/address/address.component';
+import { OrderComponent } from './components/order/order.component';
 
 @NgModule({
   declarations: [
@@ -43,9 +49,11 @@ import { AddressComponent } from './components/address/address.component';
     ViewBookComponent,
     UpdateBookComponent,
     CategoriesComponent,
+    BooksComponent,
     SidebarComponent,
     ProfileComponent,
     AddressComponent,
+    OrderComponent,
 
   ],
   imports: [

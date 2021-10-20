@@ -14,7 +14,7 @@ export class WishlistComponent implements OnInit {
   public userId: any;
   public totalAmount: number = 0;
   public totalItem: number = 0;
-  public helperString: string = "";
+  public user: any;
   constructor(private dataService: DataService, private activatedRoute: ActivatedRoute, private router: Router) {
     this.userId = activatedRoute.snapshot.paramMap.get('userId');
   }
@@ -26,6 +26,11 @@ export class WishlistComponent implements OnInit {
         this.totalAmount = this.totalAmount + item.Price;
         this.totalItem++;
       });
+      this.dataService.getUserById(this.userId).subscribe(response=>{
+        this.user = response;
+        console.log(response);
+      })
+
     })
   }
   onRemoveButton(bookId: any) {

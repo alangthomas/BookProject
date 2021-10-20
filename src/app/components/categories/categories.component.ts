@@ -24,7 +24,7 @@ export class CategoriesComponent implements OnInit {
 
 
  onButtonClick(catID:number){
-    this.router.navigate(['/showBooks',catID]);
+    this.router.navigate(['/books',catID]);
   }
 
 }

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { ThrowStmt } from '@angular/compiler';
 @Injectable({
   providedIn: 'root'
 })
@@ -71,7 +72,19 @@ export class DataService {
   getBestseller(): Observable <any>{
     return this.http.get<any>('http://localhost:54295/api/book/bestseller')
   }
+
   getUserById(userId:any):Observable<any>{
     return this.http.get<any>(`${this.ENDPOINTS.GET_USER + '/' +userId}`)
+  }
+
+  getBooksByCategoryId(catId: any): Observable <any>{
+    return this.http.get<any>('http://localhost:54295/api/book/catid/'+ catId)
+  }
+
+  getFirstAddressById(userId:any):Observable<any>{
+    return this.http.get<any>('http://localhost:54295/api/address/'+ userId)
+  }
+  getOrderById(userId:any):Observable<any>{
+    return this.http.get<any>('http://localhost:54295/api/order/user/'+ userId)
   }
 }

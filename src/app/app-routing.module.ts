@@ -11,10 +11,12 @@ import { AdminDashboardComponent } from './components/admin-dashboard/admin-dash
 import { ViewBookComponent } from './components/view-book/view-book.component';
 import{  UpdateBookComponent } from './components/update-book/update-book.component';
 import { CategoriesComponent } from './components/categories/categories.component';
+import { BooksComponent } from './components/books/books.component';
 import { WishlistComponent } from './components/wishlist/wishlist.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { AddressComponent } from './components/address/address.component';
+import { OrderComponent } from './components/order/order.component';
 
 const routes: Routes = [
   
@@ -30,10 +32,12 @@ const routes: Routes = [
   {path: 'view-book/:Id', component: ViewBookComponent},
   {path: 'view-book/:Id/updatebook', component: UpdateBookComponent},
   {path: 'categories', component:CategoriesComponent},
+  {path : 'books/:categoryId', component:BooksComponent},
   {path: 'wishlist/:userId', component:WishlistComponent},
   {path: 'sidebar/:userId', component:SidebarComponent},
   {path: 'profile/:userId', component:ProfileComponent},
   {path: 'address/getByUserId/:userId', component:AddressComponent},
+  {path: 'order/:userId', component:OrderComponent},
   { path: '**', redirectTo: 'home', pathMatch: 'full' }, //always at the last line
 ];
 
