@@ -21,9 +21,10 @@ export class LoginComponent implements OnInit {
     console.log(this.userModel);
     this.authService.login(this.userModel).subscribe( response => {
       console.log(response);
-      if( this.userModel.Email && response =='Successfully Loggedin'){
+      if(response.Email != undefined){
       // localStorage.setItem("name",this.userModel.name);
-      localStorage.setItem("user",this.userModel.Email);
+      localStorage.setItem("user",response.Email);
+      localStorage.setItem("userId",response.UserId);
       this.alertClass = "alert-success" ;
       this.router.navigate([''])
       }

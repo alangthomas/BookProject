@@ -29,6 +29,7 @@ import { BooksComponent } from './components/books/books.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { AddressComponent } from './components/address/address.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { AddressComponent } from './components/address/address.component';
     SidebarComponent,
     ProfileComponent,
     AddressComponent,
+    FooterComponent,
 
   ],
   imports: [

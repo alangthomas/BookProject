@@ -24,6 +24,10 @@ body {
     background-color: rgb(238, 234, 234);
 }
 
+.col-sm-3{
+    width: 125px;
+}
+
 
 h2 {
     color: #000;

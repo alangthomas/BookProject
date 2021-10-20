@@ -24,7 +24,7 @@
             
 
         </ul>
-        <ul class="navbar-nav " style="margin-left: 15% ; margin-right:10%; ">
+        <ul class="navbar-nav " style="margin-left: 15% ; margin-right:3%; ">
             <form class="form-inline" #searchForm='ngForm' (submit)=onSubmit(searchForm.value)>
                 <!-- <select class="custom-select" id="inputGroupSelect01">
                     <option selected>Choose...</option>
@@ -66,10 +66,10 @@
                 Profile
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">My Profile</a>
-                  <a class="dropdown-item" href="#">Cart</a>
-                  <a class="dropdown-item" href="#">Wishlist</a>
-                  <a class="dropdown-item" href="#">Orders</a>
+                  <a class="dropdown-item" routerLink='/profile/{{userId}}'>My Profile</a>
+                  <a class="dropdown-item" routerLink='/cart/{{userId}}'>Cart</a>
+                  <a class="dropdown-item" routerLink='/wishlist/{{userId}}'>Wishlist</a>
+                  <a class="dropdown-item" routerLink='/orders/{{userId}}'>Orders</a>
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="#">Something else here</a>
                 </div>
