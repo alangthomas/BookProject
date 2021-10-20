@@ -18,6 +18,10 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { AddressComponent } from './components/address/address.component';
 import { OrderComponent } from './components/order/order.component';
 
+import { SearchBooksComponent } from './components/search-books/search-books.component';
+import { SearchCategoriesComponent } from './components/search-categories/search-categories.component';
+
+
 const routes: Routes = [
   
   {path:'', redirectTo:'home', pathMatch:'full'},
@@ -38,6 +42,8 @@ const routes: Routes = [
   {path: 'profile/:userId', component:ProfileComponent},
   {path: 'address/getByUserId/:userId', component:AddressComponent},
   {path: 'order/:userId', component:OrderComponent},
+  {path:'search-books/:select/:searchString', component:SearchBooksComponent},
+  {path:'search-categories/:searchstring', component:SearchCategoriesComponent},
   { path: '**', redirectTo: 'home', pathMatch: 'full' }, //always at the last line
 ];
 

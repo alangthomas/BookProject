@@ -81,10 +81,23 @@ export class DataService {
     return this.http.get<any>('http://localhost:54295/api/book/catid/'+ catId)
   }
 
+
   getFirstAddressById(userId:any):Observable<any>{
     return this.http.get<any>('http://localhost:54295/api/address/'+ userId)
   }
   getOrderById(userId:any):Observable<any>{
     return this.http.get<any>('http://localhost:54295/api/order/user/'+ userId)
+  }
+
+  getBooksBySearch(searchString: any): Observable <any>{
+    return this.http.get<any>('http://localhost:54295/api/book/search/'+ searchString)
+  }
+
+  getBooksBySearchISBN(searchString: any): Observable <any>{
+    return this.http.get<any>('http://localhost:54295/api/book/searchISBN/'+ searchString)
+  }
+
+  getCategoriesBySearch(searchString: any): Observable <any>{
+    return this.http.get<any>('http://localhost:54295/api/category/search/'+ searchString)
   }
 }

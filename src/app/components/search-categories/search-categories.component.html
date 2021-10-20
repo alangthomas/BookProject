@@ -1,0 +1,51 @@
+<app-navbar></app-navbar>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-10">
+                <h4>Search Result for: <b>{{searchString}}</b></h4>
+                <div class="container-flex">
+                    <div class="row">
+                        <div *ngIf="categories?.length == 0" style="padding-left: 520px ;">
+                            <div class="message notice"  >
+                                <div>Your search returned no results. </div>
+                                
+                            </div>
+                            <br><br><br><br><br><br><br>
+                                <br><br><br><br><br><br><br>
+                        </div>
+                        <div class="col-sm-3" style="margin-bottom : 30px ;" *ngFor='let category of categories'>
+                            <div class="card" style="border-radius: 7px;">
+                                <div class="card-body">
+                                    <img class="card-img-top" src="assets/book.jpg" alt="Card image cap"><br><br>
+                                    <h5 class="card-title">{{category.CategoryName}}</h5><br>
+                                    <p class="card-text">{{category.Description}}</p>
+                                    <button (click)=onButtonClick(category.CategoryID)
+                                        class="btn btn-primary btn-block">View
+                                        Books</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-1"></div>
+        </div>
+    </div>
+</body>
+
+</html>
+<app-footer></app-footer>
