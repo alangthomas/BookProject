@@ -16,6 +16,7 @@ import { WishlistComponent } from './components/wishlist/wishlist.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { AddressComponent } from './components/address/address.component';
+import { ViewOrdersComponent } from './components/view-orders/view-orders.component';
 
 const routes: Routes = [
   
@@ -36,6 +37,7 @@ const routes: Routes = [
   {path: 'sidebar/:userId', component:SidebarComponent},
   {path: 'profile/:userId', component:ProfileComponent},
   {path: 'address/getByUserId/:userId', component:AddressComponent},
+  {path: 'view-order/:userId', component: ViewOrdersComponent},
   { path: '**', redirectTo: 'home', pathMatch: 'full' }, //always at the last line
 ];
 

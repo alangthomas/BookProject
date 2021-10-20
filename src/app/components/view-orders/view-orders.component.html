@@ -1,0 +1,31 @@
+<app-navbar></app-navbar>
+<h1 class="heading" *ngIf="!order[0]">No order to display</h1>
+<div *ngIf="order[0]" class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1>Orders of {{user.Name}}<small class="text-muted">(User Id : {{user.UserId}})</small></h1>
+        <table *ngIf="true" class="table   table-bordered table-hover border-dark table-sm" style="width: 60%;">
+            <thead class="thead-dark text-center">
+                <tr>
+                    <th>Order Id</th>
+                    <th>Book Id</th>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Price</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody style="background-color: white; ">
+                <tr *ngFor="let o of order">
+                    <th>{{o.OrderID}}</th>
+                    <th>{{o.BookID}}</th>
+                    <th>{{o.Title}}</th>
+                    <th>{{o.Author}}</th>
+                    <th>{{o.Price}}</th>
+                    <th>{{o.OrderDate}}</th>
+
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>

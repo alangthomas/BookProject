@@ -30,6 +30,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { AddressComponent } from './components/address/address.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ViewOrdersComponent } from './components/view-orders/view-orders.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +55,7 @@ import { FooterComponent } from './components/footer/footer.component';
     ProfileComponent,
     AddressComponent,
     FooterComponent,
+    ViewOrdersComponent,
 
   ],
   imports: [

@@ -14,7 +14,7 @@
                 <a class="menu__link" routerLink="/add-books">Add Book</a>
             </li>
             <li class="menu__item">
-                <a class="menu__link" routerLink="#">Add Coupon</a>
+                <a class="menu__link" routerLink="#">View All Orders</a>
             </li>
             <li class="menu__item">
                 <a class="menu__link" routerLink="#">Orders</a>
@@ -47,7 +47,7 @@
                         <button *ngIf="user.Active" type="button" class="btn btn-warning  btn-sm"
                             (click)='onDisable(user)' onClick="window.location.reload();">Disable</button>
                         <button *ngIf="user.Active" type = "button" class="btn btn-primary btn-sm"
-                                (click)='onViewOrders(user.UserId)'>View Orders</button>
+                                (click)='onViewOrders(user.UserId)' routerLink="/view-order/{{user.UserId}}">View Orders</button>
                     </td>
 
                 </tr>
