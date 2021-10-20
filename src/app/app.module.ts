@@ -29,8 +29,12 @@ import { BooksComponent } from './components/books/books.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { AddressComponent } from './components/address/address.component';
+import { OrderComponent } from './components/order/order.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ViewOrdersComponent } from './components/view-orders/view-orders.component';
+import { SearchBooksComponent } from './components/search-books/search-books.component';
+import { SearchCategoriesComponent } from './components/search-categories/search-categories.component';
+
 
 @NgModule({
   declarations: [
@@ -54,9 +58,12 @@ import { ViewOrdersComponent } from './components/view-orders/view-orders.compon
     SidebarComponent,
     ProfileComponent,
     AddressComponent,
+    OrderComponent,
     FooterComponent,
     ViewOrdersComponent,
 
+    SearchBooksComponent,
+    SearchCategoriesComponent,
   ],
   imports: [
     BrowserModule,

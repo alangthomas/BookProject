@@ -1,0 +1,89 @@
+<app-navbar></app-navbar>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-10">
+                <h4>Search Result for: <b>{{searchString}}</b></h4>
+                <div class="container-flex" style="padding: 0px;">
+                    <div class="row">
+                        <div *ngIf="books?.length == 0" style="padding-left: 520px ;">
+                            <div class="message notice"  >
+                                <div>Your search returned no results. </div>
+                                
+                            </div>
+                            <br><br><br><br><br><br><br>
+                                <br><br><br><br><br><br><br>
+                        </div>
+                        <div class="col-sm-2" style="margin-bottom : 30px ;" *ngFor='let book of books'>
+
+                            <div class="card">
+
+                                <div class="view zoom overlay">
+
+
+                                    <a href="#!">
+                                        <div class="mask">
+                                            <img class="img-fluid w-100"
+                                                src="https://images-na.ssl-images-amazon.com/images/I/71tbalAHYCL.jpg">
+                                            <div class="mask rgba-black-slight"></div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="card-body text-center">
+
+                                    <h5>{{book.Title}}</h5>
+                                    <p class="small  text-uppercase mb-2">{{book.Author}}</p>
+
+                                    <hr>
+                                    <h6 class="mb-3">
+                                        <span class="text-danger mr-1">{{book.Price | currency: 'INR'}}</span>
+                                        <span class="text-grey"><s>$100</s></span>
+                                    </h6>
+
+                                    <button type="button" class="btn btn-primary btn-sm mr-1 mb-2"
+                                        (click)=onCartClick(book.Id)>
+                                        <i class="fas fa-shopping-cart pr-2"></i>Add to cart
+                                    </button>
+                                    <button type="button" class="btn btn-secondary btn-sm mr-1 mb-2"
+                                        (click)=onViewClick(book.Id)>
+                                        <i class="fas fa-info-circle pr-2"></i>Details
+                                    </button>
+                                    <button type="button" class="btn btn-danger btn-sm px-3 mb-2 material-tooltip-main"
+                                        data-toggle="tooltip" data-placement="top" title="Add to wishlist"
+                                        (click)=onWishlistClick(book.Id)>
+                                        <i class="far fa-heart"></i>
+                                    </button>
+
+                                </div>
+
+                            </div>
+                            <!-- Card -->
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-lg-1"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<app-footer></app-footer>

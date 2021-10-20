@@ -15,6 +15,7 @@ export class DataService {
     ADD_TO_CART : 'http://localhost:54295/api/cart/add',
     ADD_TO_WISHLIST : 'http://localhost:54295/api/wishlist/add',
     ADDRESS_URL : 'http://localhost:54295/api/address/getByUserId',
+    GET_USER : 'http://localhost:54295/api/user',
   }
 
   constructor(private http:HttpClient) { }
@@ -87,6 +88,10 @@ export class DataService {
     return this.http.post<any>('http://localhost:54295/api/category',category);
   }
 
+  getUserById(userId:any):Observable<any>{
+    return this.http.get<any>(`${this.ENDPOINTS.GET_USER + '/' +userId}`)
+  }
+
   getBooksByCategoryId(catId: any): Observable <any>{
     return this.http.get<any>('http://localhost:54295/api/book/catid/'+ catId)
   }
@@ -95,8 +100,22 @@ export class DataService {
     return this.http.get<any>('http://localhost:54295/api/order/'+id);
   }
 
-  getUserById(id:any): Observable<any>{
-    return this.http.get<any>('http://localhost:54295/api/user/'+id);
+  getFirstAddressById(userId:any):Observable<any>{
+    return this.http.get<any>('http://localhost:54295/api/address/'+ userId)
+  }
+  getOrderById(userId:any):Observable<any>{
+    return this.http.get<any>('http://localhost:54295/api/order/user/'+ userId)
   }
 
+  getBooksBySearch(searchString: any): Observable <any>{
+    return this.http.get<any>('http://localhost:54295/api/book/search/'+ searchString)
+  }
+
+  getBooksBySearchISBN(searchString: any): Observable <any>{
+    return this.http.get<any>('http://localhost:54295/api/book/searchISBN/'+ searchString)
+  }
+
+  getCategoriesBySearch(searchString: any): Observable <any>{
+    return this.http.get<any>('http://localhost:54295/api/category/search/'+ searchString)
+  }
 }
