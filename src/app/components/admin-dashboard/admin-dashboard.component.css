@@ -1,7 +1,6 @@
-.jumbotron-fluid{
+/* .jumbotron-fluid{
     height: 400px;
-    /* margin: auto; */
-    /* padding: 10px; */
+  
     background-image: url("src/assets/book.jpg");
     color: white;
     font-weight: 500px !important;
@@ -68,7 +67,48 @@
   #button-5:hover a {
     color: #2D3142;
   }
-  
+   */
 
+ /* Primary Styles */
 
-  
+ .admin__nav {
+  flex: 0 0 250px;
+  grid-area: nav;
+  background-color: #313541;
+  min-height: 500px;
+  width: 175px;
+  margin-top: 50px;
+  margin-left: 30px ;
+  border-radius: 5px;
+}
+
+a {
+  color: #dc5a60;
+  text-decoration: none;
+}
+.menu {
+  list-style-type: none;
+  padding: 0;
+}
+.menu__item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+.menu__link {
+  display: block;
+  padding: 1rem 2rem;
+  color: #76808f;
+  text-decoration: none;
+}
+.menu__link:hover, .menu__link:focus {
+  color: #fff;
+  background-color: #1f222d;
+  width: auto;
+}
+
+.container{
+  margin-top: 100px;
+}
+
+button{
+  margin: 5px;
+}

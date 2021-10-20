@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {  DataService } from 'src/app/services/data.service';
+
 
 @Component({
   selector: 'app-admin-dashboard',
@@ -7,9 +9,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminDashboardComponent implements OnInit {
 
-  constructor() { }
+  users : any[] = [];
+  constructor(private dataService : DataService) { }
 
   ngOnInit(): void {
+    this.dataService.getAllUsers().subscribe(response=>{
+      this.users = response;
+      console.log(this.users);
+    })
+  }
+
+  onActivate(user:any){
+    this.dataService.activateUser(user).subscribe();
+  }
+
+  onDisable(user:any){
+    this.dataService.disableUser(user).subscribe()
+  }
+
+  onViewOrders(id:any){
+    console.log(id);
   }
 
 }

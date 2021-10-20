@@ -69,8 +69,23 @@ export class DataService {
     return this.http.get<any>(`${this.ENDPOINTS.ADDRESS_URL +'/'+userId}`)
   }
 
+  getAllUsers(): Observable<any>{
+    return this.http.get<any>('http://localhost:54295/api/user');
+  }
+
+  activateUser(user: any): Observable<any>{
+    return this.http.put<any>('http://localhost:54295/api/user/activate',user);
+  }
+
+  disableUser(user: any): Observable<any>{
+    return this.http.put<any>('http://localhost:54295/api/user/disable',user);
+  }
   getBestseller(): Observable <any>{
-    return this.http.get<any>('http://localhost:54295/api/book/bestseller')
+    return this.http.get<any>('http://localhost:54295/api/book/bestseller');
+  }
+
+  addCategory(category: any): Observable<any>{
+    return this.http.post<any>('http://localhost:54295/api/category',category);
   }
 
   getUserById(userId:any):Observable<any>{
@@ -81,6 +96,9 @@ export class DataService {
     return this.http.get<any>('http://localhost:54295/api/book/catid/'+ catId)
   }
 
+  getOrderByUserId(id :any):Observable<any>{
+    return this.http.get<any>('http://localhost:54295/api/order/'+id);
+  }
 
   getFirstAddressById(userId:any):Observable<any>{
     return this.http.get<any>('http://localhost:54295/api/address/'+ userId)
