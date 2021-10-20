@@ -30,6 +30,8 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { AddressComponent } from './components/address/address.component';
 import { OrderComponent } from './components/order/order.component';
+import { FooterComponent } from './components/footer/footer.component';
+
 
 @NgModule({
   declarations: [
@@ -54,7 +56,7 @@ import { OrderComponent } from './components/order/order.component';
     ProfileComponent,
     AddressComponent,
     OrderComponent,
-
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

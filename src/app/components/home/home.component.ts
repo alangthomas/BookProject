@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';  
+import { Book } from 'src/app/book';
 import { DataService } from 'src/app/services/data.service';
 
 
@@ -45,6 +46,7 @@ onButtonClick(catID:number){
 }
 
 onCartClick(BookID:number){
+  this.dataService.addToCart(localStorage.getItem('userId'),BookID)
   this.router.navigate(['/cart',BookID])
 }
 
