@@ -5,7 +5,7 @@
     <nav class="admin__nav col-lg-3 ">
         <ul class="menu">
             <li class="menu__item">
-                <a class="menu__link" routerLink="/admin-dashboard">View Users</a>
+                <a class="menu__link" (click)="onViewUser()" routerLink="/admin-dashboard">View Users</a>
             </li>
             <li class="menu__item">
                 <a class="menu__link" routerLink="/add-category">Add Category</a>
@@ -14,10 +14,10 @@
                 <a class="menu__link" routerLink="/add-books">Add Book</a>
             </li>
             <li class="menu__item">
-                <a class="menu__link" routerLink="#">View All Orders</a>
+                <a class="menu__link" routerLink="view-order">View All Orders</a>
             </li>
             <li class="menu__item">
-                <a class="menu__link" routerLink="#">Orders</a>
+                <a class="menu__link" routerLink="#">abcd</a>
             </li>
             <li class="menu__item">
                 <a class="menu__link" routerLink="#">Plumbuses</a>
@@ -25,7 +25,7 @@
         </ul>
     </nav>
     <div class="div container text-center col-lg-9">
-        <table *ngIf="true" class="table   table-bordered table-hover" style="width: 60%;">
+        <table *ngIf="viewUser"  class="table   table-bordered table-hover" style="width: 60%;">
             <thead class="thead-dark text-center">
                 <tr>
                     <th>Id</th>

@@ -34,6 +34,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ViewOrdersComponent } from './components/view-orders/view-orders.component';
 import { SearchBooksComponent } from './components/search-books/search-books.component';
 import { SearchCategoriesComponent } from './components/search-categories/search-categories.component';
+import { ViewAllOrdersComponent } from './components/view-all-orders/view-all-orders.component';
 
 
 @NgModule({
@@ -64,6 +65,7 @@ import { SearchCategoriesComponent } from './components/search-categories/search
 
     SearchBooksComponent,
     SearchCategoriesComponent,
+    ViewAllOrdersComponent,
   ],
   imports: [
     BrowserModule,

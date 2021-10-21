@@ -8,17 +8,21 @@ import {  DataService } from 'src/app/services/data.service';
   styleUrls: ['./admin-dashboard.component.css']
 })
 export class AdminDashboardComponent implements OnInit {
-
+  viewUser = false;
   users : any[] = [];
   constructor(private dataService : DataService) { }
 
   ngOnInit(): void {
+    this.viewUser=false;
     this.dataService.getAllUsers().subscribe(response=>{
       this.users = response;
       console.log(this.users);
     })
   }
-
+  
+  onViewUser(){
+    this.viewUser = true;
+  }
   onActivate(user:any){
     this.dataService.activateUser(user).subscribe();
   }
