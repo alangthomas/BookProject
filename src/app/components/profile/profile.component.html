@@ -141,9 +141,24 @@
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Default Address </label>
-                <input type="email" class="form-control" disabled="" id="exampleInputPassword1" placeholder="{{address.AddressStr}}">
             </div>
-            <a href="/address/getByUserId/{{userId}}" class="btn btn-primary">Edit Addresss</a>
+            <div style="min-width: 100%; ">
+                <div class="form-group">
+                    <input type="text" disabled class="form-control" style="width:49%; float: left;background-color: rgba(232, 242, 252, 0.904); " aria-describedby="emailHelp" value={{address.Name}}>
+                    <input type="email" disabled class="form-control" style="width:49% ; float: right;background-color: rgba(232, 242, 252, 0.904);" id="exampleInputPassword1" value="{{address.Mobile}}">
+                </div>
+                <div class="form-group" style="padding-top : 50px">
+                    <input type="text" disabled class="form-control" style="width:49%; float: left;background-color: rgba(232, 242, 252, 0.904);" id="exampleInputEmail1" aria-describedby="emailHelp" value={{address.BuildingName}}>
+                    <input type="email" disabled class="form-control" style="width:49% ; float: right;background-color: rgba(232, 242, 252, 0.904);" id="exampleInputPassword1" placeholder="{{address.Locality}}">
+                </div>
+                <div class=" form-group" style="padding-top : 33px">
+                    <input type="text" disabled class="form-control" style="width:49%; float: left;background-color: rgba(232, 242, 252, 0.904);" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="{{address.Pincode}}">
+                    <input type="email" disabled class="form-control" style="width:49% ; float: right;background-color: rgba(232, 242, 252, 0.904);" id="exampleInputPassword1" placeholder="{{address.District}}">
+                </div>
+                <div class="form-group" style="padding-top : 33px">
+                    <input type="text" disabled class="form-control" style="width:100%; float: left;background-color: rgba(232, 242, 252, 0.904);" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="{{address.Landmark}}">
+                </div>
+            </div>
         </form>
     </div>
 </div>

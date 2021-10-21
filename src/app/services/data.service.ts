@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { ThrowStmt } from '@angular/compiler';
+// import { timeStamp } from 'console';
 @Injectable({
   providedIn: 'root'
 })
@@ -16,6 +17,8 @@ export class DataService {
     ADD_TO_WISHLIST : 'http://localhost:54295/api/wishlist/add',
     ADDRESS_URL : 'http://localhost:54295/api/address/getByUserId',
     GET_USER : 'http://localhost:54295/api/user',
+    GET_CART_QUANTITY : 'http://localhost:54295/api/cart/quantity',
+    UPDATE_CART_QUANTITY : 'http://localhost:54295/api/cart/update/quantity',
   }
 
   constructor(private http:HttpClient) { }
@@ -117,5 +120,14 @@ export class DataService {
 
   getCategoriesBySearch(searchString: any): Observable <any>{
     return this.http.get<any>('http://localhost:54295/api/category/search/'+ searchString)
+  }
+  getCartforQuantity(userId:any, bookId: any){
+    return this.http.get<any>(`${this.ENDPOINTS.GET_CART_QUANTITY + '/' +userId + '/' + bookId}`);
+  }
+  updateCartQuantity(userId:any, bookId:any, quantity:any){
+    return this.http.get<any>(`${this.ENDPOINTS.UPDATE_CART_QUANTITY+'/' + userId + '/' + bookId + '/' + quantity}`);
+  }
+  removeAddressById(UserID:any){
+    return this.http.delete<any>('http://localhost:54295/api/address/'+UserID);
   }
 }
