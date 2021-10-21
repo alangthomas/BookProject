@@ -118,4 +118,8 @@ export class DataService {
   getCategoriesBySearch(searchString: any): Observable <any>{
     return this.http.get<any>('http://localhost:54295/api/category/search/'+ searchString)
   }
+
+  getAllOrders():Observable<any>{
+    return this.http.get<any>('http://localhost:54295/api/order')
+  }
 }

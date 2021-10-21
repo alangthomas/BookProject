@@ -13,7 +13,7 @@ export class ViewOrdersComponent implements OnInit {
   id:any;
   book : any = [];
   order: any = [];
-  user : any = []
+  user : any = [];
 
   constructor(private dataservice: DataService, private activatedRoute: ActivatedRoute, private router: Router) {
     this.id = activatedRoute.snapshot.paramMap.get('userId');

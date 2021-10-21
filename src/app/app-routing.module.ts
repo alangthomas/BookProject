@@ -21,6 +21,7 @@ import { OrderComponent } from './components/order/order.component';
 
 import { SearchBooksComponent } from './components/search-books/search-books.component';
 import { SearchCategoriesComponent } from './components/search-categories/search-categories.component';
+import { ViewAllOrdersComponent } from './components/view-all-orders/view-all-orders.component';
 
 
 const routes: Routes = [
@@ -46,6 +47,7 @@ const routes: Routes = [
   {path: 'order/:userId', component:OrderComponent},
   {path:'search-books/:select/:searchString', component:SearchBooksComponent},
   {path:'search-categories/:searchstring', component:SearchCategoriesComponent},
+  {path: 'admin-dashboard/view-order', component:ViewAllOrdersComponent},
   { path: '**', redirectTo: 'home', pathMatch: 'full' }, //always at the last line
 ];
 
