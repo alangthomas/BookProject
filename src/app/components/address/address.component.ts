@@ -12,6 +12,10 @@ export class AddressComponent implements OnInit {
   public userId: any;
   public addresses: any;
   public user: any;
+
+  message="";
+  alertClass = "alert-success";
+
   constructor(private dataService: DataService, private activatedRoute: ActivatedRoute, private router: Router) {
     this.userId = activatedRoute.snapshot.paramMap.get('userId');
   }
@@ -30,6 +34,13 @@ export class AddressComponent implements OnInit {
     this.dataService.removeAddressById(AddressID).subscribe(response=>{
       console.log(response)
       this.ngOnInit()
+    })
+  }
+
+  onUpdate(address:any){
+    this.dataService.updateAddress(address).subscribe(Response=>{
+      console.log(Response);
+      this.ngOnInit();
     })
   }
 }
