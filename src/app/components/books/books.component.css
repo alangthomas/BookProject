@@ -30,8 +30,13 @@ body{
     cursor: pointer;
 }
 
+li.list-group-item:hover{
+    background-image: none;
+    background-color: rgb(162, 209, 255) !important;
+}
+
 .list-group{
-    max-height: 400px;
+    max-height: 600px;
     margin-bottom: 10px;
     overflow:scroll;
     -webkit-overflow-scrolling: touch;
