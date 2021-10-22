@@ -52,3 +52,8 @@ h2::after {
 h2 b {
     color: #ffc000;
 }
+
+li.list-group-item:hover{
+    background-image: none;
+    background-color: rgb(162, 209, 255) !important;
+}

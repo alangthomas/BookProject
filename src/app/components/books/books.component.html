@@ -21,7 +21,7 @@
                     <h5 style="margin-left: 4px; border-right: 1px solid lightgrey; margin-top: 40px;">Browse by Category</h5>
                     <ul class="list-group">
                         <!-- <li class="list-group-item active"></li> -->
-                        <li (click)=onButtonClick(category.CategoryID) class="list-group-item list-group-item-action"
+                        <li (click)=onButtonClick(category.CategoryID) [ngClass]="categoryId==category.CategoryID ? 'active' : ''" class="list-group-item "
                             *ngFor='let category of categories'>{{category.CategoryName}}</li>
                     </ul>
                     <hr>
@@ -89,3 +89,4 @@
 </body>
 
 </html>
+<app-footer></app-footer>
