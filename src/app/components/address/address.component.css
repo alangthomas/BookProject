@@ -135,3 +135,22 @@ img {
     color: #2874f0;
     background-color: #f5faff;
 }
+
+.inputBox {
+    width: 49%;
+    float: left;
+    background-color: rgba(232, 242, 252, 0.904);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+/* Firefox */
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
