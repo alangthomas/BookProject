@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap'); */
 * {
-    font-family: 'Comfortaa', cursive;
+    /* font-family: 'Comfortaa', cursive; */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -30,7 +30,7 @@ body {
 }
 
 .products {
-    flex: 0.75;
+    flex: 0.9;
     /* border: 2px solid rgb(101, 74, 145); */
 }
 
@@ -49,7 +49,7 @@ body {
 .product:hover {
     border: none;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    transform: scale(1.01);
+    transform: scale(1.003);
 }
 
 .product>img {
@@ -92,19 +92,19 @@ body {
     position: absolute;
     bottom: 20px;
     right: 20px;
-    padding: 10px 25px;
-    background-color: green;
+    /* padding: 10px 25px; */
+    /* background-color: green; */
     color: white;
     cursor: pointer;
     border-radius: 5px;
 }
 
-.product-remove:hover {
+/* .product-remove:hover {
     background-color: white;
     color: green;
     font-weight: 600;
     border: 1px solid green;
-}
+} */
 
 .product-quantity>input {
     width: 40px;
@@ -332,3 +332,105 @@ img {
     background-color: #f5faff;
 }
 
+
+/* form css */
+
+._3E8aIl {
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 8%);
+}
+
+._3c8nMP {
+    padding: 24px 32px 0;
+}
+
+.JLGkw1 {
+    padding-bottom: 56px;
+}
+
+._1cyhik {
+    padding-bottom: 24px;
+}
+
+._1cyhik ._1mHr1S {
+    font-size: 18px;
+    font-weight: 500;
+    padding-right: 24px;
+}
+
+._1cyhik .oKZoMV {
+    font-size: 14px;
+    font-weight: 500;
+    color: #2874f0;
+    cursor: pointer;
+}
+
+._1TlPi6 {
+    padding-bottom: 2px;
+}
+
+._1TlPi6 ._1YVqbV {
+    width: 270px;
+    padding-right: 12px;
+}
+
+._1Jqgld {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+._1w3ZZo:disabled {
+    background-color: #fafafa;
+    cursor: not-allowed;
+}
+
+._1YmvCG {
+    padding: 16px;
+    color: #878787;
+}
+
+._2mFmU7 {
+    height: 50px;
+}
+
+._1509Hs {
+    padding: 12px 0;
+}
+
+._2fnqkz {
+    font-size: 16px;
+}
+
+._2hH1hC {
+    color: #878787;
+    cursor: not-allowed;
+}
+
+._2LcXZ- {
+    color: #878787!important;
+    cursor: not-allowed;
+}
+
+._3iI7Qn {
+    border-bottom: none;
+    display: inline-block;
+    margin-right: 32px;
+}
+
+._3L7Pww {
+    cursor: auto;
+}
+
+._2Fn-Ln {
+    cursor: pointer;
+}
+
+
+/* radio bad effect */
+
+._2jIO64 {
+    display: inline-block;
+    margin-left: 18px;
+    width: calc(100% - 34px);
+}
