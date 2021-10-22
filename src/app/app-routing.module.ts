@@ -24,6 +24,9 @@ import { SearchCategoriesComponent } from './components/search-categories/search
 import { ViewAllOrdersComponent } from './components/view-all-orders/view-all-orders.component';
 
 
+import { AddAddressComponent } from './components/add-address/add-address.component';
+
+
 const routes: Routes = [
   
   {path:'', redirectTo:'home', pathMatch:'full'},
@@ -48,6 +51,7 @@ const routes: Routes = [
   {path:'search-books/:select/:searchString', component:SearchBooksComponent},
   {path:'search-categories/:searchstring', component:SearchCategoriesComponent},
   {path: 'admin-dashboard/view-order', component:ViewAllOrdersComponent},
+  {path: 'address/add/:userId', component:AddAddressComponent},
   { path: '**', redirectTo: 'home', pathMatch: 'full' }, //always at the last line
 ];
 
