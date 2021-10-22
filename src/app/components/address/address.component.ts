@@ -10,16 +10,26 @@ import { ActivatedRoute } from '@angular/router';
 export class AddressComponent implements OnInit {
 
   public userId: any;
-  public addresses : any;
+  public addresses: any;
+  public user: any;
   constructor(private dataService: DataService, private activatedRoute: ActivatedRoute, private router: Router) {
     this.userId = activatedRoute.snapshot.paramMap.get('userId');
   }
 
   ngOnInit(): void {
-    this.dataService.getAddressById(this.userId).subscribe(response =>{
+    this.dataService.getAddressById(this.userId).subscribe(response => {
       this.addresses = response;
       console.log(response);
+      this.dataService.getUserById(this.userId).subscribe(response => {
+        this.user = response;
+        console.log(response);
+      });
+    });
+  }
+  onRemoveButton(AddressID:any){
+    this.dataService.removeAddressById(AddressID).subscribe(response=>{
+      console.log(response)
+      this.ngOnInit()
     })
   }
-
 }

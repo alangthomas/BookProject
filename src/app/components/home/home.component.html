@@ -8,7 +8,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 </head>
 
 <body>
@@ -25,7 +26,7 @@
 
             </div>
 
-            <aside class="col-lg-3">
+            <aside class="col-lg-3" style="margin-top: 20px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);padding-top: 15px;">
                 <h5 style="margin-left: 4px; border-right: 1px solid lightgrey;">Browse by Category</h5>
                 <ul class="list-group">
                     <!-- <li class="list-group-item active"></li> -->
@@ -42,7 +43,7 @@
                     </div>
                 </div>
             </aside>
-            <section class="col-lg-7">
+            <section class="col-lg-7" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); padding-bottom: 20px;border-radius: 15px;margin: 30px;background-color: rgb(206, 221, 231);">
                 <ngb-carousel style="margin-top: 33px; border-left: 1px solid lightgrey;">
                     <ng-template ngbSlide>
                         <img src="https://d2g9wbak88g7ch.cloudfront.net/bannerimages/46_inr.png" width="100%"
@@ -90,90 +91,63 @@
 
             </section>
 
-            <div class="container-flex">
-                <hr>
+            <div class="container-flex" >
                 <div class="row">
-                    <div class="col-lg-1">
-                    </div>
-                    <div class="col-lg-10">
-                        <h2>Trending <b>Products</b></h2>
-                        <div class="container-flex" style="padding: 20px;">
-                            <div class="row">
-                                <div class="col-sm-2" style="margin-bottom : 30px ;"
-                                    *ngFor='let bestseller of bestsellers'>
-                                    <!-- <div class="card" style="border-radius: 7px;">
-                                        <div class="card-body">
-                                            <img class="card-img-top" src="assets/book.jpg"
-                                                alt="Card image cap"><br><br>
-                                            <h5 class="card-title">{{bestseller.Title}}</h5><br>
-                                            <h6 class="card-title">{{bestseller.Author}}</h6>
-                                            <p class="card-text">{{bestseller.Description}}</p>
-                                            <h1>{{ bestseller.Price | currency: 'INR' }} </h1>
-                                            <button (click)=onCartClick(bestseller.Id)
-                                                class="btn btn-primary btn-block">Add to Cart</button>
-                                            <button (click)=onWishlistClick(bestseller.Id)
-                                                class="btn btn-primary btn-block">Add to wishlist</button>
-                                            <button (click)=onViewClick(bestseller.Id)
-                                                class="btn btn-primary btn-block">View</button>
-                                        </div>
-                                    </div> -->
-                                    <!-- Card -->
-                                    <div class="card">
-
-                                        <div class="view zoom overlay">
-                                            
-                                            <!-- <h4 class="mb-0"><span
-                                                    class="badge badge-primary badge-pill badge-news">Sale</span></h4> -->
-                                            <a href="#!">
-                                                <div class="mask">
-                                                    <img class="img-fluid w-100" 
-                                                        src="https://images-na.ssl-images-amazon.com/images/I/71tbalAHYCL.jpg">
-                                                    <div class="mask rgba-black-slight"></div>
+                    <div class="col-lg-12">
+                        <div class="col-lg-12" style="margin-bottom: 100px; margin-left: 80px;">
+                            <h2 style="margin-right: 50px;">Trending <b>Products</b></h2>
+                            <carousel [height] = "700" [cellWidth] = "250" [width] = "1500"  [autoplay] = "true" [autoplayInterval] = "2000" style="background-color: rgb(206, 221, 231); padding: 50px; border-radius: 15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                                <div class="carousel-cell" *ngFor= "let bestseller of bestsellers" >
+                                    <div class="card" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+        
+                                                <div class="view zoom overlay">
+                                                    
+                                                    <!-- <h4 class="mb-0"><span
+                                                            class="badge badge-primary badge-pill badge-news">Sale</span></h4> -->
+                                                    <a href="#!">
+                                                        <div class="mask">
+                                                            <img class="img-fluid w-100" 
+                                                                src="https://images-na.ssl-images-amazon.com/images/I/71tbalAHYCL.jpg">
+                                                            <div class="mask rgba-black-slight"></div>
+                                                        </div>
+                                                    </a>
                                                 </div>
-                                            </a>
-                                        </div>
-
-                                        <div class="card-body text-center">
-
-                                            <h5>{{bestseller.Title}}</h5>
-                                            <p class="small text-uppercase mb-2">{{bestseller.Author}}</p>
-                                            <p class="small text-muted text-uppercase mb-2">bestseller</p>
-                                            
-                                            <hr>
-                                            <h6 class="mb-3">
-                                                <span class="text-danger mr-1">{{bestseller.Price | currency: 'INR'}}</span>
-                                                <span class="text-grey"><s>$100</s></span>
-                                            </h6>
-
-                                            <button type="button" class="btn btn-primary btn-sm mr-1 mb-2" (click)=onCartClick(bestseller.Id)>
-                                                <i class="fas fa-shopping-cart pr-2"></i>Add to cart
-                                            </button>
-                                            <button type="button" class="btn btn-secondary btn-sm mr-1 mb-2" (click)=onViewClick(bestseller.Id) >
-                                                <i class="fas fa-info-circle pr-2"></i>Details
-                                            </button>
-                                            <button type="button"
-                                                class="btn btn-danger btn-sm px-3 mb-2 material-tooltip-main"
-                                                data-toggle="tooltip" data-placement="top" title="Add to wishlist" (click)=onWishlistClick(bestseller.Id) >
-                                                <i class="far fa-heart"></i>
-                                            </button>
-
-                                        </div>
-
-                                    </div>
-                                    <!-- Card -->
+        
+                                                <div class="card-body text-center">
+        
+                                                    <h5>{{bestseller.Title}}</h5>
+                                                    <p class="small text-uppercase mb-2">{{bestseller.Author}}</p>
+                                                    <p class="small text-muted text-uppercase mb-2">bestseller</p>
+                                                    
+                                                    <hr>
+                                                    <h6 class="mb-3">
+                                                        <span class="text-danger mr-1">{{bestseller.Price | currency: 'INR'}}</span>
+                                                        <span class="text-grey"><s>$100</s></span>
+                                                    </h6>
+        
+                                                    <button type="button" class="btn btn-primary btn-sm mr-1 mb-2" (click)=onCartClick(bestseller.Id)>
+                                                        <i class="fas fa-shopping-cart pr-2"></i>Add to cart
+                                                    </button>
+                                                    <button type="button" class="btn btn-secondary btn-sm mr-1 mb-2" (click)=onViewClick(bestseller.Id) >
+                                                        <i class="fas fa-info-circle pr-2"></i>Details
+                                                    </button>
+                                                    <button type="button"
+                                                        class="btn btn-danger btn-sm px-3 mb-2 material-tooltip-main"
+                                                        data-toggle="tooltip" data-placement="top" title="Add to wishlist" (click)=onWishlistClick(bestseller.Id) >
+                                                        <i class="far fa-heart"></i>
+                                                    </button>
+        
+                                                </div>
+        
+                                            </div>
+        
                                 </div>
-                            </div>
+                            </carousel>
+        
                         </div>
                     </div>
-                    <div class="col-lg-1">
-                    </div>
+        
                 </div>
-
-
-                <div class="col-lg-1">
-
-                </div>
-
             </div>
         </div>
     </div>

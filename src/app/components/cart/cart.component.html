@@ -13,7 +13,7 @@
                     <h4 class="product-price font">{{ book.Price | currency: 'INR' }} </h4>
                     <p class="product-quantity">
                         Qnt:
-                        <input type="text" [(ngModel)]="quantity" id="{{book.ISBN}}" (change)="onChange() ">
+                        <input type="number" [(ngModel)]=book.Quantity id="" (change)="onChange(book.Id, book.Quantity)" style="min-width: 60px; min-height: 40px;">
                     </p>
                     <button type="button " class="btn btn-danger btn-lg " style=" position: absolute;bottom: 20px;right: 20px; " (click)="onRemoveButton(book.Id) ">Remove</button>
                 </div>

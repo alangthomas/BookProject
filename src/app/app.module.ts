@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule }  from '@angular/common/http';
 import { FormsModule } from '@angular/forms'; 
+import {IvyCarouselModule} from 'angular-responsive-carousel';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -75,6 +76,7 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
     NgbModule,
     HttpClientModule,
     FormsModule,
+    IvyCarouselModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
