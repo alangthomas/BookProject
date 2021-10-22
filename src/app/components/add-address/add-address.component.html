@@ -1,0 +1,50 @@
+<app-navbar></app-navbar>
+
+<div style="float: left; width: 24%; padding-top: 25px; background-color: white;">
+    <app-sidebar></app-sidebar>
+</div>
+<div class="container" style="background-color: white; max-width: 75%; float: right; padding-top: 25px;">
+<div class="wrapper col-lg-6 col-md-8 col-sm-10 ">
+
+    <h1>Add New Address</h1>
+    <hr>
+    <div *ngIf="message" class="alert" [class]="alertClass" role="alert">
+        {{ message }}
+    </div>
+    <form #registerForm="ngForm" (submit)="onSubmit(AddressModel)">
+        <div class="form-group">
+            <label for="Name"> Name</label>
+            <input type="text" name="Name" id="Name" required class="form-control" #Name="ngModel" [(ngModel)]="AddressModel.Name" [class.is-invalid]="Name.invalid && Name.touched">
+        </div>
+
+        <div class="form-group">
+            <label for="Mobile">Mobile</label>
+            <input type="number" name="Mobile" id="Mobile" class="form-control" #Mobile="ngModel" [(ngModel)]="AddressModel.Mobile" [class.is-invalid]="Mobile.invalid && Mobile.touched">
+        </div>
+        <div class="form-group">
+            <label for="BuildingName">Building Name</label>
+            <input type="text" name="BuildingName" id="BuildingName" required class="form-control" #BuildingName="ngModel" [(ngModel)]="AddressModel.BuildingName" [class.is-invalid]="BuildingName.invalid && BuildingName.touched">
+        </div>
+
+        <div class="form-group">
+            <label for="Pincode">Pincode</label>
+            <input type="text" name="Pincode" id="Pincode" required class="form-control" #Pincode="ngModel" [(ngModel)]="AddressModel.Pincode" [class.is-invalid]="Pincode.invalid && Pincode.touched">
+        </div>
+        <div class="form-group">
+            <label for="Locality">Area</label>
+            <input type="text" name="Locality" id="Locality" required class="form-control" #Locality="ngModel" [(ngModel)]="AddressModel.Locality" [class.is-invalid]="Locality.invalid && Locality.touched">
+        </div>
+        <div class="form-group">
+            <label for="District">City/District</label>
+            <input type="text" name="District" id="District" required class="form-control" #District="ngModel" [(ngModel)]="AddressModel.District" [class.is-invalid]="District.invalid && District.touched">
+        </div>
+        <div class="form-group">
+            <label for="Landmark">Landmark</label>
+            <input type="text" name="Landmark" id="Landmark" required class="form-control" #Landmark="ngModel" [(ngModel)]="AddressModel.Landmark" [class.is-invalid]="Landmark.invalid && Landmark.touched">
+        </div>
+        <input type="submit" value="Add Address" class="btn btn-primary btn-block" [disabled]="registerForm.invalid" />
+
+    </form>
+</div>
+
+</div>

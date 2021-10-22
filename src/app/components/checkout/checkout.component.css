@@ -9,6 +9,17 @@ body {
     /* background-color:  white; */
     font-family: 'Arial', sans-serif;
 }
+.payment{
+    background-color: white;
+    border: 1px solid black;
+    min-height: 600px;
+    padding: 10px 20px;
+    max-width: 60%;
+}
+.form-check{
+    border: 2px solid black;
+    background-color:  white;
+}
 .Container {
     max-width: 100%;
     margin-left: 10%;

@@ -1,36 +1,62 @@
 <app-navbar></app-navbar>
 
 <div class="Container">
-    <ul class="Container-progessbar">
-      <li class="active">SIGN IN</li>
-      <li class="active">DELEVERY & PAYMENT</li>
-      <li class="">PLACE ORDER</li>
-      <li class="">COMPLETE PAYMENT</li>
-    </ul>
+  <ul class="Container-progessbar">
+    <li class="active">SIGN IN</li>
+    <li class="active">DELEVERY & PAYMENT</li>
+    <li class="">PLACE ORDER</li>
+    <li class="">COMPLETE PAYMENT</li>
+  </ul>
 
-    <div class="select_address">
-      <h1>Select a delevery address</h1>
-      <p>Is the address you'd like to use displayed below? If so, click the corresponding "Deliver to this address" button. Or you can enter a new delivery address. </p>
+  <!-- <div *ngIf="firstTime" class="select_address">
+    <h1>Select a delevery address</h1>
+    <p>Is the address you'd like to use displayed below? If so, click the corresponding "Deliver to this address"
+      button. Or you can enter a new delivery address. </p>
+    <br><br>
+    <hr>
+    <div class="addr" *ngFor="let addr of address">
+      <h4>{{addr.Name}}</h4>
+      <p>{{addr.BuildingName}}</p>
+      <p>{{addr.Locality}}</p>
+      <p>{{addr.District}}, {{addr.Pincode}}</p>
+      <p>{{addr.Mobile}}</p>
+      <p>Land mark - {{addr.Landmark}}</p>
+
+      <button class="btn btn-warning" (click)="onDeliver(addr.AddressID)">Deliver to this address</button>
+      <br>
+      <button class="btn btn-light" (click)="onEdit(addr)">Edit</button>
+      <button class="btn btn-light" (click)="onDelete(addr.AddressID)">Delete</button>
       <br><br>
       <hr>
-      <div class="addr" *ngFor="let addr of address">
-          <h4>{{addr.Name}}</h4>
-          <p>{{addr.BuildingName}}</p>
-          <p>{{addr.Locality}}</p>
-          <p>{{addr.District}}, {{addr.Pincode}}</p>
-          <p>{{addr.Mobile}}</p>
-          <p>Land mark - {{addr.Landmark}}</p>
-          
-          <button class="btn btn-warning" (click)="onDeliver(addr.AddressID)">Deliver to this address</button>
-          <br>
-          <button class="btn btn-light" (click)="onEdit(addr)">Edit</button>
-          <button class="btn btn-light" (click)="onDelete(addr.AddressID)" >Delete</button>
-          <br><br>
-          <hr>
-      </div>
-      
-
     </div>
+  </div> -->
+
+  <div class="payment">
+    <h4>Select a Payment Method</h4>
+    <hr>
+    <br>
+    <form action="/action_page.php">
+    
+      <input type="radio" id="card" name="payment" value="card">
+      <label for="card"><b>Debit/Credit/ATM Card</b></label><br> <br>
+      <input type="radio" id="css" name="fav_language" value="CSS">
+      <label for="css">CSS</label><br>
+      <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+      <label for="javascript">JavaScript</label>
+    
+      <br>  
+    
+      <p>Please select your age:</p>
+      <input type="radio" id="age1" name="age" value="30">
+      <label for="age1">0 - 30</label><br>
+      <input type="radio" id="age2" name="age" value="60">
+      <label for="age2">31 - 60</label><br>  
+      <input type="radio" id="age3" name="age" value="100">
+      <label for="age3">61 - 100</label><br><br>
+      <input type="submit" value="Submit">
+    </form>
 
 
   </div>
+
+</div>

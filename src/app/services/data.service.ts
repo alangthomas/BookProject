@@ -130,8 +130,13 @@ export class DataService {
   removeAddressById(UserID:any){
     return this.http.delete<any>('http://localhost:54295/api/address/'+UserID);
   }
-
   getAllOrders():Observable<any>{
     return this.http.get<any>('http://localhost:54295/api/order')
+  }
+  updateAddress(address:any){
+    return this.http.put<any>('http://localhost:54295/api/address/',address);
+  }
+  addAddress(address:any){
+    return this.http.post<any>('http://localhost:54295/api/address/',address);
   }
 }

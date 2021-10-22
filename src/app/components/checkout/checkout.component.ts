@@ -11,6 +11,8 @@ import { ActivatedRoute } from '@angular/router';
 export class CheckoutComponent implements OnInit {
   userId: any;
   address : any[] = []
+  addressId : any;
+  firstTime = true;
   constructor(private dataService: DataService, private activatedRoute: ActivatedRoute, private router: Router) 
   {
     this.userId = activatedRoute.snapshot.paramMap.get('userId');
@@ -19,12 +21,15 @@ export class CheckoutComponent implements OnInit {
   ngOnInit(): void {
     this.dataService.getAddressById(this.userId).subscribe(data=>{
         this.address  = data;
+        this.firstTime = true;
         console.log(data)
     })
   }
 
   onDeliver(id:number){
     console.log(id)
+    this.addressId = id;
+    this.firstTime = false;
   }
 
   onDelete(id: number){

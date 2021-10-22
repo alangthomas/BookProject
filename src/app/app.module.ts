@@ -37,6 +37,7 @@ import { SearchBooksComponent } from './components/search-books/search-books.com
 import { SearchCategoriesComponent } from './components/search-categories/search-categories.component';
 import { ViewAllOrdersComponent } from './components/view-all-orders/view-all-orders.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
+import { AddAddressComponent } from './components/add-address/add-address.component';
 
 
 @NgModule({
@@ -64,11 +65,11 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
     OrderComponent,
     FooterComponent,
     ViewOrdersComponent,
-
     SearchBooksComponent,
     SearchCategoriesComponent,
     ViewAllOrdersComponent,
     CheckoutComponent,
+    AddAddressComponent,
   ],
   imports: [
     BrowserModule,
