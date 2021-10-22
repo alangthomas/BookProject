@@ -17,8 +17,8 @@
 
             </div>
             <div class="col-lg-3">
-                <aside>
-                    <h5 style="margin-left: 4px; border-right: 1px solid lightgrey; margin-top: 40px;">Browse by Category</h5>
+                <aside style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border-radius: 15px; padding: 10px; margin-top: 40px; margin-bottom: 20px; ">
+                    <h5 style="margin-left: 4px; border-right: 1px solid lightgrey;">Browse by Category</h5>
                     <ul class="list-group">
                         <!-- <li class="list-group-item active"></li> -->
                         <li (click)=onButtonClick(category.CategoryID) [ngClass]="categoryId==category.CategoryID ? 'active' : ''" class="list-group-item "
@@ -29,10 +29,10 @@
                 </aside>
             </div>
             <div class="col-lg-7">
-                <h2> <b>Books Availabe</b></h2>
+                <h2>Books <b> Availabe</b></h2>
                 <div class="container-flex" style="padding: 0px;">
                     <div class="row">
-                        <div class="col-sm-3" style="margin-bottom : 30px ;" *ngFor='let book of books'>
+                        <div class="col-sm-3" style="margin-bottom : 30px ;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);padding: 7px;" *ngFor='let book of books'>
 
                             <div class="card">
 
