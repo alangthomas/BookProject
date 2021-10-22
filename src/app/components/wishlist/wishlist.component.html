@@ -58,21 +58,20 @@
         </div>
     </div>
 </div>
-<div class="container" style="background-color: white; max-width: 75%; float: right; padding-top: 25px;">
-    <div class="cart" style="padding-top: 3%; border-width: 2px; border: tomato;">
+<div class="container" style="background-color: white; max-width: 75%; float: right; padding-top: 25px; min-height: 100vh;">
+    <div class="cart" style="min-width: 100%; padding-top: 3%; border-width: 2px; border: tomato;">
         <h1 style="font-family: Arial, Helvetica, sans-serif;">Wishlist</h1>
     </div>
     <div class="cart">
-
         <div class="products">
             <div class="product" *ngFor="let book of books">
                 <img src="{{book.Image}}">
                 <div class="product-info">
-                    <h3 class="product-name">{{book.Title}}</h3>
-                    <h4 class="product-price">{{ book.Price | currency: 'INR' }} </h4>
-                    <button type="button" class="btn btn-danger btn-lg" style="	position: absolute;bottom: 80px;right: 20px;" (click)="onMoveToCartButton(book.Id)">Move
+                    <h4 class="product-name">{{book.Title}}</h4>
+                    <h5 class="product-price">{{ book.Price | currency: 'INR' }} </h5>
+                    <button type="button" class="btn btn-danger btn-lg" style="	position: absolute;bottom: 20px;right: 20px;" (click)="onMoveToCartButton(book.Id)">Move
                         to Cart</button>
-                    <button type="button" class="btn btn-danger btn-lg " style="	position: absolute;bottom: 20px;right: 20px;" (click)="onRemoveButton(book.Id)">Remove</button>
+                    <button type="button" class="btn btn-danger btn-lg " style="	position: absolute;bottom: 80px;right: 20px;" (click)="onRemoveButton(book.Id)">Remove</button>
                 </div>
             </div>
         </div>
