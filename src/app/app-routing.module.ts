@@ -22,7 +22,7 @@ import { OrderComponent } from './components/order/order.component';
 import { SearchBooksComponent } from './components/search-books/search-books.component';
 import { SearchCategoriesComponent } from './components/search-categories/search-categories.component';
 import { ViewAllOrdersComponent } from './components/view-all-orders/view-all-orders.component';
-
+import { CheckoutComponent } from './components/checkout/checkout.component';
 
 const routes: Routes = [
   
@@ -32,6 +32,7 @@ const routes: Routes = [
   {path:'add-category', component: AddCategoryComponent},
   {path:'add-subcategory', component:AddSubcategoryComponent},
   {path: 'cart/:userId', component:CartComponent},
+  {path: 'checkout/:userId',component:CheckoutComponent},
   {path:'register', component:RegisterComponent},
   {path:'login', component:LoginComponent},
   {path:'admin-dashboard',component:AdminDashboardComponent},
@@ -47,7 +48,7 @@ const routes: Routes = [
   {path: 'order/:userId', component:OrderComponent},
   {path:'search-books/:select/:searchString', component:SearchBooksComponent},
   {path:'search-categories/:searchstring', component:SearchCategoriesComponent},
-  {path: 'admin-dashboard/view-order', component:ViewAllOrdersComponent},
+  {path: 'view-order', component:ViewAllOrdersComponent},
   { path: '**', redirectTo: 'home', pathMatch: 'full' }, //always at the last line
 ];
 

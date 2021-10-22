@@ -11,6 +11,9 @@ export class AddCategoryComponent implements OnInit {
   categoryModel = new Category();
   message = ""
   alertClass = "alert-success";
+  viewUser = false;
+  viewAddCat = false;
+  viewAddBook = false;
 
   constructor(private dataService: DataService) { }
 
@@ -21,6 +24,10 @@ export class AddCategoryComponent implements OnInit {
     console.log(this.categoryModel);
     this.dataService.addCategory(this.categoryModel).subscribe(response=>
       console.log(response));
+  }
+
+  onViewUser(){
+    this.viewUser = true;
   }
 
 }

@@ -1,73 +1,64 @@
 <app-navbar></app-navbar>
 
-<div class="wrapper col-lg-6 col-md-8 col-sm-10 " >
-    
-    <h1>Add New Category</h1>
-    <hr>
-    <div *ngIf="message" class="alert" [class]="alertClass" role="alert">
-        {{ message }}
-    </div>
-    <form #registerForm="ngForm" (submit)="onSubmit()" >
-        <div class="form-group">
-            <label for="name"> Category Name</label>
-            <input 
-                type="name"
-                name = "name"
-                id = "name"
-                required
-                class="form-control"
-                #name = "ngModel"
-                [(ngModel)] = "categoryModel.CategoryName"
-                [class.is-invalid]="name.invalid && name.touched"
-                >
-        </div>
+<div class="row">
+    <nav class="col admin__nav col-lg-3 ">
+        <ul class="menu">
+            <li class="menu__item">
+                <a class="menu__link" (click)="onViewUser()" routerLink="/admin-dashboard">View Users</a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" routerLink="/add-category">Add Category</a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" routerLink="/add-books">Add Book</a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" routerLink="/view-order">View All Orders</a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" routerLink="#">View Coupons</a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" routerLink="#">Add Coupons</a>
+            </li>
+        </ul>
+    </nav>
+    <div class=" col col-lg-8 wrapper" >
 
-        <div class="form-group">
-            <label for="description">Description</label>
-            <textarea 
-                type=""
-                name = "description"
-                id = "description"
-                class="form-control"
-                #description = "ngModel"
-                [(ngModel)] = "categoryModel.description"
-                ></textarea>
-        </div> 
-        <div class="form-group">
-            <label for="position">Position</label>
-            <input 
-                type="number"
-                name = "position"
-                id = "position"
-                required
-                class="form-control"
-                #position = "ngModel"
-                [(ngModel)] = "categoryModel.position"
-                [class.is-invalid]="description.invalid && description.touched"
-                >
+        <h1 class="text-center">Add New Category</h1>
+        <hr>
+        <div *ngIf="message" class="alert" [class]="alertClass" role="alert">
+            {{ message }}
         </div>
+        <form #registerForm="ngForm" (submit)="onSubmit()">
+            <div class="form-group">
+                <label for="name"> Category Name</label>
+                <input type="name" name="name" id="name" required class="form-control" #name="ngModel"
+                    [(ngModel)]="categoryModel.CategoryName" [class.is-invalid]="name.invalid && name.touched">
+            </div>
 
-        <div class="form-group">
-            <label for="image">Image</label>
-            <input 
-                type="text"
-                name = "image"
-                id = "image"
-                required
-                class="form-control"
-                #image = "ngModel"
-                [(ngModel)] = "categoryModel.image"
-                [class.is-invalid]="image.invalid && image.touched"
-                >
-        </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea type="" name="description" id="description" class="form-control" #description="ngModel"
+                    [(ngModel)]="categoryModel.description"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="position">Position</label>
+                <input type="number" name="position" id="position" required class="form-control" #position="ngModel"
+                    [(ngModel)]="categoryModel.position"
+                    [class.is-invalid]="description.invalid && description.touched">
+            </div>
 
-        <input 
-                type="submit"
-                value="Add Category"
-                class="btn btn-primary btn-block"
+            <div class="form-group">
+                <label for="image">Image</label>
+                <input type="text" name="image" id="image" required class="form-control" #image="ngModel"
+                    [(ngModel)]="categoryModel.image" [class.is-invalid]="image.invalid && image.touched">
+            </div>
+
+            <input type="submit" value="Add Category" class="btn btn-primary btn-block"
                 [disabled]="registerForm.invalid" />
 
 
-    </form>
+        </form>
+    </div>
 </div>
-

@@ -13,6 +13,9 @@ export class AddBooksComponent implements OnInit {
   
   message="";
   alertClass = "alert-success";
+  viewUser = false;
+  viewAddCat = false;
+  viewAddBook = false;
 
   constructor(private dataService: DataService, private router: Router) { }
 
@@ -27,6 +30,10 @@ export class AddBooksComponent implements OnInit {
       console.log('SUCCESS');
       this.router.navigate(['admin-dashboard'])
     })
+  }
+
+  onViewUser(){
+    this.viewUser = true;
   }
   
 }

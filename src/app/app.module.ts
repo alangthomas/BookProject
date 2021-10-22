@@ -35,6 +35,7 @@ import { ViewOrdersComponent } from './components/view-orders/view-orders.compon
 import { SearchBooksComponent } from './components/search-books/search-books.component';
 import { SearchCategoriesComponent } from './components/search-categories/search-categories.component';
 import { ViewAllOrdersComponent } from './components/view-all-orders/view-all-orders.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
 
 
 @NgModule({
@@ -66,6 +67,7 @@ import { ViewAllOrdersComponent } from './components/view-all-orders/view-all-or
     SearchBooksComponent,
     SearchCategoriesComponent,
     ViewAllOrdersComponent,
+    CheckoutComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,36 +1,63 @@
 <app-navbar></app-navbar>
 
+<div class="row">
+    <nav class="admin__nav col-lg-3 ">
+        <ul class="menu">
+            <li class="menu__item">
+                <a class="menu__link"  routerLink="/admin-dashboard">View Users</a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" routerLink="/add-category">Add Category</a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" routerLink="/add-books">Add Book</a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" routerLink="/view-order">View All Orders</a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" routerLink="#">View Coupons</a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" routerLink="#">Add Coupons</a>
+            </li>
+        </ul>
+    </nav>
 
-<h1 class="heading" *ngIf="!order[0]">No order to display</h1>
-<div *ngIf="order[0]" class="jumbotron jumbotron-fluid">
-    <div class="container">
-        <table *ngIf="true" class="table   table-bordered table-hover border-dark table-sm" style="width: 60%;">
-            <thead class="thead-dark text-center">
-                <tr>
-                    <th>Order Id</th>
-                    <th>User Id</th>
-                    <th>User Name</th>
-                    <th>Book Id</th>
-                    <th>Title</th>
-                    <th>Author</th>
-                    <th>Price</th>
-                    <th>Date</th>
-                </tr>
-            </thead>
-            <tbody style="background-color: white; ">
-                <tr *ngFor="let o of order">
-                    <td>{{o.OrderID}}</td>
-                    <td>{{o.UserId}}</td>
-                    <td>{{o.UserName}}</td>
-                    <td>{{o.BookID}}</td>
-                    <td>{{o.Title}}</td>
-                    <td>{{o.Author}}</td>
-                    <td>{{o.Price}}</td>
-                    <td>{{o.OrderDate}}</td>
+    <div class="div container text-center col-lg-9">
 
-                </tr>
-            </tbody>
-        </table>
+        <h1 class="heading" *ngIf="!order[0]">No order to display</h1>
+        <div *ngIf="order[0]" >
+            <div class="container">
+                <table *ngIf="true" class="table   table-bordered table-hover border-dark table-sm" style="width: 60%;">
+                    <thead class="thead-dark text-center">
+                        <tr>
+                            <th>Order Id</th>
+                            <th>User Id</th>
+                            <th>User Name</th>
+                            <th>Book Id</th>
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th>Price</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody style="background-color: white; ">
+                        <tr *ngFor="let o of order">
+                            <td>{{o.OrderID}}</td>
+                            <td>{{o.UserId}}</td>
+                            <td>{{o.UserName}}</td>
+                            <td>{{o.BookID}}</td>
+                            <td>{{o.Title}}</td>
+                            <td>{{o.Author}}</td>
+                            <td>{{o.Price}}</td>
+                            <td>{{o.OrderDate}}</td>
 
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
     </div>
 </div>

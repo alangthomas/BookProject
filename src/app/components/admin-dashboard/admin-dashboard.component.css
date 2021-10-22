@@ -1,81 +1,9 @@
-/* .jumbotron-fluid{
-    height: 400px;
-  
-    background-image: url("src/assets/book.jpg");
-    color: white;
-    font-weight: 500px !important;
-    font-size: 100px !important;
-}
-.header{
-    margin-top: 20px;
-}
-.btn{
-    margin: 5px;
-}
-
-.button {
-    display: inline-flex;
-    height: 50px;
-    width: 225px;
-    border: 4px solid #BFC0C0;
-    margin: 20px 20px 0px 200px;
-    padding: 5px  10px;
-    color: #BFC0C0 !important;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-size: 10px;
-    letter-spacing: 1.5px;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    font-size: large;
-    font-weight: 500;
-    
-  }
-  
-  a {
-    color: white;
-    text-decoration: none;
-    letter-spacing: 1px;
-  }
-  #button-5 {
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-  }
-  
-  #button-5 a {
-    position: relative;
-    transition: all .45s ease-Out;
-  }
-  
-  #translate {
-    transform: rotate(50deg);
-    width: 100%;
-    height: 250%;
-    left: -200px;
-    top: -30px;
-    background: #BFC0C0;
-    position: absolute;
-    transition: all .3s ease-Out;
-  }
-  
-  #button-5:hover #translate {
-    left: 0;
-  }
-  
-  #button-5:hover a {
-    color: #2D3142;
-  }
-   */
-
- /* Primary Styles */
 
  .admin__nav {
   flex: 0 0 250px;
   grid-area: nav;
   background-color: #313541;
-  min-height: 500px;
+  height: 500px;
   width: 175px;
   margin-top: 50px;
   margin-left: 30px ;
@@ -111,4 +39,10 @@ a {
 
 button{
   margin: 5px;
+}
+
+table {
+  margin-left: auto;
+  margin-right:  auto;
+  min-width: 50%;
 }

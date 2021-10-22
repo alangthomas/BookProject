@@ -1,8 +1,33 @@
 <app-navbar></app-navbar>
+<div class="row">
+    <nav class="col admin__nav col-lg-3 ">
+        <ul class="menu">
+            <li class="menu__item">
+                <a class="menu__link" (click)="onViewUser()" routerLink="/admin-dashboard">View Users</a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" routerLink="/add-category">Add Category</a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" routerLink="/add-books">Add Book</a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" routerLink="/view-order">View All Orders</a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" routerLink="#">View Coupons</a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" routerLink="#">Add Coupons</a>
+            </li>
+        </ul>
+    </nav>
+   
 
-<div class="wrapper col-lg-6 col-md-8 col-sm-10 " >
+
+<div class="wrapper  col col-lg-8" >
     
-    <h1>Add New Book</h1>
+    <h1 class="text-center">Add New Book</h1>
     <hr>
     <div *ngIf="message" class="alert" [class]="alertClass" role="alert">
         {{ message }}
@@ -146,5 +171,6 @@
 
 
     </form>
+</div>
 </div>
 
