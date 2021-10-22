@@ -23,7 +23,6 @@ export class SidebarComponent implements OnInit {
         this.user = response;
         console.log(response);
       });
-  
   }
 
 }

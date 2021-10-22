@@ -64,7 +64,6 @@ import { AddAddressComponent } from './components/add-address/add-address.compon
     OrderComponent,
     FooterComponent,
     ViewOrdersComponent,
-
     SearchBooksComponent,
     SearchCategoriesComponent,
     ViewAllOrdersComponent,
