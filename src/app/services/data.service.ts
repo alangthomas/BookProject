@@ -139,4 +139,14 @@ export class DataService {
   addAddress(address:any){
     return this.http.post<any>('http://localhost:54295/api/address/',address);
   }
+  getAddressByAddrId(id: any){
+    return this.http.get<any>('http://localhost:54295/api/address/'+id);
+  }
+
+  checkCoupon(code: any){
+    return this.http.get<any>('http://localhost:54295/api/coupon/check/'+code);
+  }
+  getCouponByCode(code:any){
+    return this.http.get<any>('http://localhost:54295/api/coupon/'+code);
+  }
 }

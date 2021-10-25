@@ -1,0 +1,90 @@
+<app-navbar></app-navbar>
+
+<div class="Container">
+    <ul class="Container-progessbar">
+        <li class="active">SIGN IN</li>
+        <li class="active">DELEVERY & PAYMENT</li>
+        <li class="active">PLACE ORDER</li>
+        <li class="">COMPLETE PAYMENT</li>
+    </ul>
+    <h3>Review your order</h3>
+    <div class="row">
+        <div class="col-lg-9">
+            <div class="div1">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <p>
+                            <b>Shipping Address</b> <br>
+                            {{address.Name}} <br>
+                            {{address.BuildingName}} <br>
+                            {{address.Locality}} <br>
+                            {{address.District}} <br>
+                            {{address.Pincode}} <br>
+                            Land Mark - {{address.Landmark}} <br>
+                            {{address.Mobile}}
+                        </p>
+                    </div>
+                    <div class="col-lg-5 ">
+                        <p><b>Voucher and Promo codes</b></p> 
+                        <form #registerForm="ngForm" (submit)="onSubmit()" class="form-inline" >
+                            
+                            <div class="form-group mx-sm-3 mb-2">
+
+                                <label for="promo" class="sr-only"></label>
+                                <input  type="text" class="form-control" id="promo" placeholder="Code"  name = "promo"
+                                        style=" margin-top: 10px; width: 100px; height: 30px;"
+                                        #promo = "ngModel"
+                                        [(ngModel)] = "promoCode">
+                            </div>
+                            <input 
+                                    type="submit"
+                                     value="Apply"
+                                    class="btn btn-primary btn-sm "
+                                    [disabled]="registerForm.invalid" />
+                        </form>
+
+                        <div *ngIf="message" class="alert" [class]="alertClass" role="alert">
+                            <i>{{ message }}</i>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class=div2>
+                <div *ngFor="let book of books" class="row">
+                    <div class="col-lg-2 image">
+                        <img src="assets/{{book.Image}}.jpg" alt="book image" style="width: 100px;">
+                    </div>
+                    <div class="col-lg-8 details">
+                        <p>
+                            <b>{{book.Title}}</b> <br>
+                            {{book.Author}} <br>
+                            {{book.Price | currency:'INR'}} <br>
+                            <b> Quantity </b>: {{book.Quantity}}  <br>
+                            <b>Total Price : </b> {{book.Price*book.Quantity | currency:'INR'}}
+
+                        </p>
+                    </div>
+                    <hr> <hr>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-lg-3">
+            <div class="div3">
+                <button (click)="onPlaceOrder()" class="btn btn-warning btn-sm placeOrder">Place order and Pay</button> <br><br>
+                <p>
+                    <b class="orderSummary">Order Summary</b> <br> 
+                    Items:   <b class="orderDetails "> {{totalAmount | currency:'INR'}}</b>  <br>
+                    Delevery:  <b class="orderDetails "> {{delevery | currency:'INR'}}</b>  <br>  
+                    Promo Applied: <b class="orderDetails2 "> -{{promoValue | currency:'INR'}}</b>  <br> 
+                </p>
+                <hr>
+                <p style="color:brown ; font-size: large;">
+                    <b>Order Total: </b> <b class="orderDetails3">{{finalCartTotal | currency:'INR'}}</b>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

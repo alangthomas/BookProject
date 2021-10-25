@@ -1,26 +1,3 @@
-* {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    box-sizing: border-box;
-}
-body {
-    /* background-color:  white; */
-    font-family: 'Arial', sans-serif;
-}
-.payment{
-    background-color: white;
-    border: 1px solid black;
-    padding-bottom: 100px ;
-    padding: 10px 20px;
-    max-width: 60%;
-    border-radius: 5px;
-}
-.form-check{
-    border: 2px solid black;
-    background-color:  white;
-}
 .Container {
     max-width: 100%;
     margin-left: 10%;
@@ -31,20 +8,71 @@ body {
     padding-left: 20px;
    
 }
-.btn-warning{
-    margin-top: 10px; width: 200px; 
-    background-color: #FFBD02;
-    min-height: 10px;
+
+.div1{
+    border: 1px solid grey;
+    min-height: 250px;
+    background-color: white;
+    border-radius: 5px;
+    padding-left: 15px;
+    padding-top: 15px;
 }
-.btn-light{
-    min-width: 95px;
-    margin-top: 10px;
-    margin-right: 10px;
-}
-.addr{
+
+.div2 {
     margin-top: 20px;
-    margin-bottom: 20px;
+    border: 1px solid grey;
+    min-height: 250px;
+    background-color: white;
+    border-radius: 5px;
+    
 }
+
+.div3{
+    
+    border: 1px solid grey;
+    min-height: 250px;
+    background-color: white;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-top: 10px ;
+    font-size: smaller;
+
+}
+.placeOrder{
+    margin-left : 10px;
+    width: 90%;
+    
+}
+.orderDetails{
+    text-align: right;
+    position: relative;
+    left: 160px;
+    margin-right: 10px !important;
+}
+.orderDetails2{
+    text-align: right;
+    position: relative;
+    left: 105px;
+    margin-right: 10px !important;
+
+}
+.orderDetails3{
+    text-align: right;
+    position: relative;
+    left: 70px;
+    margin-right: 10px !important;
+
+}
+.orderSummary{
+    font-size: large;
+}
+.image{
+    margin: 20px;
+}
+.details{
+    margin: 20px;
+}
+
 .Container-progessbar {
     display: flex;
     width: 75%;

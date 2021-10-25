@@ -62,5 +62,8 @@ export class CartComponent implements OnInit {
       this.ngOnInit();
     })
   }
+  onCheckout(){
+    localStorage.total = this.totalAmount;
+  }
 }
 

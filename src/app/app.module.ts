@@ -38,6 +38,7 @@ import { SearchCategoriesComponent } from './components/search-categories/search
 import { ViewAllOrdersComponent } from './components/view-all-orders/view-all-orders.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { AddAddressComponent } from './components/add-address/add-address.component';
+import { PlaceOrderComponent } from './components/place-order/place-order.component';
 
 
 @NgModule({
@@ -70,6 +71,7 @@ import { AddAddressComponent } from './components/add-address/add-address.compon
     ViewAllOrdersComponent,
     CheckoutComponent,
     AddAddressComponent,
+    PlaceOrderComponent,
   ],
   imports: [
     BrowserModule,

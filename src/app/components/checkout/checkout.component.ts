@@ -13,12 +13,14 @@ export class CheckoutComponent implements OnInit {
   address : any[] = []
   addressId : any;
   firstTime = true;
+  total: any;
   constructor(private dataService: DataService, private activatedRoute: ActivatedRoute, private router: Router) 
   {
     this.userId = activatedRoute.snapshot.paramMap.get('userId');
    }
 
   ngOnInit(): void {
+    this.total = localStorage.total;
     this.dataService.getAddressById(this.userId).subscribe(data=>{
         this.address  = data;
         this.firstTime = true;
@@ -29,6 +31,7 @@ export class CheckoutComponent implements OnInit {
   onDeliver(id:number){
     console.log(id)
     this.addressId = id;
+    localStorage.addressId = id;
     this.firstTime = false;
   }
 
@@ -39,5 +42,7 @@ export class CheckoutComponent implements OnInit {
   onEdit(addr: any){
     console.log(addr)
   }
+
+  
 
 }

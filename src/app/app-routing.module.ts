@@ -25,7 +25,7 @@ import { ViewAllOrdersComponent } from './components/view-all-orders/view-all-or
 import { CheckoutComponent } from './components/checkout/checkout.component';
 
 import { AddAddressComponent } from './components/add-address/add-address.component';
-
+import { PlaceOrderComponent } from './components/place-order/place-order.component';
 
 const routes: Routes = [
   
@@ -36,6 +36,7 @@ const routes: Routes = [
   {path:'add-subcategory', component:AddSubcategoryComponent},
   {path: 'cart/:userId', component:CartComponent},
   {path: 'checkout/:userId',component:CheckoutComponent},
+  {path: 'checkout/:userId/place-order', component: PlaceOrderComponent },
   {path:'register', component:RegisterComponent},
   {path:'login', component:LoginComponent},
   {path:'admin-dashboard',component:AdminDashboardComponent},
