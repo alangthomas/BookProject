@@ -44,12 +44,7 @@
         </ul>
 
         <ul class="navbar-nav ml-auto">
-            <li *ngIf="loggedin == false" class="nav-item" style="margin: 20px;">
-                <button class="btn btn-outline-primary" routerLink="/register">Register</button>
-            </li>
-            <li *ngIf="loggedin == false" class="nav-item" style="margin-left: 7px;" style="margin: 20px;">
-                <button class="btn btn-outline-success" routerLink="/login">Login</button>
-            </li>
+            
 
             <li *ngIf="loggedin != false and loggedin !='admin@gmail.com'" class="nav-item"
                 style="margin-top: 20px; margin-right: 7px;">
@@ -59,7 +54,7 @@
                     Cart
                 </a>
             </li>
-            <li class="nav-item dropdown" style="margin-top: 20px;">
+            <li *ngIf="loggedin != false" class="nav-item dropdown" style="margin-top: 20px;">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTboP3I7YVTIvLusl6s0sph0CDmXVW6wY4u8atSX4D2OKCfh7auYYZi0zuJpPmd8VmmA38&usqp=CAU"
                     width="26" height="30" alt="" style="border-radius: 250px;">
@@ -78,6 +73,12 @@
                 <button (click)="onLogout()" class="btn btn-outline-danger" routerLink="">Logout</button>
             </li>
         </ul>
+        <li *ngIf="loggedin == false" class="nav-item" style="margin: 20px;">
+            <button class="btn btn-outline-primary" routerLink="/register">Register</button>
+        </li>
+        <li *ngIf="loggedin == false" class="nav-item" style="margin-left: 7px;" style="margin: 20px;">
+            <button class="btn btn-outline-success" routerLink="/login">Login</button>
+        </li>
         <!-- <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>

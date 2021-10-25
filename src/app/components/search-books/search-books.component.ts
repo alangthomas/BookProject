@@ -33,15 +33,18 @@ export class SearchBooksComponent implements OnInit {
     }
   }
 
-  onCartClick(BookID: number) {
-    this.dataService.addToCart(localStorage.getItem('userId'), BookID)
-    this.router.navigate(['/cart', localStorage.getItem('userId')])
+  onCartClick(BookID:number){
+    this.dataService.addToCart(localStorage.getItem('userId'),BookID).subscribe((response) =>{
+      this.router.navigate(['/cart',localStorage.getItem('userId')])
+    })
   }
-
-
-  onWishlistClick(BookID: number) {
-    this.dataService.addToWishlist(localStorage.getItem('userId'), BookID)
-    this.router.navigate(['/wishlist', localStorage.getItem('userId')])
+  
+  
+  onWishlistClick(BookID:number){
+    this.dataService.addToWishlist(localStorage.getItem('userId'),BookID).subscribe((response) =>{
+      this.router.navigate(['/wishlist',localStorage.getItem('userId')])
+    })
+    
   }
 
 

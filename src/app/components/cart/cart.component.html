@@ -1,22 +1,40 @@
 <app-navbar></app-navbar>
-<div class="box">
-    <!-- <h1>Shopping Cart</h1> -->
-    <div class="cart" style="padding-top: 3%; border-width: 2px; border: tomato;">
-        <h1 style="font-family: Arial, Helvetica, sans-serif;">Shopping Cart</h1>
-    </div>
-    <div class="cart">
-        <div class="products">
-            <div class="product" *ngFor="let book of books">
-                <img src="{{book.Image}}">
-                <div class="product-info">
-                    <h3 class="product-name font">{{book.Title}}</h3>
-                    <h4 class="product-price font">{{ book.Price | currency: 'INR' }} </h4>
-                    <p class="product-quantity">
-                        Qnt:
-                        <input type="number" [(ngModel)]=book.Quantity id="" (change)="onChange(book.Id, book.Quantity)" style="min-width: 60px; min-height: 40px;">
-                    </p>
-                    <button type="button " class="btn btn-danger btn-lg " style=" position: absolute;bottom: 20px;right: 20px; " (click)="onRemoveButton(book.Id) ">Remove</button>
+
+<div class = "container" style="float: left; width: 24%; padding-top: 25px; background-color: white;">
+<app-sidebar></app-sidebar>
+</div>
+
+<div class="container"style="background-color: white; max-width: 75%; float: right; padding-top: 25px;">
+    <div class="box" style="min-width: 100%;">
+        <!-- <h1>Shopping Cart</h1> -->
+        <div class="cart" style="padding-top: 3%; border-width: 2px; border: tomato;">
+            <h1 >Shopping Cart</h1>
+        </div>
+        <div class="cart">
+            <div class="products">
+                <div class="product" *ngFor="let book of books">
+                    <img src="{{book.Image}}">
+                    <div class="product-info">
+                        <h4 class="product-name ">{{book.Title}}</h4>
+                        <h5 class="product-price ">{{ book.Price | currency: 'INR' }} </h5>
+                        <p class="product-quantity">
+                            Qnt:
+                            <input type="number" [(ngModel)]=book.Quantity id="" (change)="onChange(book.Id, book.Quantity)" style="min-width: 60px; min-height: 40px;">
+                        </p>
+                        <button type="button " class="btn btn-danger btn-lg " style=" position: absolute;bottom: 20px;right: 20px; " (click)="onRemoveButton(book.Id) ">Remove</button>
+                    </div>
                 </div>
+            </div>
+            <div class="cart-total ">
+                <p>
+                    <span>Total Price</span>
+                    <span>{{ totalAmount | currency: 'INR' }} </span>
+                </p>
+                <p>
+                    <span>Number of Items</span>
+                    <span>{{totalItem}}</span>
+                </p>
+                <a href="# ">Proceed to Checkout</a>
             </div>
         </div>
         <div class="cart-total ">
@@ -31,19 +49,5 @@
             <a (click)="onCheckout()"routerLink="/checkout/{{userId}}">Proceed to Checkout</a>
         </div>
     </div>
+    </div>    
 </div>
-
-
-
-
-
-
-
-
-
-<!-- <p class="product-remove ">
-						<i class="fa fa-trash " aria-hidden="true "></i>
-
-						 <span class="remove " (click)>Remove</span>
-            <button type="button " class="btn btn-danger " style=" position: absolute;bottom: 20px;right: 20px; ">Remove</button>
-					</p> -->

@@ -38,14 +38,17 @@ onButtonClick(catId: any){
 }
 
 onCartClick(BookID:number){
-  this.dataservice.addToCart(localStorage.getItem('userId'),BookID)
-  this.router.navigate(['/cart',localStorage.getItem('userId')])
+  this.dataservice.addToCart(localStorage.getItem('userId'),BookID).subscribe((response) =>{
+    this.router.navigate(['/cart',localStorage.getItem('userId')])
+  })
 }
 
 
 onWishlistClick(BookID:number){
-  this.dataservice.addToWishlist(localStorage.getItem('userId'),BookID)
-  this.router.navigate(['/wishlist',localStorage.getItem('userId')])
+  this.dataservice.addToWishlist(localStorage.getItem('userId'),BookID).subscribe((response) =>{
+    this.router.navigate(['/wishlist',localStorage.getItem('userId')])
+  })
+  
 }
 
 
