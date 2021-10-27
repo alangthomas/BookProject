@@ -64,10 +64,11 @@
                             <b>Total Price : </b> {{book.Price*book.Quantity | currency:'INR'}}
 
                         </p>
+                        <hr>
                     </div>
-                    <hr> <hr>
+                    
                 </div>
-
+                
             </div>
         </div>
 
@@ -82,7 +83,7 @@
                 </p>
                 <hr>
                 <p style="color:brown ; font-size: large;">
-                    <b>Order Total: </b> <b class="orderDetails3">{{finalCartTotal | currency:'INR'}}</b>
+                    <b>Order Total: </b> <b  class="orderDetails3">{{getFinalCartTotal() | currency:'INR'}}</b>
                 </p>
             </div>
         </div>

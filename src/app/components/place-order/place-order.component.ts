@@ -9,6 +9,7 @@ import { DataService } from 'src/app/services/data.service';
   styleUrls: ['./place-order.component.css']
 })
 export class PlaceOrderComponent implements OnInit {
+  order:any = []
   delevery = 40;
   finalCartTotal: any;
   promoValue = 0 ;
@@ -31,7 +32,7 @@ export class PlaceOrderComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.promoValue = localStorage.discount
+    this.promoValue = 0
     this.dataservice.getCartById(this.userId).subscribe(response => {
       this.books = response;
       for (let book of this.books) {
@@ -78,9 +79,10 @@ export class PlaceOrderComponent implements OnInit {
           this.message = "Promo applied";
           this.dataservice.getCouponByCode(this.promoCode).subscribe(response=>{
             this.promo = response
-            // console.log(this.promo)
+             //console.log(this.promo)
           })
           localStorage.discount = Math.min(this.promo.MaxAmount, this.totalAmount*this.promo.Discount/100)
+          
         }
         else{
           localStorage.discount = 0
@@ -88,8 +90,8 @@ export class PlaceOrderComponent implements OnInit {
           this.message = "Invalid code";
         }
       })
-      if(this.promo.length){
       
+      if(this.promo){
         if(this.promo.MaxAmount < this.totalAmount*this.promo.Discount/100){
           this.promoValue = this.promo.MaxAmount;
         }
@@ -98,18 +100,37 @@ export class PlaceOrderComponent implements OnInit {
         this.finalCartTotal = this.totalAmount+this.delevery-this.promoValue;
       }
       else{
-        console.log(this.finalCartTotal)
-        // console.log("promo")
+         //console.log(this.promo)
         // console.log(this.promoValue)
         this.finalCartTotal = this.totalAmount+this.delevery
       }
-      console.log(this.promo)
+      console.log(this.finalCartTotal)
       
   }
-  
+   
 
   onPlaceOrder(){
+    for (let book of this.books){
+      this.order.push({"UserID":Number(this.userId), "BookID":book.Id})
 
+      // this.order["UserID"] = Number(this.userId);
+      // this.order["BookID"] = book.Id;
+       
+    }
+    //console.log(this.order)
+    for(let o of this.order){
+      this.dataservice.addOrder(o).subscribe(data=>{
+        if(data){
+          alert("Order Placed Successfully")
+          this.router.navigateByUrl('home')
+        }
+      })
+    console.log(o)
+    }
+  }
+
+  getFinalCartTotal(){
+    return this.finalCartTotal
   }
 
 

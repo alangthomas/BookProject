@@ -26,6 +26,8 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
 
 import { AddAddressComponent } from './components/add-address/add-address.component';
 import { PlaceOrderComponent } from './components/place-order/place-order.component';
+import { ViewCouponsComponent } from './components/view-coupons/view-coupons.component';
+import { AddCouponsComponent } from './components/add-coupons/add-coupons.component';
 
 const routes: Routes = [
   
@@ -40,6 +42,7 @@ const routes: Routes = [
   {path:'register', component:RegisterComponent},
   {path:'login', component:LoginComponent},
   {path:'admin-dashboard',component:AdminDashboardComponent},
+  {path:'view-coupons', component:ViewCouponsComponent},
   {path: 'view-book/:Id', component: ViewBookComponent},
   {path: 'view-book/:Id/updatebook', component: UpdateBookComponent},
   {path: 'categories', component:CategoriesComponent},
@@ -55,6 +58,7 @@ const routes: Routes = [
   {path: 'view-order', component:ViewAllOrdersComponent},
   {path: 'admin-dashboard/view-order', component:ViewAllOrdersComponent},
   {path: 'address/add/:userId', component:AddAddressComponent},
+  {path: 'add-coupon', component: AddCouponsComponent},
   { path: '**', redirectTo: 'home', pathMatch: 'full' }, //always at the last line
 ];
 

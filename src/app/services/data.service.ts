@@ -149,4 +149,18 @@ export class DataService {
   getCouponByCode(code:any){
     return this.http.get<any>('http://localhost:54295/api/coupon/'+code);
   }
+
+  addOrder(order: any){
+    return this.http.post<any>('http://localhost:54295/api/order', order);
+  }
+
+  getAllCoupon(){
+    return this.http.get<any>('http://localhost:54295/api/coupon')
+  }
+  deleteCouponById(id: any){
+    return this.http.delete<any>('http://localhost:54295/api/coupon/delete/'+id)
+  }
+  addCoupon(coupon:any){
+    return this.http.post<any>('http://localhost:54295/api/coupon/add/', coupon);
+  }
 }

@@ -26,32 +26,29 @@
 
     <div class="div container text-center col-lg-9">
 
-        <h1 class="heading" *ngIf="!order[0]">No order to display</h1>
-        <div *ngIf="order[0]" >
+        <h1 class="heading" *ngIf="!coupons[0]">No coupon to display</h1>
+        <div *ngIf="coupons[0]" >
             <div class="container">
-                <table *ngIf="true" class="table   table-bordered table-hover border-dark table-sm" style="width: 60%;">
+                <table *ngIf="true" class="table   table-bordered table-hover border-dark table-sm" style="max-width: 50%;">
                     <thead class="thead-dark text-center">
                         <tr>
-                            <th>Order Id</th>
-                            <th>User Id</th>
-                            <th>User Name</th>
-                            <th>Book Id</th>
-                            <th>Title</th>
-                            <th>Author</th>
-                            <th>Price</th>
-                            <th>Date</th>
-                        </tr>
+                            <th>Coupon Id</th>
+                            <th>Discount </th>
+                            <th>Max Discount</th>
+                            <th>Code</th>
+                            <th></th>
+    
                     </thead>
                     <tbody style="background-color: white; ">
-                        <tr *ngFor="let o of order">
-                            <td>{{o.OrderID}}</td>
-                            <td>{{o.UserId}}</td>
-                            <td>{{o.UserName}}</td>
-                            <td>{{o.BookID}}</td>
-                            <td>{{o.Title}}</td>
-                            <td>{{o.Author}}</td>
-                            <td>{{o.Price}}</td>
-                            <td>{{o.OrderDate}}</td>
+                        <tr *ngFor="let c of coupons">
+                            <td>{{c.CouponID}}</td>
+                            <td>{{c.Discount}}</td>
+                            <td>{{c.MaxAmount}}</td>
+                            <td>{{c.CouponCode}}</td>
+                            <td>
+                                <button class="btn btn-danger btn-sm" (click)="onDelete(c.CouponID)" onclick="window.location.reload()">Delete</button>
+                            </td>
+                          
 
                         </tr>
                     </tbody>

@@ -23,11 +23,11 @@ export class AddBooksComponent implements OnInit {
   }
 
   onSubmit(){
-    this.bookModel.status = 1 ;
+    this.bookModel.Status = 1 ;
     console.log(this.bookModel);
     this.dataService.addBook(this.bookModel).subscribe(response => {
       this.message = "Book added successfully";
-      console.log('SUCCESS');
+      alert("Book added succcessfully");
       this.router.navigate(['admin-dashboard'])
     })
   }
