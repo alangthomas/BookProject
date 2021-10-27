@@ -24,23 +24,23 @@ export class UpdateBookComponent implements OnInit {
 
   ngOnInit(): void {
     this.dataService.getBookById(this.id).subscribe(response =>{
-      this.bookModel.catId = response.CatId
-      this.bookModel.title = response.Title;
+      this.bookModel.CatId = response.CatId
+      this.bookModel.Title = response.Title;
       this.bookModel.ISBN = response.ISBN;
-      this.bookModel.price = response.Price;
-      this.bookModel.year = response.Year;
-      this.bookModel.description = response.Description;
-      this.bookModel.author = response.Author;
-      this.bookModel.position = response.Position
-      this.bookModel.status = 1
-      this.bookModel.image = response.Image
+      this.bookModel.Price = response.Price;
+      this.bookModel.Year = response.Year;
+      this.bookModel.Description = response.Description;
+      this.bookModel.Author = response.Author;
+      this.bookModel.Position = response.Position
+      this.bookModel.Status = 1
+      this.bookModel.Image = response.Image
       console.log(response);
 
     })
   }
 
   onSubmit(){
-    this.bookModel.id = this.id;
+    this.bookModel.Id = this.id;
     this.dataService.updateBook(this.id, this.bookModel).subscribe(response =>{
       console.log(response);
     });

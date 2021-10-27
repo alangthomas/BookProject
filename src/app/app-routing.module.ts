@@ -22,10 +22,12 @@ import { OrderComponent } from './components/order/order.component';
 import { SearchBooksComponent } from './components/search-books/search-books.component';
 import { SearchCategoriesComponent } from './components/search-categories/search-categories.component';
 import { ViewAllOrdersComponent } from './components/view-all-orders/view-all-orders.component';
-
+import { CheckoutComponent } from './components/checkout/checkout.component';
 
 import { AddAddressComponent } from './components/add-address/add-address.component';
-
+import { PlaceOrderComponent } from './components/place-order/place-order.component';
+import { ViewCouponsComponent } from './components/view-coupons/view-coupons.component';
+import { AddCouponsComponent } from './components/add-coupons/add-coupons.component';
 
 const routes: Routes = [
   
@@ -35,9 +37,12 @@ const routes: Routes = [
   {path:'add-category', component: AddCategoryComponent},
   {path:'add-subcategory', component:AddSubcategoryComponent},
   {path: 'cart/:userId', component:CartComponent},
+  {path: 'checkout/:userId',component:CheckoutComponent},
+  {path: 'checkout/:userId/place-order', component: PlaceOrderComponent },
   {path:'register', component:RegisterComponent},
   {path:'login', component:LoginComponent},
   {path:'admin-dashboard',component:AdminDashboardComponent},
+  {path:'view-coupons', component:ViewCouponsComponent},
   {path: 'view-book/:Id', component: ViewBookComponent},
   {path: 'view-book/:Id/updatebook', component: UpdateBookComponent},
   {path: 'categories', component:CategoriesComponent},
@@ -50,8 +55,10 @@ const routes: Routes = [
   {path: 'order/:userId', component:OrderComponent},
   {path:'search-books/:select/:searchString', component:SearchBooksComponent},
   {path:'search-categories/:searchstring', component:SearchCategoriesComponent},
+  {path: 'view-order', component:ViewAllOrdersComponent},
   {path: 'admin-dashboard/view-order', component:ViewAllOrdersComponent},
   {path: 'address/add/:userId', component:AddAddressComponent},
+  {path: 'add-coupon', component: AddCouponsComponent},
   { path: '**', redirectTo: 'home', pathMatch: 'full' }, //always at the last line
 ];
 

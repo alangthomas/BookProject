@@ -1,0 +1,70 @@
+<app-navbar></app-navbar>
+
+<div class="Container">
+  <ul class="Container-progessbar">
+    <li class="active">SIGN IN</li>
+    <li class="active">DELEVERY & PAYMENT</li>
+    <li class="">PLACE ORDER</li>
+    <li class="">COMPLETE PAYMENT</li>
+  </ul>
+
+  <div *ngIf="firstTime" class="select_address">
+    <h1>Select a delevery address</h1>
+    <p>Is the address you'd like to use displayed below? If so, click the corresponding "Deliver to this address"
+      button. Or you can enter a new delivery address. </p>
+    <br><br>
+    <hr>
+    <div class="addr" *ngFor="let addr of address">
+      <h4>{{addr.Name}}</h4>
+      <p>{{addr.BuildingName}}</p>
+      <p>{{addr.Locality}}</p>
+      <p>{{addr.District}}, {{addr.Pincode}}</p>
+      <p>{{addr.Mobile}}</p>
+      <p>Land mark - {{addr.Landmark}}</p>
+
+      <button class="btn btn-warning" (click)="onDeliver(addr.AddressID)">Deliver to this address</button>
+      <br>
+      <button class="btn btn-light" (click)="onEdit(addr)">Edit</button>
+      <button class="btn btn-light" (click)="onDelete(addr.AddressID)">Delete</button>
+      <br><br>
+      <hr>
+    </div>
+  </div>
+
+  <div *ngIf="!firstTime" class="payment">
+    <h4 style="margin-bottom: 7px;">Select a Payment Method</h4>
+    <hr>
+    <br>
+    <form #registerForm="ngForm">
+       
+      <input required type="radio" id="card" name="payment" value="card">
+        <label for="card"><b>Debit/Credit/ATM Card</b></label><br> <br>
+
+        <input required type="radio" id="netbanking" name="payment" value="netbanking">
+        <label for="netbanking">
+        <b>Net Banking</b>
+        <select class="form-select" aria-label="Default select example" style="border-radius: 2px ;">
+          <option selected>Choose an Option</option>
+          <option value="1">SBI</option>
+          <option value="2">HDFC</option>
+          <option value="3">YES Bank</option>
+          <option value="4">City Bank</option>
+          <option value="5">ICICI</option>
+        </select>
+      </label><br><br>
+
+      <input required type="radio" id="upi" name="payment" value="upi">
+        <label for="upi"><b>Other UPI Apps</b></label><br> <br>
+
+      <input required type="radio" id="upi" name="payment" value="cod">
+      <label for="javascript"><b> Cash on delevery</b></label>
+      <br>
+      <input type="submit" value="Continue" class="btn btn-warning" [disabled]="registerForm.invalid"
+        routerLink="place-order" />
+
+    </form>
+
+
+  </div>
+
+</div>
