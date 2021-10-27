@@ -1,6 +1,5 @@
 
 .jumbotron-fluid{
-   
     background-color: white;
     width: 70%;
     margin: auto;
@@ -12,12 +11,57 @@
     text-align: center;
     margin-top: 30px;
 }
+
 table{
-    
     margin-left: auto;
     margin-right: auto;
     margin-top: 30px;
-    margin-bottom: 30px;
-    
-      
+    margin-bottom: 30px;   
+    min-width: 1000px;
 }
+
+
+.admin__nav {
+    flex: 0 0 250px;
+    grid-area: nav;
+    background-color: #313541;
+    height: 500px;
+    width: 175px;
+    margin-top: 50px;
+    margin-left: 30px ;
+    border-radius: 5px;
+  }
+  
+  a {
+    color: #dc5a60;
+    text-decoration: none;
+  }
+  .menu {
+    list-style-type: none;
+    padding: 0;
+  }
+  .menu__item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  }
+  .menu__link {
+    display: block;
+    padding: 1rem 2rem;
+    color: #76808f;
+    text-decoration: none;
+  }
+  .menu__link:hover, .menu__link:focus {
+    color: #fff;
+    background-color: #1f222d;
+    width: auto;
+  }
+  
+  .container{
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 700px ;
+  }
+  
+  button{
+    margin: 5px;
+  }
