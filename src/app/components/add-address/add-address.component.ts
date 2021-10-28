@@ -32,7 +32,10 @@ export class AddAddressComponent implements OnInit {
   onSubmit(Address : any){
     Address.UserID = this.userId;
     this.dataService.addAddress(Address).subscribe(response => {
-      console.log(response);
+      this.message = response;
+      this.router.navigate(['/address/getByUserId', this.userId])
+      // console.log(response);
+
     })
   }
 }

@@ -40,6 +40,7 @@ export class AddressComponent implements OnInit {
   onUpdate(address:any){
     this.dataService.updateAddress(address).subscribe(Response=>{
       console.log(Response);
+      this.message = Response.Name;
       this.ngOnInit();
     })
   }

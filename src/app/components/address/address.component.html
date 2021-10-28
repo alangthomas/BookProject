@@ -1,73 +1,88 @@
 <app-navbar></app-navbar>
 
+
 <div style="float: left; width: 24%; padding-top: 25px; background-color: white;">
     <app-sidebar></app-sidebar>
 </div>
+
+
+
 
 <div class="container"
     style="background-color:white; max-width: 75%; float: right; padding-top: 25px; padding-left: 100px;padding-right: 100px;border-left: 50% ; min-height: 100vh;">
     <div class="container">
         <a class="btn btn-info btn-lg btn-block" href="/address/add/{{userId}}" role="button">Add Address</a>
     </div>
+    
+    <div class="container" style="padding-top: 30px;">
+        <div style="text-align: center;" *ngIf="message" class="alert" [class]="alertClass" role="alert">
+            Address updated
+        </div>      
+    </div>
+    
     <div class="container" *ngFor="let address of addresses">
         <div class="float:left"
             style=" padding-left: 20%px; padding-top: 15px;padding-bottom: 15px; position: relative; left: 0px; top: 0px;background-color: white; ">
             <div class="panel problem-block "
                 style="padding:5%;padding-left: 10%;padding-right: 10%;margin-bottom:0px;border-radius: 10px;box-shadow:2px 2px 15px 0 rgba(46,61,73,.4); min-height: 200px; background-color: rgba(232, 242, 252, 0.904);">
-                <div clastyle="min-width: 100%; ">
-                        <div *ngIf="message" class="alert" [class]="alertClass" role="alert">
-                            {{ message }}
-                        </div>
+                <div clastyle="min-width: 100%;">
                         <div class="form-group">
-                            <input type="text" class="form-control" name="Name" id="Name" #Name="ngModel"
+                            <input type="text" class="form-control" name="Name" id="Name" required #Name="ngModel"
                                 [(ngModel)]=address.Name [class.is-invalid]="(Name.invalid && Name.touched)"
                                 style="width:49%; float: left;background-color: rgba(232, 242, 252, 0.904);">
-                            <input type="number" class="form-control" name=" Mobile" id=" Mobile" #Mobile="ngModel"
+                            <input type="number" class="form-control" name=" Mobile" id=" Mobile" required #Mobile="ngModel"
                                 [(ngModel)]=address.Mobile [class.is-invalid]="Mobile.invalid && Mobile.touched"
                                 style="width:49% ; float: right;background-color: rgba(232, 242, 252, 0.904);">
                         </div>
                         <div class="form-group" style="padding-top : 50px">
-                            <input type="text" class="form-control" name="BuildingName" id="BuildingName"
+                            <input type="text" class="form-control" name="BuildingName" required id="BuildingName"
                                 #BuildingName="ngModel" [(ngModel)]=address.BuildingName
                                 [class.is-invalid]="BuildingName.invalid && BuildingName.touched"
                                 style="width:49%; float: left;background-color: rgba(232, 242, 252, 0.904);"
                                 value={{address.BuildingName}}>
-                            <input type="email" class="form-control" name="Locality" id="Locality" #Locality="ngModel"
+                            <input type="email" class="form-control" name="Locality" id="Locality" required #Locality="ngModel"
                                 [(ngModel)]=address.Locality [class.is-invalid]="Locality.invalid && Locality.touched"
                                 style="width:49% ; float: right;background-color: rgba(232, 242, 252, 0.904);"
                                 value="{{address.Locality}}">
                         </div>
                         <div class=" form-group" style="padding-top : 33px">
-                            <input type="text" class="form-control" name="Pincode" id="Pincode" #Pincode="ngModel"
+                            <input type="text" class="form-control" name="Pincode" id="Pincode" required #Pincode="ngModel"
                                 [(ngModel)]=address.Pincode [class.is-invalid]="Pincode.invalid && Pincode.touched"
                                 style="width:49%; float: left;background-color: rgba(232, 242, 252, 0.904);"
                                 placeholder="{{address.Pincode}}">
-                            <input type="email" class="form-control" name="District" id="District" #District="ngModel"
+                            <input type="email" class="form-control" name="District" id="District" required #District="ngModel"
                                 [(ngModel)]=address.District [class.is-invalid]="District.invalid && District.touched"
                                 style="width:49% ; float: right;background-color: rgba(232, 242, 252, 0.904);"
                                 id="exampleInputPassword1" placeholder="{{address.District}}">
                         </div>
                         <div class="form-group" style="padding-top : 33px">
-                            <input type="text" class="form-control" name="Landmark" id="Landmark" #Landmark="ngModel"
+                            <input type="text" class="form-control" name="Landmark" id="Landmark" required #Landmark="ngModel"
                                 [(ngModel)]=address.Landmark [class.is-invalid]="Landmark.invalid && Landmark.touched"
                                 style="width:100%; float: left;background-color: rgba(232, 242, 252, 0.904);"
                                 placeholder="{{address.Landmark}}">
                         </div>
 
 
-                        <label style="padding-left : 30%">
+                        <span>
+                           
                             <div style="padding-top: 50px; padding-left: 20px; padding-right: 20px ; ">
-                                <button class="btn btn-info btn-lg" id="u"
+                                <button class="btn btn-info btn-lg" id="u" type="submit"
                                     style="position: relative; right: 0px; bottom: 0px; "
-                                    (click)="onUpdate(address) ">Update</button>
+                                    (click)="onUpdate(address)" >Update</button>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 <button class="btn btn-danger btn-lg" id="delete"
                                     style="position: relative; right: 0px; bottom: 0px; "
                                     (click)="onRemoveButton(address.AddressID) ">Delete</button>
                             </div>
-                        </label>
+                        </span>
 
-                         <div class style="padding-top: 20px; padding-left: 30%;">
+                         <div class style="padding-top: 20px; padding-left: 42%;">
                                 <input class="form-check-input" type="radio" name="r">
                                 <label class="form-check-label" for="flexCheckDefault">
                                     Default checkbox

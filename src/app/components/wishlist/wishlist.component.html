@@ -1,4 +1,7 @@
 <app-navbar></app-navbar>
+<div *ngIf="message" class="alert" [class]="alertClass" role="alert">
+    {{ message }}
+</div>
 <div style="float: left; width: 24%; padding-top: 25px; background-color: white;">
     <!-- <app-sidebar></app-sidebar> -->
     <div class="continer" style="max-width: 150%; height: 100vh;">

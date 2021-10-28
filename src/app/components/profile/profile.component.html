@@ -1,12 +1,12 @@
 <app-navbar></app-navbar>
 
-<div style="float: left; width: 24%; padding-top: 25px; background-color: white;">
+<div style="float: left; width: 24%; padding-top: 25px; background-color: white;" *ngIf="user">
     <app-sidebar></app-sidebar>
 </div>
 
 
 
-<div class="container" style="background-color: white; max-width: 75%; float: right; padding-top: 25px;">
+<div class="container" style="background-color: white; max-width: 75%; float: right; padding-top: 25px;" *ngIf = "user">
     <div class="formContainer" style="padding: 10%; min-height: 100vh;">
         <form class="">
             <div class="form-group">
