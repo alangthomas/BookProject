@@ -1,16 +1,16 @@
 
 export class Book {
     constructor(
-        public id ? : number,
-        public catId ?: number,
-        public title? : string,
+        public Id ? : number,
+        public CatId ?: number,
+        public Title? : string,
         public ISBN ? : number,
-        public year? : number,
-        public price ? : number,
-        public description ? : string,
-        public position? : number,
-        public status? : number,
-        public image? : string,
-        public author ? : string 
+        public Year? : number,
+        public Price ? : number,
+        public Description ? : string,
+        public Position? : number,
+        public Status? : number,
+        public Image? : string,
+        public Author ? : string 
     ){ }
 }

@@ -1,0 +1,86 @@
+<app-navbar></app-navbar>
+<div class="row">
+    <nav class="col admin__nav col-lg-3 ">
+        <ul class="menu">
+            <li class="menu__item">
+                <a class="menu__link"  routerLink="/admin-dashboard">View Users</a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" routerLink="/add-category">Add Category</a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" routerLink="/add-books">Add Book</a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" routerLink="/view-order">View All Orders</a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" routerLink="/view-coupons">View Coupons</a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" routerLink="/add-coupon">Add Coupons</a>
+            </li>
+        </ul>
+    </nav>
+   
+
+
+<div class="wrapper  col col-lg-8" >
+    
+    <h1 class="text-center">Add New Coupon</h1>
+    <hr>
+    <div *ngIf="message" class="alert" [class]="alertClass" role="alert">
+        {{ message }}
+    </div>
+    <form #registerForm="ngForm" (submit)="onSubmit()" >
+        <div class="form-group">
+            <label for="discount"> Discount %</label>
+            <input 
+                type="number"
+                name = "discount"
+                id = "discount"
+                required
+                class="form-control"
+                #discount = "ngModel"
+                [(ngModel)] = "couponModel.Discount"
+                [class.is-invalid]="discount.invalid && discount.touched"
+                >
+        </div>
+        <div class="form-group">
+            <label for="maxi">Coupon Code</label>
+            <input 
+                type="text"
+                name = "code"
+                id = "code"
+                required
+                class="form-control"
+                #code = "ngModel"
+                [(ngModel)] = "couponModel.CouponCode"
+                [class.is-invalid]="code.invalid && code.touched"
+                >
+        </div>
+        <div class="form-group">
+            <label for="maxi">Maximum Amount</label>
+            <input 
+                type="number"
+                name = "maxi"
+                id = "maxi"
+                required
+                class="form-control"
+                #maxi = "ngModel"
+                [(ngModel)] = "couponModel.MaxAmount"
+                [class.is-invalid]="maxi.invalid && maxi.touched"
+                >
+        </div>
+        
+        <input 
+                type="submit"
+                value="Add Coupon"
+                class="btn btn-primary btn-block"
+                [disabled]="registerForm.invalid" />
+
+
+    </form>
+</div>
+</div>
+

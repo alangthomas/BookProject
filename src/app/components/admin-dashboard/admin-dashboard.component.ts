@@ -9,11 +9,13 @@ import {  DataService } from 'src/app/services/data.service';
 })
 export class AdminDashboardComponent implements OnInit {
   viewUser = false;
+  viewAddCat = false;
+  viewAddBook = false;
   users : any[] = [];
   constructor(private dataService : DataService) { }
 
   ngOnInit(): void {
-    this.viewUser=false;
+    
     this.dataService.getAllUsers().subscribe(response=>{
       this.users = response;
       console.log(this.users);
@@ -24,10 +26,13 @@ export class AdminDashboardComponent implements OnInit {
     this.viewUser = true;
   }
   onActivate(user:any){
+    this.viewUser = true
     this.dataService.activateUser(user).subscribe();
   }
 
   onDisable(user:any){
+    console.log(user)
+    this.viewUser = true
     this.dataService.disableUser(user).subscribe()
   }
 

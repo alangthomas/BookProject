@@ -5,7 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 import { forEachChild } from 'typescript';
 import { toInteger } from '@ng-bootstrap/ng-bootstrap/util/util';
 
-
+ 
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
@@ -61,6 +61,9 @@ export class CartComponent implements OnInit {
       this.totalItem = 0;
       this.ngOnInit();
     })
+  }
+  onCheckout(){
+    localStorage.total = this.totalAmount;
   }
 }
 
