@@ -23,23 +23,23 @@ export class AddressComponent implements OnInit {
   ngOnInit(): void {
     this.dataService.getAddressById(this.userId).subscribe(response => {
       this.addresses = response;
-      console.log(response);
+      // console.log(response);
       this.dataService.getUserById(this.userId).subscribe(response => {
         this.user = response;
-        console.log(response);
+        // console.log(response);
       });
     });
   }
   onRemoveButton(AddressID:any){
     this.dataService.removeAddressById(AddressID).subscribe(response=>{
-      console.log(response)
+      // console.log(response)
       this.ngOnInit()
     })
   }
 
   onUpdate(address:any){
     this.dataService.updateAddress(address).subscribe(Response=>{
-      console.log(Response);
+      // console.log(Response);
       this.message = Response.Name;
       this.ngOnInit();
     })

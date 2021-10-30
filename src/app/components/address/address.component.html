@@ -27,35 +27,54 @@
                 style="padding:5%;padding-left: 10%;padding-right: 10%;margin-bottom:0px;border-radius: 10px;box-shadow:2px 2px 15px 0 rgba(46,61,73,.4); min-height: 200px; background-color: rgba(232, 242, 252, 0.904);">
                 <div clastyle="min-width: 100%;">
                         <div class="form-group">
-                            <input type="text" class="form-control" name="Name" id="Name" required #Name="ngModel"
+                            <div style="width:49%; float: left;background-color: rgba(232, 242, 252, 0.904);">
+                                <label for="Name">Name</label>
+                                <input type="text" class="form-control" name="Name" id="Name" required #Name="ngModel"
                                 [(ngModel)]=address.Name [class.is-invalid]="(Name.invalid && Name.touched)"
-                                style="width:49%; float: left;background-color: rgba(232, 242, 252, 0.904);">
+                                style="background-color: rgba(232, 242, 252, 0.904);"
+                                >
+                            </div>
+                            <div style="width:49% ; float: right;background-color: rgba(232, 242, 252, 0.904);">
+                                <label for="Name">Mobile</label>
                             <input type="number" class="form-control" name=" Mobile" id=" Mobile" required #Mobile="ngModel"
                                 [(ngModel)]=address.Mobile [class.is-invalid]="Mobile.invalid && Mobile.touched"
-                                style="width:49% ; float: right;background-color: rgba(232, 242, 252, 0.904);">
+                                style="background-color: rgba(232, 242, 252, 0.904);"
+                                >
+                            </div>
+                                
                         </div>
-                        <div class="form-group" style="padding-top : 50px">
-                            <input type="text" class="form-control" name="BuildingName" required id="BuildingName"
+                        <div class="form-group" style="padding-top : 85px">
+                            <div style="width:49%; float: left;background-color: rgba(232, 242, 252, 0.904);">
+                                <label for="Name">Building Name</label>
+                                <input type="text" class="form-control" name="BuildingName" required id="BuildingName"
                                 #BuildingName="ngModel" [(ngModel)]=address.BuildingName
                                 [class.is-invalid]="BuildingName.invalid && BuildingName.touched"
-                                style="width:49%; float: left;background-color: rgba(232, 242, 252, 0.904);"
-                                value={{address.BuildingName}}>
+                                style="background-color: rgba(232, 242, 252, 0.904);">
+                            </div>
+                            <div style="width:49% ; float: right;background-color: rgba(232, 242, 252, 0.904);">
+                                <label for="Name">Locality</label>
                             <input type="email" class="form-control" name="Locality" id="Locality" required #Locality="ngModel"
                                 [(ngModel)]=address.Locality [class.is-invalid]="Locality.invalid && Locality.touched"
-                                style="width:49% ; float: right;background-color: rgba(232, 242, 252, 0.904);"
-                                value="{{address.Locality}}">
+                                style="background-color: rgba(232, 242, 252, 0.904);">
+                            </div>  
                         </div>
-                        <div class=" form-group" style="padding-top : 33px">
-                            <input type="text" class="form-control" name="Pincode" id="Pincode" required #Pincode="ngModel"
+                        <div class="form-group" style="padding-top :66px">
+                            <div style="width:49%; float: left;background-color: rgba(232, 242, 252, 0.904);">
+                                <label for="Name">Pincode</label>
+                                <input type="number" class="form-control" name="Pincode" id="Pincode" required #Pincode="ngModel"
                                 [(ngModel)]=address.Pincode [class.is-invalid]="Pincode.invalid && Pincode.touched"
-                                style="width:49%; float: left;background-color: rgba(232, 242, 252, 0.904);"
-                                placeholder="{{address.Pincode}}">
-                            <input type="email" class="form-control" name="District" id="District" required #District="ngModel"
+                                style="background-color: rgba(232, 242, 252, 0.904);">
+                            </div>
+                            <div style="width:49% ; float: right;background-color: rgba(232, 242, 252, 0.904);">
+                                <label for="Name">District</label>
+                                <input type="email" class="form-control" name="District" id="District" required #District="ngModel"
                                 [(ngModel)]=address.District [class.is-invalid]="District.invalid && District.touched"
-                                style="width:49% ; float: right;background-color: rgba(232, 242, 252, 0.904);"
-                                id="exampleInputPassword1" placeholder="{{address.District}}">
+                                style="background-color: rgba(232, 242, 252, 0.904);"
+                                id="exampleInputPassword1" >
+                            </div>  
                         </div>
-                        <div class="form-group" style="padding-top : 33px">
+                        <div class="form-group" style="padding-top : 60px">
+                            <label for="Landmark">Landmark</label>
                             <input type="text" class="form-control" name="Landmark" id="Landmark" required #Landmark="ngModel"
                                 [(ngModel)]=address.Landmark [class.is-invalid]="Landmark.invalid && Landmark.touched"
                                 style="width:100%; float: left;background-color: rgba(232, 242, 252, 0.904);"
@@ -82,12 +101,12 @@
                             </div>
                         </span>
 
-                         <div class style="padding-top: 20px; padding-left: 42%;">
+                        <div class style="padding-top: 20px; padding-left: 42%;">
                                 <input class="form-check-input" type="radio" name="r">
                                 <label class="form-check-label" for="flexCheckDefault">
                                     Default checkbox
                                 </label>
-                            </div>
+                        </div>
                 </div>
             </div>
         </div>

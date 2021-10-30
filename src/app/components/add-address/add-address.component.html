@@ -29,7 +29,7 @@
 
         <div class="form-group">
             <label for="Pincode">Pincode</label>
-            <input type="text" name="Pincode" id="Pincode" required class="form-control" #Pincode="ngModel" [(ngModel)]="AddressModel.Pincode" [class.is-invalid]="Pincode.invalid && Pincode.touched">
+            <input type="number" name="Pincode" id="Pincode" required class="form-control" #Pincode="ngModel" [(ngModel)]="AddressModel.Pincode" [class.is-invalid]="Pincode.invalid && Pincode.touched">
         </div>
         <div class="form-group">
             <label for="Locality">Area</label>

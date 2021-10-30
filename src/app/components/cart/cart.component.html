@@ -37,20 +37,9 @@
                     <span>Number of Items</span>
                     <span>{{totalItem}}</span>
                 </p>
-                <a href="# ">Proceed to Checkout</a>
+                <a (click)="onCheckout()" routerLink="/checkout/{{userId}}">Proceed to Checkout</a>
             </div>
         </div>
-        <div class="cart-total ">
-            <p>
-                <span>Total Price</span>
-                <span>{{ totalAmount | currency: 'INR' }} </span>
-            </p>
-            <p>
-                <span>Number of Items</span>
-                <span>{{totalItem}}</span>
-            </p>
-            <a (click)="onCheckout()" routerLink="/checkout/{{userId}}">Proceed to Checkout</a>
-        </div>
+    
     </div>
 </div>
-
