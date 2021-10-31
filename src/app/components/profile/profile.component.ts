@@ -19,10 +19,10 @@ export class ProfileComponent implements OnInit {
   ngOnInit(): void {
     this.dataService.getUserById(this.userId).subscribe(response=>{
       this.user = response;
-      console.log(response);
+      // console.log(response);
       this.dataService.getFirstAddressById(this.userId).subscribe(response=>{
         this.address = response;
-        console.log(response)
+        // console.log(response)
       })
     })
   }

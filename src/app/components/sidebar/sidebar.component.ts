@@ -21,7 +21,7 @@ export class SidebarComponent implements OnInit {
   ngOnInit(): void {
     this.dataService.getUserById(this.userId).subscribe(response => {
         this.user = response;
-        console.log(response);
+        // console.log(response);
       });
   }
 

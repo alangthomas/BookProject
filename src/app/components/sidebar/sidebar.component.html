@@ -1,6 +1,6 @@
 
     
-    <div class="continer" style="max-width: 100%; height: 100vh; ">
+    <div class="continer" style="max-width: 100%; height: 100vh; " *ngIf="user">
         <div class="_3SyQ96" style="padding-left:2%">
             <div>
                 <div class="_3E8aIl">
@@ -8,7 +8,8 @@
                             src="https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/profile-pic-male_4811a1.svg">
                         <div class="DxGiT2">
                             <div class="_2QZ3Er">Hello,</div>
-                            <div class="_1ruvv2">{{user.Name}}</div>
+
+                            <div class="_1ruvv2" *ngIf="user">{{user.Name}}</div>
                         </div>
                     </div>
                 </div>

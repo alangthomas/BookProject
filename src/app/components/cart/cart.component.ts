@@ -66,4 +66,3 @@ export class CartComponent implements OnInit {
     localStorage.total = this.totalAmount;
   }
 }
-

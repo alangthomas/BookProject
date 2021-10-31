@@ -42,7 +42,6 @@ import { PlaceOrderComponent } from './components/place-order/place-order.compon
 import { ViewCouponsComponent } from './components/view-coupons/view-coupons.component';
 import { AddCouponsComponent } from './components/add-coupons/add-coupons.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
