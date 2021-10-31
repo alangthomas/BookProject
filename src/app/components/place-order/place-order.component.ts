@@ -120,12 +120,13 @@ export class PlaceOrderComponent implements OnInit {
     //console.log(this.order)
     for(let o of this.order){
       this.dataservice.addOrder(o).subscribe(data=>{
-        if(data){
-          alert("Order Placed Successfully")
-          this.router.navigateByUrl('home')
-        }
+        
       })
     console.log(o)
+    }
+    if(this.order){
+      alert("Order Placed Successfully")
+      this.router.navigateByUrl('home')
     }
   }
 

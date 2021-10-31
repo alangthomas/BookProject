@@ -11,7 +11,7 @@
         <div class="col-sm-3" style="margin-bottom : 30px ;" *ngFor='let category of categories'>
           <div class="card" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border-radius: 7px;">
             <div class="card-body">
-                <img class="card-img-top" src="assets/book.jpg" alt="Card image cap"><br><br>
+                <img class="card-img-top" src="assets/{{category.Image}}.jpg" alt="Card image cap"><br><br>
               <h5 class="card-title">{{category.CategoryName}}</h5><br>
               <p class="card-text">{{category.Description}}</p>
               <button (click)=onButtonClick(category.CategoryID) class="btn btn-primary btn-block">View Books</button>

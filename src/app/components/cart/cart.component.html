@@ -8,12 +8,12 @@
     <div class="box" style="min-width: 100%;">
         <!-- <h1>Shopping Cart</h1> -->
         <div class="cart" style="padding-top: 3%; border-width: 2px; border: tomato;">
-            <h1>Shopping Cart</h1>
+            <h1 style="margin-bottom: 20px;">Shopping Cart</h1>
         </div>
         <div class="cart">
             <div class="products">
                 <div class="product" *ngFor="let book of books">
-                    <img src="{{book.Image}}">
+                    <img src="assets/{{book.Image}}.jpg" style="width:150px">
                     <div class="product-info">
                         <h4 class="product-name ">{{book.Title}}</h4>
                         <h5 class="product-price ">{{ book.Price | currency: 'INR' }} </h5>
