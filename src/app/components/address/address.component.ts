@@ -12,6 +12,7 @@ export class AddressComponent implements OnInit {
   public userId: any;
   public addresses: any;
   public user: any;
+  public addressId : any;
 
   message="";
   alertClass = "alert-success";
@@ -37,11 +38,8 @@ export class AddressComponent implements OnInit {
     })
   }
 
-  onUpdate(address:any){
-    this.dataService.updateAddress(address).subscribe(Response=>{
-      // console.log(Response);
-      this.message = Response.Name;
-      this.ngOnInit();
-    })
+  onEdit(address:any){
+    this.addressId = address.AddressID;
+    this.router.navigate(['/address/edit', this.userId, this.addressId]);
   }
 }
