@@ -163,4 +163,9 @@ export class DataService {
   addCoupon(coupon:any){
     return this.http.post<any>('http://localhost:54295/api/coupon/add/', coupon);
   }
+  //this return an address based on addressid, used in edit-address
+  getAddressByAddressID(addressId:any){
+    return this.http.get<any>('http://localhost:54295/api/address/edit/'+addressId);
+  }
+
 }

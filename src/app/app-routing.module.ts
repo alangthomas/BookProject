@@ -29,6 +29,8 @@ import { PlaceOrderComponent } from './components/place-order/place-order.compon
 import { ViewCouponsComponent } from './components/view-coupons/view-coupons.component';
 import { AddCouponsComponent } from './components/add-coupons/add-coupons.component';
 
+import { EditAddressComponent } from './components/edit-address/edit-address.component';
+
 const routes: Routes = [
   
   {path:'', redirectTo:'home', pathMatch:'full'},
@@ -59,6 +61,7 @@ const routes: Routes = [
   {path: 'admin-dashboard/view-order', component:ViewAllOrdersComponent},
   {path: 'address/add/:userId', component:AddAddressComponent},
   {path: 'add-coupon', component: AddCouponsComponent},
+  {path: 'address/edit/:userId/:addressId', component:EditAddressComponent},
   { path: '**', redirectTo: 'home', pathMatch: 'full' }, //always at the last line
 ];
 

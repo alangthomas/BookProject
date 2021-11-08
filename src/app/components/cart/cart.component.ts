@@ -29,7 +29,7 @@ export class CartComponent implements OnInit {
     this.dataService.getCartById(this.userId).subscribe(response => {
       this.books = response;
       for (let book of this.books) {
-        console.log(book);
+        // console.log(book);
         this.totalAmount = 0;
         this.totalItem = 0;
         this.dataService.getCartforQuantity(this.userId, book.Id).subscribe(response => {
@@ -43,7 +43,7 @@ export class CartComponent implements OnInit {
     })
   }
   onChange(bookId:any, quantity:any) {
-    console.log(bookId, quantity);
+    // console.log(bookId, quantity);
     if(quantity == 0){
       this.onRemoveButton(bookId);
     }
@@ -56,7 +56,7 @@ export class CartComponent implements OnInit {
   }
   onRemoveButton(bookId: any) {
     this.dataService.RemoveFromCartById(this.userId, bookId).subscribe(response => {
-      console.log(response);
+      // console.log(response);
       this.totalAmount = 0;
       this.totalItem = 0;
       this.ngOnInit();

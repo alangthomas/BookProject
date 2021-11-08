@@ -21,11 +21,11 @@ export class OrderComponent implements OnInit {
   ngOnInit(): void {
     this.dataService.getOrderById(this.userId).subscribe(response => {
       this.books = response;
-      console.log(response)
+      // console.log(response)
 
       this.dataService.getUserById(this.userId).subscribe(response=>{
         this.user = response;
-        console.log(response);
+        // console.log(response);
       })
     })
   }
