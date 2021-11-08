@@ -9,7 +9,7 @@ import { Router } from "@angular/router";
   styleUrls: ['./view-book.component.css']
 })
 export class ViewBookComponent implements OnInit {
-
+  user :any;
   book : any = [];
   id : any;
   isLoggedIn : any;
@@ -21,6 +21,7 @@ export class ViewBookComponent implements OnInit {
   
 
   ngOnInit(): void {
+    this.user = localStorage.getItem("user")
     this.dataservice.getBookById(this.id).subscribe(response => {
       this.book = response;
       console.log(this.book);

@@ -108,7 +108,7 @@ export class PlaceOrderComponent implements OnInit {
       
   }
    
-
+ 
   onPlaceOrder(){
     for (let book of this.books){
       this.order.push({"UserID":Number(this.userId), "BookID":book.Id})
@@ -126,7 +126,7 @@ export class PlaceOrderComponent implements OnInit {
     }
     if(this.order){
       alert("Order Placed Successfully")
-      this.router.navigateByUrl('home')
+      this.router.navigateByUrl('order/'+this.userId)
     }
   }
 

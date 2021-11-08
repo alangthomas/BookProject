@@ -13,15 +13,15 @@
                 <small class="text-muted">By</small>
                 {{book.Author}}
             </h4>
-
+ 
             <div style="font-size: 30px;"> <i>{{ book.Price | currency:'INR' }}</i> </div>
             <p style="font-size: 20px; opacity: 50%;">Book Id: {{book.Id}}</p>
             <p>{{book.Description}}</p>
             <div>
-                <button class="btn btn-warning" routerLink='updatebook'>Update</button>
-                <button  class="btn btn-danger" (click)='onDeleteClick(book.Id)' routerLink=''>Delete</button> <br>
-                <button  class="btn wishlist " (click)='wishlist(book.Id)' routerLink=''>Wishlist</button>
-                <button  class="btn btn-primary cart" (click)='addToCart(book.Id)' routerLink=''>Add to Cart</button>
+                <button *ngIf="user == 'admin@gmail.com'" class="btn btn-warning" routerLink='updatebook'>Update</button>
+                <button *ngIf="user == 'admin@gmail.com'"  class="btn btn-danger" (click)='onDeleteClick(book.Id)' routerLink=''>Delete</button> <br>
+                <button *ngIf="user != 'admin@gmail.com'"  class="btn wishlist " (click)='wishlist(book.Id)' routerLink=''>Wishlist</button>
+                <button *ngIf="user != 'admin@gmail.com'"  class="btn btn-primary cart" (click)='addToCart(book.Id)' routerLink=''>Add to Cart</button>
                 
             </div>
         </div>
