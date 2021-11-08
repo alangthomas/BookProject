@@ -38,13 +38,12 @@ export class WishlistComponent implements OnInit {
         this.user = response;
         // console.log(response);
       })
-
     })
   }
   onRemoveButton(bookId: any) {
     this.dataService.RemoveFromWishlistById(this.userId, bookId).subscribe(response => {
-      console.log(response);
-      console.log(response.error)
+      // console.log(response);
+      // console.log(response.error)
       this.totalAmount = 0;
       this.totalItem = 0;
       this.dataService.GetWishListById(this.userId).subscribe(response => {

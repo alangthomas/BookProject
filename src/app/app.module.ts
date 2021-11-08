@@ -41,6 +41,7 @@ import { AddAddressComponent } from './components/add-address/add-address.compon
 import { PlaceOrderComponent } from './components/place-order/place-order.component';
 import { ViewCouponsComponent } from './components/view-coupons/view-coupons.component';
 import { AddCouponsComponent } from './components/add-coupons/add-coupons.component';
+import { EditAddressComponent } from './components/edit-address/edit-address.component';
 
 @NgModule({
   declarations: [
@@ -75,6 +76,7 @@ import { AddCouponsComponent } from './components/add-coupons/add-coupons.compon
     PlaceOrderComponent,
     ViewCouponsComponent,
     AddCouponsComponent,
+    EditAddressComponent,
   ],
   imports: [
     BrowserModule,
